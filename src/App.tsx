@@ -62,7 +62,7 @@ const App = () => (
           <Route path="/locations/north-las-vegas" element={<PlaceholderPage title="North Las Vegas Locations" />} />
 
           {/* New Patients */}
-          <Route path="/new-patients" element={<PlaceholderPage title="New Patients" />} />
+          <Route path="/new-patients" element={<NewPatients />} />
           <Route path="/new-patients/your-first-visit" element={<PlaceholderPage title="Your First Visit" />} />
           <Route path="/new-patients/insurance" element={<PlaceholderPage title="Insurance" />} />
           <Route path="/new-patients/financing" element={<PlaceholderPage title="Financing" />} />
