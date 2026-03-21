@@ -588,8 +588,10 @@ const Index = () => {
             <motion.div
               variants={reveal} custom={0}
               whileHover={{ y: -4 }}
-              className="bg-brand-coral rounded-[28px] p-10 md:p-14 mb-6 relative overflow-hidden"
+              className="rounded-[28px] p-10 md:p-14 mb-6 relative overflow-hidden"
             >
+              <img src={promoEmergency} alt="" className="absolute inset-0 w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--coral-600))] via-[hsl(var(--coral-600))]/80 to-[hsl(var(--coral-600))]/40" />
               <motion.div
                 variants={floatSlow} initial="initial" animate="animate"
                 className="absolute -right-10 -top-10 w-[250px] h-[250px] rounded-full bg-white/5 blur-[40px]"
