@@ -1,0 +1,7 @@
+[
+  {"id":"emergency-exam","title":"Emergency Exam & X-Ray","price":"$49","regularPrice":"$155","description":"Plus FREE comprehensive exam within 30 days ($380 value)","cta":"Book emergency visit","ctaVariant":"emergency","type":"emergency","active":true},
+  {"id":"kids-new-patient","title":"Kids New Patient Special","price":"$95","description":"Includes free consultation","cta":"Schedule your child's first visit","ctaVariant":"primary","type":"kids","active":true},
+  {"id":"invisalign-discount","title":"Invisalign® or Orthodontics","price":"$1,200 OFF","description":"Includes free consultation","cta":"Get $1,200 off","ctaVariant":"promo","type":"orthodontics","active":true},
+  {"id":"wisdom-teeth","title":"Wisdom Tooth Extraction (4 teeth)","price":"$1,899","description":"Includes free consultation","cta":"Book your free consultation","ctaVariant":"primary","type":"surgery","active":true},
+  {"id":"implant-package","title":"Complete Implant Package","price":"$1,200 OFF","description":"Includes consultation, implant, abutment & crown","cta":"Get $1,200 off implants","ctaVariant":"promo","type":"implants","active":true}
+]
