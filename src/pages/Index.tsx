@@ -470,24 +470,34 @@ const Index = () => {
             {filteredServices.map((s, i) => (
               <Link key={s.id} to={`/services/${s.slug}`} className="block">
                 <motion.div
-                  whileHover={{ y: -4, borderColor: "rgba(255,255,255,0.2)" }}
+                  whileHover={{ y: -4 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  className="bg-white/5 backdrop-blur-sm border border-white/6 rounded-[20px] p-7 hover:bg-white/8 transition-all duration-300 group cursor-pointer h-full"
+                  className="rounded-[20px] overflow-hidden relative min-h-[220px] flex flex-col justify-end group cursor-pointer h-full"
                 >
-                  <div className="flex items-start justify-between mb-4">
-                    <h3 className="font-display text-body-lg font-bold text-white group-hover:text-brand-blue transition-colors duration-300">{s.name}</h3>
-                    <ChevronRight className="w-4 h-4 text-navy-200 group-hover:text-brand-blue group-hover:translate-x-0.5 transition-all" />
-                  </div>
-                  <p className="font-body text-body-sm text-navy-200 mb-6 leading-[1.6]">{s.tagline}</p>
-                  <div className="flex items-center justify-between pt-5 border-t border-white/6">
-                    <span className="font-display font-extrabold text-h5 text-white">{s.priceDisplay}</span>
-                    {s.promoText && (
-                      <span className="font-display font-bold text-caption bg-brand-gold/15 text-brand-gold px-3 py-1.5 rounded-btn uppercase tracking-wider">
-                        {s.promoText}
-                      </span>
-                    )}
+                  <img
+                    src={serviceTabImages[activeTab]}
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--navy-800))] via-[hsl(var(--navy-800))]/60 to-transparent" />
+                  <div className="relative z-10 p-7">
+                    <div className="flex items-start justify-between mb-2">
+                      <h3 className="font-display text-body-lg font-bold text-white group-hover:text-brand-blue transition-colors duration-300">{s.name}</h3>
+                      <ChevronRight className="w-4 h-4 text-navy-200 group-hover:text-brand-blue group-hover:translate-x-0.5 transition-all" />
+                    </div>
+                    <p className="font-body text-body-sm text-navy-100/80 mb-4 leading-[1.6]">{s.tagline}</p>
+                    <div className="flex items-center justify-between pt-4 border-t border-white/10">
+                      <span className="font-display font-extrabold text-h5 text-white">{s.priceDisplay}</span>
+                      {s.promoText && (
+                        <span className="font-display font-bold text-caption bg-brand-gold/15 text-brand-gold px-3 py-1.5 rounded-btn uppercase tracking-wider">
+                          {s.promoText}
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </motion.div>
+              </Link>
+            ))}
               </Link>
             ))}
           </motion.div>
