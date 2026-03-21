@@ -12,9 +12,24 @@ import LocationFinder from "./pages/LocationFinder.tsx";
 import NewPatients from "./pages/NewPatients.tsx";
 import WisdomTeeth from "./pages/WisdomTeeth.tsx";
 import ServicePage from "./pages/ServicePage.tsx";
-import PlaceholderPage from "./pages/PlaceholderPage.tsx";
+import ServicesIndex from "./pages/ServicesIndex.tsx";
 import CityHub from "./pages/CityHub.tsx";
 import LocationPage from "./pages/LocationPage.tsx";
+import YourFirstVisit from "./pages/YourFirstVisit.tsx";
+import Insurance from "./pages/Insurance.tsx";
+import Financing from "./pages/Financing.tsx";
+import PatientForms from "./pages/PatientForms.tsx";
+import About from "./pages/About.tsx";
+import OurStory from "./pages/OurStory.tsx";
+import Technology from "./pages/Technology.tsx";
+import OurTeam from "./pages/OurTeam.tsx";
+import Employers from "./pages/Employers.tsx";
+import Careers from "./pages/Careers.tsx";
+import FAQs from "./pages/FAQs.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
+import HIPAANotice from "./pages/HIPAANotice.tsx";
+import WebsiteAccessibility from "./pages/WebsiteAccessibility.tsx";
+import PlaceholderPage from "./pages/PlaceholderPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -29,7 +44,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
 
           {/* Service pages — specific routes first */}
-          <Route path="/services" element={<PlaceholderPage title="Our Services" />} />
+          <Route path="/services" element={<ServicesIndex />} />
           <Route path="/services/emergency-dental-care" element={<EmergencyDentalCare />} />
           <Route path="/services/dental-implants" element={<DentalImplants />} />
           <Route path="/services/invisalign" element={<Invisalign />} />
@@ -46,25 +61,25 @@ const App = () => (
 
           {/* New Patients */}
           <Route path="/new-patients" element={<NewPatients />} />
-          <Route path="/new-patients/your-first-visit" element={<PlaceholderPage title="Your First Visit" />} />
-          <Route path="/new-patients/insurance" element={<PlaceholderPage title="Insurance" />} />
-          <Route path="/new-patients/financing" element={<PlaceholderPage title="Financing" />} />
-          <Route path="/new-patients/patient-forms" element={<PlaceholderPage title="Patient Forms" />} />
+          <Route path="/new-patients/your-first-visit" element={<YourFirstVisit />} />
+          <Route path="/new-patients/insurance" element={<Insurance />} />
+          <Route path="/new-patients/financing" element={<Financing />} />
+          <Route path="/new-patients/patient-forms" element={<PatientForms />} />
 
           {/* About */}
-          <Route path="/about" element={<PlaceholderPage title="About Us" />} />
-          <Route path="/about/our-story" element={<PlaceholderPage title="Our Story" />} />
-          <Route path="/about/technology" element={<PlaceholderPage title="Technology" />} />
-          <Route path="/about/our-team" element={<PlaceholderPage title="Our Team" />} />
-          <Route path="/about/employers" element={<PlaceholderPage title="Employers" />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/about/our-story" element={<OurStory />} />
+          <Route path="/about/technology" element={<Technology />} />
+          <Route path="/about/our-team" element={<OurTeam />} />
+          <Route path="/about/employers" element={<Employers />} />
 
           {/* Misc */}
           <Route path="/blog" element={<PlaceholderPage title="Blog" />} />
-          <Route path="/careers" element={<PlaceholderPage title="Careers" />} />
-          <Route path="/faqs" element={<PlaceholderPage title="FAQs" />} />
-          <Route path="/privacy-policy" element={<PlaceholderPage title="Privacy Policy" />} />
-          <Route path="/hipaa-notice" element={<PlaceholderPage title="HIPAA Notice" />} />
-          <Route path="/website-accessibility" element={<PlaceholderPage title="Website Accessibility" />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/faqs" element={<FAQs />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/hipaa-notice" element={<HIPAANotice />} />
+          <Route path="/website-accessibility" element={<WebsiteAccessibility />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
