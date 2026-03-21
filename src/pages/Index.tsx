@@ -20,22 +20,60 @@ import whyWholeFamily from "@/assets/why-whole-family.jpg";
 import whyEmergency from "@/assets/why-emergency.jpg";
 import whyBooking from "@/assets/why-booking.jpg";
 import whySpecialties from "@/assets/why-specialties.jpg";
-import serviceFamily from "@/assets/service-family.jpg";
-import serviceCosmetic from "@/assets/service-cosmetic.jpg";
-import serviceRestorative from "@/assets/service-restorative.jpg";
-import serviceKids from "@/assets/service-kids.jpg";
-import serviceOrthodontics from "@/assets/service-orthodontics.jpg";
-import serviceEmergency from "@/assets/service-emergency.jpg";
+import svcDentalExams from "@/assets/svc-dental-exams.jpg";
+import svcDentalCleanings from "@/assets/svc-dental-cleanings.jpg";
+import svcDentalSedation from "@/assets/svc-dental-sedation.jpg";
+import svcVeneers from "@/assets/svc-porcelain-veneers.jpg";
+import svcWhitening from "@/assets/svc-teeth-whitening.jpg";
+import svcSmileMakeovers from "@/assets/svc-smile-makeovers.jpg";
+import svcFillings from "@/assets/svc-dental-fillings.jpg";
+import svcCrowns from "@/assets/svc-dental-crowns.jpg";
+import svcRootCanals from "@/assets/svc-root-canals.jpg";
+import svcBridges from "@/assets/svc-dental-bridges.jpg";
+import svcSameDayCrowns from "@/assets/svc-same-day-crowns.jpg";
+import svcImplants from "@/assets/svc-dental-implants.jpg";
+import svcImplantDentures from "@/assets/svc-implant-dentures.jpg";
+import svcDentures from "@/assets/svc-dentures.jpg";
+import svcKids from "@/assets/service-kids.jpg";
+import svcBabyToddler from "@/assets/svc-baby-toddler.jpg";
+import svcKidsOrtho from "@/assets/svc-kids-orthodontics.jpg";
+import svcSpecialNeeds from "@/assets/svc-special-needs.jpg";
+import svcInvisalign from "@/assets/svc-invisalign.jpg";
+import svcBraces from "@/assets/svc-traditional-braces.jpg";
+import svcTeenOrtho from "@/assets/svc-teen-orthodontics.jpg";
+import svcAdultOrtho from "@/assets/svc-adult-orthodontics.jpg";
+import svcEmergency from "@/assets/service-emergency.jpg";
+import svcWisdomTeeth from "@/assets/svc-wisdom-teeth.jpg";
+import svcToothExtractions from "@/assets/svc-tooth-extractions.jpg";
 import promotions from "@/data/promotions.json";
 import services from "@/data/services.json";
 
-const serviceTabImages: Record<number, string> = {
-  0: serviceFamily,
-  1: serviceCosmetic,
-  2: serviceRestorative,
-  3: serviceKids,
-  4: serviceOrthodontics,
-  5: serviceEmergency,
+const serviceImageMap: Record<string, string> = {
+  "dental-exams": svcDentalExams,
+  "dental-cleanings": svcDentalCleanings,
+  "dental-sedation": svcDentalSedation,
+  "porcelain-veneers": svcVeneers,
+  "teeth-whitening": svcWhitening,
+  "smile-makeovers": svcSmileMakeovers,
+  "dental-fillings": svcFillings,
+  "dental-crowns": svcCrowns,
+  "root-canals": svcRootCanals,
+  "dental-bridges": svcBridges,
+  "same-day-crowns": svcSameDayCrowns,
+  "dental-implants": svcImplants,
+  "implant-supported-dentures": svcImplantDentures,
+  "dentures": svcDentures,
+  "kids-dentistry": svcKids,
+  "baby-toddler-dentistry": svcBabyToddler,
+  "kids-orthodontics": svcKidsOrtho,
+  "special-needs-dentistry": svcSpecialNeeds,
+  "invisalign": svcInvisalign,
+  "traditional-braces": svcBraces,
+  "teen-orthodontics": svcTeenOrtho,
+  "adult-orthodontics": svcAdultOrtho,
+  "emergency-dental-care": svcEmergency,
+  "wisdom-tooth-extractions": svcWisdomTeeth,
+  "tooth-extractions": svcToothExtractions,
 };
 
 /* ─── Animation variants ─── */
@@ -475,7 +513,7 @@ const Index = () => {
                   className="rounded-[20px] overflow-hidden relative min-h-[220px] flex flex-col justify-end group cursor-pointer h-full"
                 >
                   <img
-                    src={serviceTabImages[activeTab]}
+                    src={serviceImageMap[s.slug] || svcDentalExams}
                     alt=""
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
