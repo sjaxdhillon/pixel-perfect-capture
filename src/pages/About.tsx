@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import dentalOffice from "@/assets/dental-office-interior.jpg";
+import friendlyDentist from "@/assets/friendly-dentist.jpg";
 import { Link } from "react-router-dom";
 import { Phone, MapPin, ArrowRight, BookOpen, Cpu, Users, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
