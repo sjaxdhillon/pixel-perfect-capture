@@ -31,7 +31,7 @@ const App = () => (
           <Route path="/services/tooth-extractions" element={<PlaceholderPage title="Tooth Extractions" />} />
           <Route path="/services/dental-bridges" element={<PlaceholderPage title="Dental Bridges" />} />
           <Route path="/services/same-day-crowns" element={<PlaceholderPage title="Same-Day Crowns" />} />
-          <Route path="/services/dental-implants" element={<PlaceholderPage title="Dental Implants" />} />
+          <Route path="/services/dental-implants" element={<DentalImplants />} />
           <Route path="/services/implant-supported-dentures" element={<PlaceholderPage title="Implant-Supported Dentures" />} />
           <Route path="/services/dentures" element={<PlaceholderPage title="Dentures" />} />
           <Route path="/services/porcelain-veneers" element={<PlaceholderPage title="Porcelain Veneers" />} />
