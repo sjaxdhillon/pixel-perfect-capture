@@ -39,7 +39,7 @@ const App = () => (
           <Route path="/services/porcelain-veneers" element={<PlaceholderPage title="Porcelain Veneers" />} />
           <Route path="/services/teeth-whitening" element={<PlaceholderPage title="Teeth Whitening" />} />
           <Route path="/services/smile-makeovers" element={<PlaceholderPage title="Smile Makeovers" />} />
-          <Route path="/services/invisalign" element={<PlaceholderPage title="Invisalign®" />} />
+          <Route path="/services/invisalign" element={<Invisalign />} />
           <Route path="/services/traditional-braces" element={<PlaceholderPage title="Traditional Braces" />} />
           <Route path="/services/teen-orthodontics" element={<PlaceholderPage title="Teen Orthodontics" />} />
           <Route path="/services/adult-orthodontics" element={<PlaceholderPage title="Adult Orthodontics" />} />
