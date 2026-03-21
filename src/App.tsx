@@ -8,6 +8,8 @@ import EmergencyDentalCare from "./pages/EmergencyDentalCare.tsx";
 import DentalImplants from "./pages/DentalImplants.tsx";
 import Invisalign from "./pages/Invisalign.tsx";
 import KidsDentistry from "./pages/KidsDentistry.tsx";
+import LocationFinder from "./pages/LocationFinder.tsx";
+import NewPatients from "./pages/NewPatients.tsx";
 import PlaceholderPage from "./pages/PlaceholderPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -54,13 +56,13 @@ const App = () => (
           <Route path="/services/dental-sedation" element={<PlaceholderPage title="Dental Sedation" />} />
 
           {/* Location pages */}
-          <Route path="/locations" element={<PlaceholderPage title="Find a Location" />} />
+          <Route path="/locations" element={<LocationFinder />} />
           <Route path="/locations/las-vegas" element={<PlaceholderPage title="Las Vegas Locations" />} />
           <Route path="/locations/henderson" element={<PlaceholderPage title="Henderson Locations" />} />
           <Route path="/locations/north-las-vegas" element={<PlaceholderPage title="North Las Vegas Locations" />} />
 
           {/* New Patients */}
-          <Route path="/new-patients" element={<PlaceholderPage title="New Patients" />} />
+          <Route path="/new-patients" element={<NewPatients />} />
           <Route path="/new-patients/your-first-visit" element={<PlaceholderPage title="Your First Visit" />} />
           <Route path="/new-patients/insurance" element={<PlaceholderPage title="Insurance" />} />
           <Route path="/new-patients/financing" element={<PlaceholderPage title="Financing" />} />
