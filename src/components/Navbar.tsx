@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, ChevronDown, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoIcon from "@/assets/gooddocdentalicon.svg";
-import wordLogo from "@/assets/gooddocdentalwordlogo.svg";
+import wordMark from "@/assets/gooddocdentalwordmark.svg";
 
 const serviceCategories = [
   {

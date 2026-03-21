@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Mail, Phone, ArrowUpRight, Heart } from "lucide-react";
 import logoIcon from "@/assets/gooddocdentalicon.svg";
-import wordLogo from "@/assets/gooddocdentalwordlogo.svg";
+import wordMark from "@/assets/gooddocdentalwordmark.svg";
 
 const reveal = {
   hidden: { opacity: 0, y: 16, filter: "blur(4px)" },
