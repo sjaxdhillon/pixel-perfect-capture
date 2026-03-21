@@ -14,6 +14,9 @@ import locations from "@/data/locations.json";
 import services from "@/data/services.json";
 import promotions from "@/data/promotions.json";
 import { locationContentMap } from "@/data/locationContent";
+import dentalOffice from "@/assets/dental-office-interior.jpg";
+import happyKid from "@/assets/happy-kid-dental.jpg";
+import happyFamily from "@/assets/happy-family-smiles.jpg";
 
 const reveal = {
   hidden: { opacity: 0, y: 18, filter: "blur(4px)" },
