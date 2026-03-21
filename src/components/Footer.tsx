@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Mail, Phone, ArrowUpRight, Heart } from "lucide-react";
 import logoIcon from "@/assets/gooddocdentalicon.svg";
-import wordLogo from "@/assets/gooddocdentalwordlogo.svg";
+import wordMark from "@/assets/gooddocdentalwordmark.svg";
 
 const reveal = {
   hidden: { opacity: 0, y: 16, filter: "blur(4px)" },
@@ -63,7 +63,7 @@ const Footer = () => (
               <img src={logoIcon} alt="" className="h-9 w-9 brightness-0 invert" />
             </div>
             <div>
-              <img src={wordLogo} alt="Good Doc Dental" className="h-6 brightness-0 invert opacity-95" />
+              <img src={wordMark} alt="Good Doc Dental" className="h-7 brightness-0 invert opacity-95" />
               <span className="block font-body text-caption text-navy-200 tracking-wider uppercase mt-0.5">of Nevada</span>
             </div>
           </div>

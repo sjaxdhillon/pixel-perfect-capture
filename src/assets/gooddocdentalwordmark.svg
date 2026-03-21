@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 144">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0474c1;
+        font-size: 41.5px;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        font-family: UmbaSoft-BoldItalic, 'Umba Soft';
+        font-style: italic;
+      }
+
+      .cls-3 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-3, .cls-4 {
+        font-family: UmbaSoft-Bold, 'Umba Soft';
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(9.73 86.46)"><tspan class="cls-4" x="0" y="0">GOOD </tspan><tspan class="cls-2" x="143.56" y="0">DOC </tspan><tspan class="cls-4" x="250.22" y="0">DEN</tspan><tspan class="cls-3" x="338.41" y="0">T</tspan><tspan class="cls-4" x="361.74" y="0">AL</tspan></text>
+</svg>
