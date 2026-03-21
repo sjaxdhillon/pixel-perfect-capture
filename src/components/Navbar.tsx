@@ -260,10 +260,12 @@ const Navbar = () => {
             <MobileNavLink label="Blog" href="/blog" onClick={() => setMobileOpen(false)} />
           </div>
           <div className="fixed bottom-0 inset-x-0 p-4 bg-navy-800/95 backdrop-blur-sm border-t border-navy-400">
-            <Button variant="emergency" className="w-full" size="lg">
-              <Phone className="w-4 h-4" />
-              Call Now — $49 Emergency
-            </Button>
+            <a href="tel:7028522829" className="block">
+              <Button variant="emergency" className="w-full" size="lg">
+                <Phone className="w-4 h-4" />
+                Call Now — $49 Emergency
+              </Button>
+            </a>
           </div>
         </div>
       )}
