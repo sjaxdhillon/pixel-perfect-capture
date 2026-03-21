@@ -498,8 +498,6 @@ const Index = () => {
                 </motion.div>
               </Link>
             ))}
-              </Link>
-            ))}
           </motion.div>
 
           <div className="text-center mt-12">
