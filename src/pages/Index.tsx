@@ -639,16 +639,20 @@ const Index = () => {
                   key={promo.id}
                   variants={reveal}
                   custom={i + 1}
-                  whileHover={{ y: -6, boxShadow: "0 25px 50px -12px rgba(0,0,0,0.1)" }}
+                  whileHover={{ y: -6 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  className="bg-gold-50 border border-gold-100/60 rounded-[20px] p-7 group"
+                  className="rounded-[20px] relative overflow-hidden group min-h-[280px] flex flex-col justify-end"
                 >
-                  <span className="font-display font-extrabold text-[32px] text-brand-navy leading-none">{promo.price}</span>
-                  <h4 className="font-display font-bold text-body text-brand-navy mt-3 mb-1.5">{promo.title}</h4>
-                  <p className="font-body text-body-sm text-brand-slate mb-6 leading-[1.6]">{promo.description}</p>
-                  <Button variant={promo.ctaVariant === "promo" ? "promo" : "default"} size="sm" className="w-full">
-                    {promo.cta}
-                  </Button>
+                  <img src={promoImageMap[promo.id]} alt="" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--navy-800))] via-[hsl(var(--navy-800))]/70 to-transparent" />
+                  <div className="relative z-10 p-7">
+                    <span className="font-display font-extrabold text-[32px] text-white leading-none">{promo.price}</span>
+                    <h4 className="font-display font-bold text-body text-white mt-3 mb-1.5">{promo.title}</h4>
+                    <p className="font-body text-body-sm text-white/70 mb-6 leading-[1.6]">{promo.description}</p>
+                    <Button variant={promo.ctaVariant === "promo" ? "promo" : "default"} size="sm" className="w-full">
+                      {promo.cta}
+                    </Button>
+                  </div>
                 </motion.div>
               ))}
             </div>
