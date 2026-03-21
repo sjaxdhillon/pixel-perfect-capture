@@ -29,7 +29,7 @@ const float = {
   initial: { y: 0 },
   animate: {
     y: [-8, 8, -8],
-    transition: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+    transition: { duration: 6, repeat: Infinity, ease: "easeInOut" as const },
   },
 };
 
@@ -37,7 +37,7 @@ const floatSlow = {
   initial: { y: 0 },
   animate: {
     y: [-5, 12, -5],
-    transition: { duration: 8, repeat: Infinity, ease: "easeInOut" },
+    transition: { duration: 8, repeat: Infinity, ease: "easeInOut" as const },
   },
 };
 
@@ -45,7 +45,7 @@ const floatReverse = {
   initial: { y: 0 },
   animate: {
     y: [6, -10, 6],
-    transition: { duration: 7, repeat: Infinity, ease: "easeInOut" },
+    transition: { duration: 7, repeat: Infinity, ease: "easeInOut" as const },
   },
 };
 
