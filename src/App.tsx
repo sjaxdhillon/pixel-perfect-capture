@@ -46,7 +46,7 @@ const App = () => (
           <Route path="/services/traditional-braces" element={<PlaceholderPage title="Traditional Braces" />} />
           <Route path="/services/teen-orthodontics" element={<PlaceholderPage title="Teen Orthodontics" />} />
           <Route path="/services/adult-orthodontics" element={<PlaceholderPage title="Adult Orthodontics" />} />
-          <Route path="/services/wisdom-tooth-extractions" element={<PlaceholderPage title="Wisdom Tooth Extractions" />} />
+          <Route path="/services/wisdom-tooth-extractions" element={<WisdomTeeth />} />
           <Route path="/services/deep-cleanings" element={<PlaceholderPage title="Deep Cleanings" />} />
           <Route path="/services/laser-dentistry" element={<PlaceholderPage title="Laser Dentistry" />} />
           <Route path="/services/gum-surgery" element={<PlaceholderPage title="Gum Surgery" />} />
