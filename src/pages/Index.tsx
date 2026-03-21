@@ -380,18 +380,22 @@ const Index = () => {
                 <motion.div
                   key={card.title}
                   variants={reveal} custom={i + 3}
-                  whileHover={{ y: -4, boxShadow: "0 20px 40px -12px rgba(0,0,0,0.08)" }}
+                  whileHover={{ y: -4, boxShadow: "0 20px 40px -12px rgba(0,0,0,0.15)" }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  className={`${card.bg} rounded-[24px] p-8 group`}
+                  className="rounded-[24px] flex flex-col justify-end min-h-[220px] group relative overflow-hidden"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-white/60 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                    <card.icon className={`w-6 h-6 ${card.iconColor}`} />
+                  <img src={card.img} alt={card.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/50 to-transparent" />
+                  <div className="relative z-10 p-8">
+                    <div className="w-10 h-10 rounded-xl bg-white/15 backdrop-blur-sm flex items-center justify-center mb-4">
+                      <card.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <h3 className="font-display text-h5 font-bold text-white mb-1.5">{card.title}</h3>
+                    <p className="font-body text-body-sm text-white/75 leading-[1.6]">{card.desc}</p>
+                    <Link to={card.link} className="font-display font-semibold text-caption text-brand-blue hover:text-blue-300 flex items-center gap-1.5 mt-4 transition-colors group/link">
+                      {card.cta} <ArrowRight className="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" />
+                    </Link>
                   </div>
-                  <h3 className="font-display text-h5 font-bold text-brand-navy mb-2">{card.title}</h3>
-                  <p className="font-body text-body-sm text-brand-slate leading-[1.6]">{card.desc}</p>
-                  <Link to={card.link} className="font-display font-semibold text-caption text-brand-blue hover:text-blue-600 flex items-center gap-1.5 mt-5 transition-colors group/link">
-                    {card.cta} <ArrowRight className="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" />
-                  </Link>
                 </motion.div>
               ))}
             </div>
