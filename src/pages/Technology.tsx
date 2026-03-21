@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import dentalTech from "@/assets/dental-technology.jpg";
 import { MapPin, Scan, Camera, Box, Fingerprint, Zap, Flashlight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PromoBar from "@/components/PromoBar";
