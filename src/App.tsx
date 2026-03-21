@@ -6,6 +6,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import EmergencyDentalCare from "./pages/EmergencyDentalCare.tsx";
 import DentalImplants from "./pages/DentalImplants.tsx";
+import Invisalign from "./pages/Invisalign.tsx";
+import KidsDentistry from "./pages/KidsDentistry.tsx";
 import PlaceholderPage from "./pages/PlaceholderPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -37,7 +39,7 @@ const App = () => (
           <Route path="/services/porcelain-veneers" element={<PlaceholderPage title="Porcelain Veneers" />} />
           <Route path="/services/teeth-whitening" element={<PlaceholderPage title="Teeth Whitening" />} />
           <Route path="/services/smile-makeovers" element={<PlaceholderPage title="Smile Makeovers" />} />
-          <Route path="/services/invisalign" element={<PlaceholderPage title="Invisalign®" />} />
+          <Route path="/services/invisalign" element={<Invisalign />} />
           <Route path="/services/traditional-braces" element={<PlaceholderPage title="Traditional Braces" />} />
           <Route path="/services/teen-orthodontics" element={<PlaceholderPage title="Teen Orthodontics" />} />
           <Route path="/services/adult-orthodontics" element={<PlaceholderPage title="Adult Orthodontics" />} />
@@ -45,7 +47,7 @@ const App = () => (
           <Route path="/services/deep-cleanings" element={<PlaceholderPage title="Deep Cleanings" />} />
           <Route path="/services/laser-dentistry" element={<PlaceholderPage title="Laser Dentistry" />} />
           <Route path="/services/gum-surgery" element={<PlaceholderPage title="Gum Surgery" />} />
-          <Route path="/services/kids-dentistry" element={<PlaceholderPage title="Kids Dentistry" />} />
+          <Route path="/services/kids-dentistry" element={<KidsDentistry />} />
           <Route path="/services/baby-toddler-dentistry" element={<PlaceholderPage title="Baby & Toddler Dentistry" />} />
           <Route path="/services/kids-orthodontics" element={<PlaceholderPage title="Kids Orthodontics" />} />
           <Route path="/services/special-needs-dentistry" element={<PlaceholderPage title="Special Needs Dentistry" />} />
