@@ -314,29 +314,27 @@ const Index = () => {
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}>
             <div className="grid lg:grid-cols-3 gap-5 mb-5">
-              {/* Featured card */}
+              {/* Featured card with image */}
               <motion.div
                 variants={reveal} custom={0}
                 whileHover={{ y: -4 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                className="lg:row-span-2 bg-brand-navy rounded-[24px] p-10 flex flex-col justify-between min-h-[360px] group relative overflow-hidden"
+                className="lg:row-span-2 rounded-[24px] flex flex-col justify-end min-h-[360px] group relative overflow-hidden"
               >
-                <motion.div
-                  variants={floatSlow} initial="initial" animate="animate"
-                  className="absolute -right-16 -bottom-16 w-[250px] h-[250px] rounded-full bg-brand-blue/8 blur-[50px]"
-                />
-                <div className="relative z-10">
-                  <div className="w-14 h-14 rounded-2xl bg-brand-blue/15 flex items-center justify-center mb-6">
+                <img src={lasVegasAerial} alt="Las Vegas Valley aerial view" className="absolute inset-0 w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent" />
+                <div className="relative z-10 p-10">
+                  <div className="w-14 h-14 rounded-2xl bg-brand-blue/20 backdrop-blur-sm flex items-center justify-center mb-6">
                     <MapPin className="w-7 h-7 text-brand-blue" />
                   </div>
                   <h3 className="font-display text-h3 font-bold text-white mb-3 leading-tight">23 Locations<br/>Valleywide</h3>
                   <p className="font-body text-body text-navy-200 leading-[1.7]">Las Vegas, Henderson, North Las Vegas, Summerlin — there's always one near you.</p>
+                  <Link to="/locations">
+                    <Button variant="secondary" size="sm" className="self-start mt-6 border-white/15 text-white hover:bg-white/8 hover:border-white/25 transition-all duration-300">
+                      Find yours <ArrowRight className="w-3 h-3" />
+                    </Button>
+                  </Link>
                 </div>
-                <Link to="/locations">
-                  <Button variant="secondary" size="sm" className="self-start mt-6 border-white/15 text-white hover:bg-white/8 hover:border-white/25 transition-all duration-300">
-                    Find yours <ArrowRight className="w-3 h-3" />
-                  </Button>
-                </Link>
               </motion.div>
 
               {[
