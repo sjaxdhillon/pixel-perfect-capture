@@ -20,8 +20,23 @@ import whyWholeFamily from "@/assets/why-whole-family.jpg";
 import whyEmergency from "@/assets/why-emergency.jpg";
 import whyBooking from "@/assets/why-booking.jpg";
 import whySpecialties from "@/assets/why-specialties.jpg";
+import serviceFamily from "@/assets/service-family.jpg";
+import serviceCosmetic from "@/assets/service-cosmetic.jpg";
+import serviceRestorative from "@/assets/service-restorative.jpg";
+import serviceKids from "@/assets/service-kids.jpg";
+import serviceOrthodontics from "@/assets/service-orthodontics.jpg";
+import serviceEmergency from "@/assets/service-emergency.jpg";
 import promotions from "@/data/promotions.json";
 import services from "@/data/services.json";
+
+const serviceTabImages: Record<number, string> = {
+  0: serviceFamily,
+  1: serviceCosmetic,
+  2: serviceRestorative,
+  3: serviceKids,
+  4: serviceOrthodontics,
+  5: serviceEmergency,
+};
 
 /* ─── Animation variants ─── */
 const reveal = {
