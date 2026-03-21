@@ -15,6 +15,11 @@ import heroPatient from "@/assets/hero-patient.jpg";
 import kidsSmile from "@/assets/kids-smile.jpg";
 import lasVegasAerial from "@/assets/las-vegas-aerial.jpg";
 import perfectSmile from "@/assets/perfect-smile.jpg";
+import whyOpenHours from "@/assets/why-open-hours.jpg";
+import whyWholeFamily from "@/assets/why-whole-family.jpg";
+import whyEmergency from "@/assets/why-emergency.jpg";
+import whyBooking from "@/assets/why-booking.jpg";
+import whySpecialties from "@/assets/why-specialties.jpg";
 import promotions from "@/data/promotions.json";
 import services from "@/data/services.json";
 
