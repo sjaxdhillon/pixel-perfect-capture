@@ -10,6 +10,7 @@ import Invisalign from "./pages/Invisalign.tsx";
 import KidsDentistry from "./pages/KidsDentistry.tsx";
 import LocationFinder from "./pages/LocationFinder.tsx";
 import NewPatients from "./pages/NewPatients.tsx";
+import WisdomTeeth from "./pages/WisdomTeeth.tsx";
 import PlaceholderPage from "./pages/PlaceholderPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
