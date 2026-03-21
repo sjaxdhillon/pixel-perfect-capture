@@ -513,7 +513,7 @@ const Index = () => {
                   className="rounded-[20px] overflow-hidden relative min-h-[220px] flex flex-col justify-end group cursor-pointer h-full"
                 >
                   <img
-                    src={serviceTabImages[activeTab]}
+                    src={serviceImageMap[s.slug] || svcDentalExams}
                     alt=""
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
