@@ -56,7 +56,7 @@ const App = () => (
           <Route path="/services/dental-sedation" element={<PlaceholderPage title="Dental Sedation" />} />
 
           {/* Location pages */}
-          <Route path="/locations" element={<PlaceholderPage title="Find a Location" />} />
+          <Route path="/locations" element={<LocationFinder />} />
           <Route path="/locations/las-vegas" element={<PlaceholderPage title="Las Vegas Locations" />} />
           <Route path="/locations/henderson" element={<PlaceholderPage title="Henderson Locations" />} />
           <Route path="/locations/north-las-vegas" element={<PlaceholderPage title="North Las Vegas Locations" />} />
