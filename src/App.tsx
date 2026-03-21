@@ -12,6 +12,8 @@ import LocationFinder from "./pages/LocationFinder.tsx";
 import NewPatients from "./pages/NewPatients.tsx";
 import WisdomTeeth from "./pages/WisdomTeeth.tsx";
 import PlaceholderPage from "./pages/PlaceholderPage.tsx";
+import CityHub from "./pages/CityHub.tsx";
+import LocationPage from "./pages/LocationPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
