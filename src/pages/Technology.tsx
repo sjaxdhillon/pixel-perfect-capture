@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import dentalTech from "@/assets/dental-technology.jpg";
 import { MapPin, Scan, Camera, Box, Fingerprint, Zap, Flashlight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import PromoBar from "@/components/PromoBar";
@@ -36,6 +37,16 @@ const Technology = () => (
         <motion.p variants={reveal} initial="hidden" animate="visible" custom={1}
           className="font-accent italic text-lg text-white/80">Modern tools for better, faster, more comfortable dental care.</motion.p>
       </div>
+    </section>
+
+    {/* Hero Image */}
+    <section className="py-0">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+        className="max-w-6xl mx-auto px-5 -mt-12 relative z-10">
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <img src={dentalTech} alt="Advanced dental technology at Good Doc Dental" className="w-full h-[300px] md:h-[380px] object-cover" />
+        </div>
+      </motion.div>
     </section>
 
     <section className="py-20">
