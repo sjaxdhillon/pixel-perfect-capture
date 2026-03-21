@@ -6,7 +6,7 @@ const ProcessSteps = ({ steps }: ProcessStepsProps) => (
   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
     {steps.map((step, i) => (
       <div key={i} className="relative">
-        <span className="font-display font-extrabold text-[48px] text-blue-50 leading-none select-none">
+        <span className="font-display font-extrabold text-display text-blue-50 leading-none select-none">
           {String(i + 1).padStart(2, "0")}
         </span>
         <h4 className="font-display text-h4 text-brand-navy mt-1 mb-2">{step.title}</h4>

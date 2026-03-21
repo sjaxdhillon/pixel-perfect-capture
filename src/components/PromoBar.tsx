@@ -22,7 +22,7 @@ const PromoBar = () => {
               <a
                 key={i}
                 href={offer.href}
-                className="inline-flex items-center gap-2 px-8 font-display font-medium text-[12px] text-navy-100 hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 px-8 font-display font-medium text-caption text-navy-100 hover:text-white transition-colors"
               >
                 <span>{offer.emoji}</span>
                 <span>{offer.text}</span>
@@ -34,7 +34,7 @@ const PromoBar = () => {
         {/* Phone CTA */}
         <a
           href="tel:+17028522829"
-          className="hidden md:flex items-center gap-1.5 px-5 h-full bg-brand-blue hover:bg-blue-600 transition-colors font-display font-bold text-[12px] text-white"
+          className="hidden md:flex items-center gap-1.5 px-5 h-full bg-brand-blue hover:bg-blue-600 transition-colors font-display font-bold text-caption text-white"
         >
           <Phone className="w-3 h-3" />
           702-852-2829

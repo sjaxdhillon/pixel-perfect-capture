@@ -107,7 +107,7 @@ const Navbar = () => {
             <img src={logoIcon} alt="" className="h-7 w-7 brightness-0 invert" />
           </div>
           <div className="hidden sm:block">
-            <span className="font-display font-bold text-white text-[17px] leading-tight tracking-tight">Good Doc Dental</span>
+            <span className="font-display font-bold text-white text-body-lg leading-tight tracking-tight">Good Doc Dental</span>
           </div>
         </Link>
 
@@ -126,13 +126,13 @@ const Navbar = () => {
               >
                 {serviceCategories.map((cat) => (
                   <div key={cat.title}>
-                    <h4 className="font-display font-bold text-[10px] uppercase text-brand-blue tracking-[0.12em] mb-2.5 pb-1.5 border-b border-blue-50">{cat.title}</h4>
+                    <h4 className="font-display font-bold text-caption uppercase text-brand-blue tracking-[0.12em] mb-2.5 pb-1.5 border-b border-blue-50">{cat.title}</h4>
                     <ul className="space-y-0.5">
                       {cat.items.map((item) => (
                         <li key={item.slug}>
                           <Link
                             to={`/services/${item.slug}`}
-                            className="font-body text-[13px] text-brand-slate hover:text-brand-blue hover:translate-x-1 transition-all block py-1"
+                            className="font-body text-body-sm text-brand-slate hover:text-brand-blue hover:translate-x-1 transition-all block py-1"
                             onClick={() => setActiveMenu(null)}
                           >
                             {item.name}
@@ -152,11 +152,11 @@ const Navbar = () => {
                       <span className="absolute inline-flex h-full w-full rounded-full bg-brand-coral opacity-75 animate-ping" />
                       <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-coral" />
                     </span>
-                    <span className="font-display font-bold text-[13px] text-brand-coral">Emergency Care — $49</span>
+                    <span className="font-display font-bold text-body-sm text-brand-coral">Emergency Care — $49</span>
                   </Link>
                   <Link
                     to="/services"
-                    className="font-display font-semibold text-[13px] text-brand-blue hover:text-blue-600 transition-colors flex items-center gap-1"
+                    className="font-display font-semibold text-body-sm text-brand-blue hover:text-blue-600 transition-colors flex items-center gap-1"
                     onClick={() => setActiveMenu(null)}
                   >
                     View all services <ArrowRight className="w-3.5 h-3.5" />
@@ -183,11 +183,11 @@ const Navbar = () => {
                     <li key={loc.slug}>
                       <Link
                         to={`/locations/${loc.slug}`}
-                        className="flex items-center justify-between font-body text-[14px] text-brand-slate hover:text-brand-blue transition-colors rounded-lg hover:bg-blue-50 px-3 py-2.5"
+                        className="flex items-center justify-between font-body text-body-sm text-brand-slate hover:text-brand-blue transition-colors rounded-lg hover:bg-blue-50 px-3 py-2.5"
                         onClick={() => setActiveMenu(null)}
                       >
                         <span className="font-medium">{loc.city}</span>
-                        <span className="font-display font-bold text-[11px] text-brand-blue bg-blue-50 px-2 py-0.5 rounded-btn">{loc.count}</span>
+                        <span className="font-display font-bold text-caption text-brand-blue bg-blue-50 px-2 py-0.5 rounded-btn">{loc.count}</span>
                       </Link>
                     </li>
                   ))}
@@ -195,7 +195,7 @@ const Navbar = () => {
                 <div className="border-t border-blue-50 mt-3 pt-3">
                   <Link
                     to="/locations"
-                    className="flex items-center gap-2 font-display font-bold text-[13px] text-brand-blue hover:text-blue-600 transition-colors px-3"
+                    className="flex items-center gap-2 font-display font-bold text-body-sm text-brand-blue hover:text-blue-600 transition-colors px-3"
                     onClick={() => setActiveMenu(null)}
                   >
                     Find a location <ArrowRight className="w-3.5 h-3.5" />
@@ -233,11 +233,11 @@ const Navbar = () => {
             >
               {serviceCategories.map((cat) => (
                 <div key={cat.title} className="mb-4">
-                  <span className="font-display font-semibold text-[10px] uppercase text-brand-blue tracking-[0.12em]">{cat.title}</span>
+                  <span className="font-display font-semibold text-caption uppercase text-brand-blue tracking-[0.12em]">{cat.title}</span>
                   <ul className="mt-1.5 space-y-0.5">
                     {cat.items.map((item) => (
                       <li key={item.slug}>
-                        <Link to={`/services/${item.slug}`} className="font-body text-[14px] text-navy-200 hover:text-white transition-colors block py-1" onClick={() => setMobileOpen(false)}>{item.name}</Link>
+                        <Link to={`/services/${item.slug}`} className="font-body text-body-sm text-navy-200 hover:text-white transition-colors block py-1" onClick={() => setMobileOpen(false)}>{item.name}</Link>
                       </li>
                     ))}
                   </ul>
@@ -249,9 +249,9 @@ const Navbar = () => {
               onToggle={() => setMobileAccordion(mobileAccordion === "locations" ? null : "locations")}
             >
               {locationGroups.map((loc) => (
-                <Link key={loc.slug} to={`/locations/${loc.slug}`} className="flex items-center justify-between font-body text-[14px] text-navy-200 hover:text-white transition-colors py-2" onClick={() => setMobileOpen(false)}>
+                <Link key={loc.slug} to={`/locations/${loc.slug}`} className="flex items-center justify-between font-body text-body-sm text-navy-200 hover:text-white transition-colors py-2" onClick={() => setMobileOpen(false)}>
                   <span>{loc.city}</span>
-                  <span className="text-brand-blue font-display font-bold text-[11px]">{loc.count} offices</span>
+                  <span className="text-brand-blue font-display font-bold text-caption">{loc.count} offices</span>
                 </Link>
               ))}
             </MobileAccordion>
@@ -278,7 +278,7 @@ const MenuTrigger = ({ label, isOpen, onEnter, onLeave, children }: {
   label: string; isOpen: boolean; onEnter: () => void; onLeave: () => void; children: React.ReactNode;
 }) => (
   <div className="relative" onMouseEnter={onEnter} onMouseLeave={onLeave}>
-    <button className={`flex items-center gap-1 font-display font-medium text-[13px] px-4 py-2 rounded-lg transition-all ${
+    <button className={`flex items-center gap-1 font-display font-medium text-body-sm px-4 py-2 rounded-lg transition-all ${
       isOpen ? "text-white bg-white/10" : "text-navy-100 hover:text-white"
     }`}>
       {label}
@@ -289,13 +289,13 @@ const MenuTrigger = ({ label, isOpen, onEnter, onLeave, children }: {
 );
 
 const NavLink = ({ label, href }: { label: string; href: string }) => (
-  <Link to={href} className="font-display font-medium text-[13px] text-navy-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-white/5">
+  <Link to={href} className="font-display font-medium text-body-sm text-navy-100 hover:text-white transition-colors px-4 py-2 rounded-lg hover:bg-white/5">
     {label}
   </Link>
 );
 
 const MobileNavLink = ({ label, href, onClick }: { label: string; href: string; onClick: () => void }) => (
-  <Link to={href} onClick={onClick} className="font-display font-bold text-[17px] text-white py-3.5 border-b border-white/5 block">
+  <Link to={href} onClick={onClick} className="font-display font-bold text-body-lg text-white py-3.5 border-b border-white/5 block">
     {label}
   </Link>
 );
@@ -304,7 +304,7 @@ const MobileAccordion = ({ label, isOpen, onToggle, children }: {
   label: string; isOpen: boolean; onToggle: () => void; children: React.ReactNode;
 }) => (
   <div className="border-b border-white/5">
-    <button onClick={onToggle} className="flex items-center justify-between w-full font-display font-bold text-[17px] text-white py-3.5">
+    <button onClick={onToggle} className="flex items-center justify-between w-full font-display font-bold text-body-lg text-white py-3.5">
       {label}
       <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
     </button>

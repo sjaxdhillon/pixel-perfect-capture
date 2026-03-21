@@ -49,10 +49,10 @@ const Footer = () => (
             </div>
             <div>
               <span className="font-display font-bold text-xl">Good Doc Dental</span>
-              <span className="block font-body text-[11px] text-navy-200 tracking-wider uppercase">of Nevada</span>
+              <span className="block font-body text-caption text-navy-200 tracking-wider uppercase">of Nevada</span>
             </div>
           </div>
-          <p className="font-accent italic text-[18px] text-blue-200 leading-relaxed">
+          <p className="font-accent italic text-body-lg text-blue-200 leading-relaxed">
             "Great dental care shouldn't feel like a chore — it should feel like coming home."
           </p>
         </div>
@@ -60,15 +60,15 @@ const Footer = () => (
           <a href="mailto:smile@gooddocdental.com" className="group flex items-center gap-3 bg-white/5 hover:bg-white/10 rounded-2xl px-6 py-4 transition-colors">
             <Mail className="w-5 h-5 text-brand-gold" />
             <div>
-              <span className="block font-body text-[11px] text-navy-200 uppercase tracking-wider">Email Us</span>
-              <span className="font-display font-bold text-[14px] text-brand-gold group-hover:text-gold-200 transition-colors">smile@gooddocdental.com</span>
+              <span className="block font-body text-caption text-navy-200 uppercase tracking-wider">Email Us</span>
+              <span className="font-display font-bold text-body-sm text-brand-gold group-hover:text-gold-200 transition-colors">smile@gooddocdental.com</span>
             </div>
           </a>
           <a href="tel:+17028522829" className="group flex items-center gap-3 bg-brand-blue/15 hover:bg-brand-blue/25 rounded-2xl px-6 py-4 transition-colors">
             <Phone className="w-5 h-5 text-brand-blue" />
             <div>
-              <span className="block font-body text-[11px] text-navy-200 uppercase tracking-wider">Call Us</span>
-              <span className="font-display font-bold text-[14px] text-white">702-852-2829</span>
+              <span className="block font-body text-caption text-navy-200 uppercase tracking-wider">Call Us</span>
+              <span className="font-display font-bold text-body-sm text-white">702-852-2829</span>
             </div>
           </a>
         </div>
@@ -77,48 +77,48 @@ const Footer = () => (
       {/* Links grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
         <div>
-          <h4 className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-blue mb-5">Services</h4>
+          <h4 className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-blue mb-5">Services</h4>
           <ul className="space-y-2.5">
             {serviceLinks.map((s) => (
               <li key={s.label}>
-                <Link to={s.href} className="font-body text-[13px] text-navy-200 hover:text-white transition-colors">{s.label}</Link>
+                <Link to={s.href} className="font-body text-body-sm text-navy-200 hover:text-white transition-colors">{s.label}</Link>
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <h4 className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-blue mb-5">Locations</h4>
+          <h4 className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-blue mb-5">Locations</h4>
           <ul className="space-y-2.5">
             {locationLinks.map((l) => (
               <li key={l.label}>
-                <Link to={l.href} className="font-body text-[13px] text-navy-200 hover:text-white transition-colors flex items-center gap-2">
-                  {l.label} <span className="text-[10px] text-brand-blue font-display font-bold">({l.count})</span>
+                <Link to={l.href} className="font-body text-body-sm text-navy-200 hover:text-white transition-colors flex items-center gap-2">
+                  {l.label} <span className="text-caption text-brand-blue font-display font-bold">({l.count})</span>
                 </Link>
               </li>
             ))}
           </ul>
           <div className="mt-4 pt-4 border-t border-white/5">
-            <Link to="/locations" className="font-display font-semibold text-[12px] text-brand-blue hover:text-blue-200 transition-colors flex items-center gap-1">
+            <Link to="/locations" className="font-display font-semibold text-caption text-brand-blue hover:text-blue-200 transition-colors flex items-center gap-1">
               Find a location <ArrowUpRight className="w-3 h-3" />
             </Link>
           </div>
         </div>
         <div>
-          <h4 className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-blue mb-5">Company</h4>
+          <h4 className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-blue mb-5">Company</h4>
           <ul className="space-y-2.5">
             {companyLinks.map((c) => (
               <li key={c.label}>
-                <Link to={c.href} className="font-body text-[13px] text-navy-200 hover:text-white transition-colors">{c.label}</Link>
+                <Link to={c.href} className="font-body text-body-sm text-navy-200 hover:text-white transition-colors">{c.label}</Link>
               </li>
             ))}
           </ul>
         </div>
         <div>
-          <h4 className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-blue mb-5">Patients</h4>
+          <h4 className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-blue mb-5">Patients</h4>
           <ul className="space-y-2.5">
             {patientLinks.map((p) => (
               <li key={p.label}>
-                <Link to={p.href} className="font-body text-[13px] text-navy-200 hover:text-white transition-colors">{p.label}</Link>
+                <Link to={p.href} className="font-body text-body-sm text-navy-200 hover:text-white transition-colors">{p.label}</Link>
               </li>
             ))}
           </ul>
@@ -129,13 +129,13 @@ const Footer = () => (
     {/* Bottom bar */}
     <div className="border-t border-white/5 bg-navy-900">
       <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2">
-        <p className="font-body text-[11px] text-navy-200">
+        <p className="font-body text-caption text-navy-200">
           © {new Date().getFullYear()} Good Doc Dental of Nevada. All rights reserved.
         </p>
         <div className="flex gap-6">
-          <Link to="/privacy-policy" className="font-body text-[11px] text-navy-200 hover:text-white transition-colors">Privacy</Link>
-          <Link to="/hipaa-notice" className="font-body text-[11px] text-navy-200 hover:text-white transition-colors">HIPAA</Link>
-          <Link to="/website-accessibility" className="font-body text-[11px] text-navy-200 hover:text-white transition-colors">Accessibility</Link>
+          <Link to="/privacy-policy" className="font-body text-caption text-navy-200 hover:text-white transition-colors">Privacy</Link>
+          <Link to="/hipaa-notice" className="font-body text-caption text-navy-200 hover:text-white transition-colors">HIPAA</Link>
+          <Link to="/website-accessibility" className="font-body text-caption text-navy-200 hover:text-white transition-colors">Accessibility</Link>
         </div>
       </div>
     </div>
