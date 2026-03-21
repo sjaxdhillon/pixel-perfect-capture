@@ -11,6 +11,7 @@ import KidsDentistry from "./pages/KidsDentistry.tsx";
 import LocationFinder from "./pages/LocationFinder.tsx";
 import NewPatients from "./pages/NewPatients.tsx";
 import WisdomTeeth from "./pages/WisdomTeeth.tsx";
+import ServicePage from "./pages/ServicePage.tsx";
 import PlaceholderPage from "./pages/PlaceholderPage.tsx";
 import CityHub from "./pages/CityHub.tsx";
 import LocationPage from "./pages/LocationPage.tsx";
@@ -26,37 +27,15 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/services/emergency-dental-care" element={<EmergencyDentalCare />} />
 
-          {/* Service pages */}
+          {/* Service pages — specific routes first */}
           <Route path="/services" element={<PlaceholderPage title="Our Services" />} />
-          <Route path="/services/dental-exams" element={<PlaceholderPage title="Dental Exams" />} />
-          <Route path="/services/dental-cleanings" element={<PlaceholderPage title="Dental Cleanings" />} />
-          <Route path="/services/dental-fillings" element={<PlaceholderPage title="Dental Fillings" />} />
-          <Route path="/services/dental-crowns" element={<PlaceholderPage title="Dental Crowns" />} />
-          <Route path="/services/root-canals" element={<PlaceholderPage title="Root Canals" />} />
-          <Route path="/services/tooth-extractions" element={<PlaceholderPage title="Tooth Extractions" />} />
-          <Route path="/services/dental-bridges" element={<PlaceholderPage title="Dental Bridges" />} />
-          <Route path="/services/same-day-crowns" element={<PlaceholderPage title="Same-Day Crowns" />} />
+          <Route path="/services/emergency-dental-care" element={<EmergencyDentalCare />} />
           <Route path="/services/dental-implants" element={<DentalImplants />} />
-          <Route path="/services/implant-supported-dentures" element={<PlaceholderPage title="Implant-Supported Dentures" />} />
-          <Route path="/services/dentures" element={<PlaceholderPage title="Dentures" />} />
-          <Route path="/services/porcelain-veneers" element={<PlaceholderPage title="Porcelain Veneers" />} />
-          <Route path="/services/teeth-whitening" element={<PlaceholderPage title="Teeth Whitening" />} />
-          <Route path="/services/smile-makeovers" element={<PlaceholderPage title="Smile Makeovers" />} />
           <Route path="/services/invisalign" element={<Invisalign />} />
-          <Route path="/services/traditional-braces" element={<PlaceholderPage title="Traditional Braces" />} />
-          <Route path="/services/teen-orthodontics" element={<PlaceholderPage title="Teen Orthodontics" />} />
-          <Route path="/services/adult-orthodontics" element={<PlaceholderPage title="Adult Orthodontics" />} />
           <Route path="/services/wisdom-tooth-extractions" element={<WisdomTeeth />} />
-          <Route path="/services/deep-cleanings" element={<PlaceholderPage title="Deep Cleanings" />} />
-          <Route path="/services/laser-dentistry" element={<PlaceholderPage title="Laser Dentistry" />} />
-          <Route path="/services/gum-surgery" element={<PlaceholderPage title="Gum Surgery" />} />
           <Route path="/services/kids-dentistry" element={<KidsDentistry />} />
-          <Route path="/services/baby-toddler-dentistry" element={<PlaceholderPage title="Baby & Toddler Dentistry" />} />
-          <Route path="/services/kids-orthodontics" element={<PlaceholderPage title="Kids Orthodontics" />} />
-          <Route path="/services/special-needs-dentistry" element={<PlaceholderPage title="Special Needs Dentistry" />} />
-          <Route path="/services/dental-sedation" element={<PlaceholderPage title="Dental Sedation" />} />
+          <Route path="/services/:slug" element={<ServicePage />} />
 
           {/* Location pages */}
           <Route path="/locations" element={<LocationFinder />} />
