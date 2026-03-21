@@ -8,6 +8,8 @@ import EmergencyDentalCare from "./pages/EmergencyDentalCare.tsx";
 import DentalImplants from "./pages/DentalImplants.tsx";
 import Invisalign from "./pages/Invisalign.tsx";
 import KidsDentistry from "./pages/KidsDentistry.tsx";
+import LocationFinder from "./pages/LocationFinder.tsx";
+import NewPatients from "./pages/NewPatients.tsx";
 import PlaceholderPage from "./pages/PlaceholderPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
