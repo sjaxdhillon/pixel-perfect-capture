@@ -63,7 +63,7 @@ const Footer = () => (
               <img src={logoIcon} alt="" className="h-9 w-9 brightness-0 invert" />
             </div>
             <div>
-              <img src={wordMark} alt="Good Doc Dental" className="h-9 brightness-0 invert opacity-95" />
+              <img src={wordMark} alt="Good Doc Dental" className="h-6 brightness-0 invert opacity-95" />
             </div>
           </div>
           <p className="font-accent italic text-body-lg text-blue-200/80 leading-relaxed">
