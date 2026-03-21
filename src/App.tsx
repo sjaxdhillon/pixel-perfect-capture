@@ -12,6 +12,8 @@ import LocationFinder from "./pages/LocationFinder.tsx";
 import NewPatients from "./pages/NewPatients.tsx";
 import WisdomTeeth from "./pages/WisdomTeeth.tsx";
 import PlaceholderPage from "./pages/PlaceholderPage.tsx";
+import CityHub from "./pages/CityHub.tsx";
+import LocationPage from "./pages/LocationPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -58,9 +60,10 @@ const App = () => (
 
           {/* Location pages */}
           <Route path="/locations" element={<LocationFinder />} />
-          <Route path="/locations/las-vegas" element={<PlaceholderPage title="Las Vegas Locations" />} />
-          <Route path="/locations/henderson" element={<PlaceholderPage title="Henderson Locations" />} />
-          <Route path="/locations/north-las-vegas" element={<PlaceholderPage title="North Las Vegas Locations" />} />
+          <Route path="/locations/las-vegas" element={<CityHub city="Las Vegas" slug="las-vegas" />} />
+          <Route path="/locations/henderson" element={<CityHub city="Henderson" slug="henderson" />} />
+          <Route path="/locations/north-las-vegas" element={<CityHub city="North Las Vegas" slug="north-las-vegas" />} />
+          <Route path="/locations/:slug" element={<LocationPage />} />
 
           {/* New Patients */}
           <Route path="/new-patients" element={<NewPatients />} />
