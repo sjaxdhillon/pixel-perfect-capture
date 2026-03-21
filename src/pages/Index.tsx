@@ -667,28 +667,35 @@ const Index = () => {
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.1 }}>
-            {/* Featured testimonial */}
+            {/* Featured testimonial with image */}
             <motion.div
               variants={reveal} custom={0}
               whileHover={{ y: -3 }}
-              className="bg-brand-navy rounded-[28px] p-12 md:p-16 mb-6 relative overflow-hidden"
+              className="bg-brand-navy rounded-[28px] overflow-hidden mb-6 relative"
             >
-              <motion.div
-                variants={floatSlow} initial="initial" animate="animate"
-                className="absolute -right-10 -top-10 w-[200px] h-[200px] rounded-full bg-brand-blue/5 blur-[50px]"
-              />
-              <div className="absolute right-10 top-10 font-display text-[140px] text-white/[0.02] leading-none select-none">"</div>
-              <div className="flex gap-1 mb-7">
-                {[1,2,3,4,5].map((s) => <Star key={s} className="w-5 h-5 fill-brand-gold text-brand-gold" />)}
-              </div>
-              <p className="font-accent italic text-[clamp(18px,2.2vw,24px)] text-blue-100/90 leading-[1.6] mb-10 max-w-3xl">
-                "My kids used to dread the dentist. Now they actually ask when their next appointment is. The staff is so patient and kind — truly feels like family."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-2xl bg-brand-blue/15 flex items-center justify-center font-display font-bold text-white text-body-lg">PK</div>
-                <div>
-                  <span className="font-display font-bold text-body-lg text-white block">Patricia K.</span>
-                  <span className="font-body text-body-sm text-navy-200">Henderson, NV</span>
+              <div className="grid md:grid-cols-5">
+                <div className="md:col-span-2 relative min-h-[200px]">
+                  <img src={perfectSmile} alt="Beautiful smile result" className="absolute inset-0 w-full h-full object-cover" />
+                </div>
+                <div className="md:col-span-3 p-12 md:p-16 relative">
+                  <motion.div
+                    variants={floatSlow} initial="initial" animate="animate"
+                    className="absolute -right-10 -top-10 w-[200px] h-[200px] rounded-full bg-brand-blue/5 blur-[50px]"
+                  />
+                  <div className="absolute right-10 top-10 font-display text-[140px] text-white/[0.02] leading-none select-none">"</div>
+                  <div className="flex gap-1 mb-7">
+                    {[1,2,3,4,5].map((s) => <Star key={s} className="w-5 h-5 fill-brand-gold text-brand-gold" />)}
+                  </div>
+                  <p className="font-accent italic text-[clamp(18px,2.2vw,24px)] text-blue-100/90 leading-[1.6] mb-10 max-w-3xl">
+                    "My kids used to dread the dentist. Now they actually ask when their next appointment is. The staff is so patient and kind — truly feels like family."
+                  </p>
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 rounded-2xl bg-brand-blue/15 flex items-center justify-center font-display font-bold text-white text-body-lg">PK</div>
+                    <div>
+                      <span className="font-display font-bold text-body-lg text-white block">Patricia K.</span>
+                      <span className="font-body text-body-sm text-navy-200">Henderson, NV</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>
