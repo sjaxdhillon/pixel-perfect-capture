@@ -20,7 +20,7 @@ const PromoCard = ({ title, price, regularPrice, description, cta, ctaVariant, t
         : "bg-white border-gold-100"
     }`}>
       <div className="mb-2">
-        <span className={`font-display font-extrabold text-[32px] leading-tight ${isEmergency ? "text-white" : "text-brand-navy"}`}>
+        <span className={`font-display font-extrabold text-h2 leading-tight ${isEmergency ? "text-white" : "text-brand-navy"}`}>
           {price}
         </span>
         {regularPrice && (

@@ -383,7 +383,7 @@ const Index = () => {
                     </span>
                     <span className="font-display font-semibold text-caption uppercase tracking-wider text-white">Same-Day Available</span>
                   </span>
-                  <h3 className="font-display text-[28px] md:text-[36px] font-extrabold text-white leading-[1.05]">
+                  <h3 className="font-display text-[28px] md:text-h2 font-extrabold text-white leading-[1.05]">
                     Emergency Exam & X-Ray
                   </h3>
                   <p className="font-body text-body text-coral-50 mt-2 max-w-md">
@@ -596,7 +596,7 @@ const Index = () => {
                   <div className="flex items-center gap-3 mb-3">
                     <div className={`w-3 h-3 rounded-full ${loc.color}`} />
                     <h3 className="font-display text-h5 font-bold text-brand-navy">{loc.city}</h3>
-                    <span className="ml-auto font-display font-extrabold text-[24px] text-brand-blue">{loc.count}</span>
+                    <span className="ml-auto font-display font-extrabold text-h4 text-brand-blue">{loc.count}</span>
                   </div>
                   <p className="font-body text-body-sm text-brand-slate mb-4 leading-relaxed">{loc.areas}</p>
                   <span className="font-display font-semibold text-caption text-brand-blue group-hover:text-blue-600 flex items-center gap-1 transition-colors">
