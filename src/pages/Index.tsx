@@ -45,7 +45,20 @@ import svcAdultOrtho from "@/assets/svc-adult-orthodontics.jpg";
 import svcEmergency from "@/assets/service-emergency.jpg";
 import svcWisdomTeeth from "@/assets/svc-wisdom-teeth.jpg";
 import svcToothExtractions from "@/assets/svc-tooth-extractions.jpg";
+import promoEmergency from "@/assets/promo-emergency.jpg";
+import promoKids from "@/assets/promo-kids.jpg";
+import promoInvisalign from "@/assets/promo-invisalign.jpg";
+import promoWisdom from "@/assets/promo-wisdom.jpg";
+import promoImplants from "@/assets/promo-implants.jpg";
 import promotions from "@/data/promotions.json";
+
+const promoImageMap: Record<string, string> = {
+  "emergency-exam": promoEmergency,
+  "kids-new-patient": promoKids,
+  "invisalign-discount": promoInvisalign,
+  "wisdom-teeth": promoWisdom,
+  "implant-package": promoImplants,
+};
 import services from "@/data/services.json";
 
 const serviceImageMap: Record<string, string> = {
