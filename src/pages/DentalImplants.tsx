@@ -75,12 +75,12 @@ const DentalImplants = () => (
         <motion.div initial="hidden" animate="visible" className="max-w-2xl">
           <motion.div variants={reveal} custom={0} className="inline-flex items-center gap-2 bg-white/8 backdrop-blur-sm rounded-btn px-4 py-2 mb-6">
             <span className="w-2 h-2 rounded-full bg-brand-teal animate-pulse" />
-            <span className="font-display font-semibold text-[11px] uppercase tracking-[0.1em] text-blue-200">Permanent Tooth Replacement</span>
+            <span className="font-display font-semibold text-caption uppercase tracking-[0.1em] text-blue-200">Permanent Tooth Replacement</span>
           </motion.div>
 
           <motion.h1
             variants={reveal} custom={1}
-            className="font-display text-[clamp(36px,6vw,64px)] font-extrabold text-white leading-[0.95] tracking-[-2px] mb-6"
+            className="font-display text-[clamp(34px,5vw,56px)] font-extrabold text-white leading-[0.95] tracking-[-2px] mb-6"
           >
             Dental Implants
             <br />in Las Vegas
@@ -90,16 +90,16 @@ const DentalImplants = () => (
             The permanent solution for missing teeth — and the confidence that comes with them.
           </motion.p>
 
-          <motion.p variants={reveal} custom={3} className="font-body text-[16px] text-navy-100 mb-8 max-w-xl leading-relaxed">
+          <motion.p variants={reveal} custom={3} className="font-body text-body text-navy-100 mb-8 max-w-xl leading-relaxed">
             Unlike dentures or bridges, dental implants replace the root of your tooth. They look, feel, and function like your natural teeth — and with proper care, they can last a lifetime. Our in-house oral surgeons and prosthodontists handle every step, from consultation to final crown, right here.
           </motion.p>
 
           {/* Price callout */}
           <motion.div variants={reveal} custom={4} className="inline-flex items-baseline gap-3 bg-white/12 backdrop-blur-sm rounded-2xl px-6 py-4 mb-10">
-            <span className="font-display font-extrabold text-[48px] text-white leading-none">$1,200</span>
+            <span className="font-display font-extrabold text-display text-white leading-none">$1,200</span>
             <div>
-              <span className="font-display font-bold text-[15px] text-white block">OFF Complete Implant Package</span>
-              <span className="font-body text-[13px] text-blue-200">Includes consultation, implant, abutment & crown</span>
+              <span className="font-display font-bold text-body text-white block">OFF Complete Implant Package</span>
+              <span className="font-body text-body-sm text-blue-200">Includes consultation, implant, abutment & crown</span>
             </div>
           </motion.div>
 
@@ -138,7 +138,7 @@ const DentalImplants = () => (
           ].map((item, i) => (
             <motion.div key={item.text} variants={reveal} custom={i} className="flex items-center gap-2">
               <item.icon className="w-4 h-4 text-brand-blue" />
-              <span className="font-display font-semibold text-[13px] text-brand-navy">{item.text}</span>
+              <span className="font-display font-semibold text-body-sm text-brand-navy">{item.text}</span>
             </motion.div>
           ))}
         </motion.div>
@@ -151,11 +151,11 @@ const DentalImplants = () => (
     <section className="py-24 md:py-32">
       <div className="container mx-auto px-4">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-          <motion.span variants={reveal} custom={0} className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-teal">Understanding Implants</motion.span>
-          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,4vw,44px)] font-extrabold text-brand-navy mt-3 mb-4 leading-[1.1] tracking-tight">
+          <motion.span variants={reveal} custom={0} className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-teal">Understanding Implants</motion.span>
+          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,3.5vw,40px)] font-extrabold text-brand-navy mt-3 mb-4 leading-[1.1] tracking-tight">
             What Exactly Is a Dental Implant?
           </motion.h2>
-          <motion.p variants={reveal} custom={2} className="font-body text-[18px] text-brand-slate mb-14 max-w-3xl leading-relaxed">
+          <motion.p variants={reveal} custom={2} className="font-body text-body-lg text-brand-slate mb-14 max-w-3xl leading-relaxed">
             A dental implant is a small titanium post that's surgically placed into your jawbone, where it fuses with the bone over time. Once healed, a custom-made crown is attached to the post — giving you a replacement tooth that looks and feels completely natural. Unlike bridges, implants don't require grinding down healthy neighboring teeth. And unlike dentures, they don't slip, click, or require adhesive.
           </motion.p>
         </motion.div>
@@ -171,8 +171,8 @@ const DentalImplants = () => (
               <div className="w-10 h-10 rounded-2xl bg-brand-blue/10 flex items-center justify-center mb-5">
                 <card.icon className="w-5 h-5 text-brand-blue" />
               </div>
-              <h4 className="font-display text-[17px] font-bold text-brand-navy mb-2 leading-tight">{card.title}</h4>
-              <p className="font-body text-[14px] text-brand-slate leading-relaxed">{card.body}</p>
+              <h4 className="font-display text-body-lg font-bold text-brand-navy mb-2 leading-tight">{card.title}</h4>
+              <p className="font-body text-body-sm text-brand-slate leading-relaxed">{card.body}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -185,8 +185,8 @@ const DentalImplants = () => (
     <section className="bg-blue-50 py-24 md:py-32">
       <div className="container mx-auto px-4">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-          <motion.span variants={reveal} custom={0} className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-blue">Is This Right for You?</motion.span>
-          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,4vw,44px)] font-extrabold text-brand-navy mt-3 mb-14 leading-[1.1] tracking-tight">
+          <motion.span variants={reveal} custom={0} className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-blue">Is This Right for You?</motion.span>
+          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,3.5vw,40px)] font-extrabold text-brand-navy mt-3 mb-14 leading-[1.1] tracking-tight">
             You Might Be a Good Candidate If...
           </motion.h2>
         </motion.div>
@@ -202,13 +202,13 @@ const DentalImplants = () => (
               <div className="w-6 h-6 rounded-full bg-brand-blue/10 flex items-center justify-center flex-shrink-0 mt-0.5">
                 <Check className="w-3.5 h-3.5 text-brand-blue" />
               </div>
-              <span className="font-display font-semibold text-[15px] text-brand-navy leading-snug">{item}</span>
+              <span className="font-display font-semibold text-body text-brand-navy leading-snug">{item}</span>
             </motion.div>
           ))}
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
-          <motion.p variants={reveal} custom={0} className="font-body text-[16px] text-brand-slate max-w-2xl leading-relaxed mb-8">
+          <motion.p variants={reveal} custom={0} className="font-body text-body text-brand-slate max-w-2xl leading-relaxed mb-8">
             Not sure if implants are right for you? That's exactly what the free consultation is for. Our team will evaluate your jawbone, review your health history, and give you an honest recommendation — no pressure, no obligation.
           </motion.p>
           <motion.div variants={reveal} custom={1}>
@@ -229,11 +229,11 @@ const DentalImplants = () => (
     <section className="py-24 md:py-32">
       <div className="container mx-auto px-4">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-          <motion.span variants={reveal} custom={0} className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-teal">Our Process</motion.span>
-          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,4vw,44px)] font-extrabold text-brand-navy mt-3 mb-4 leading-[1.1] tracking-tight">
+          <motion.span variants={reveal} custom={0} className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-teal">Our Process</motion.span>
+          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,3.5vw,40px)] font-extrabold text-brand-navy mt-3 mb-4 leading-[1.1] tracking-tight">
             How Dental Implants Work
           </motion.h2>
-          <motion.p variants={reveal} custom={2} className="font-body text-[16px] text-brand-slate mb-14 max-w-lg">
+          <motion.p variants={reveal} custom={2} className="font-body text-body text-brand-slate mb-14 max-w-lg">
             From your first visit to your final smile — here's the complete implant journey, step by step.
           </motion.p>
         </motion.div>
@@ -242,14 +242,14 @@ const DentalImplants = () => (
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {processSteps.map((step, i) => (
               <motion.div key={i} variants={reveal} custom={i} className="bg-brand-sky rounded-3xl p-7 border border-blue-100 relative group hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <span className="font-display font-extrabold text-[52px] text-blue-100 leading-none select-none absolute top-4 right-5 group-hover:text-brand-blue/10 transition-colors">
+                <span className="font-display font-extrabold text-display text-blue-100 leading-none select-none absolute top-4 right-5 group-hover:text-brand-blue/10 transition-colors">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div className="w-10 h-10 rounded-2xl bg-brand-blue/10 flex items-center justify-center mb-5">
-                  <span className="font-display font-extrabold text-[16px] text-brand-blue">{i + 1}</span>
+                  <span className="font-display font-extrabold text-body text-brand-blue">{i + 1}</span>
                 </div>
-                <h4 className="font-display text-[17px] font-bold text-brand-navy mb-2 leading-tight">{step.title}</h4>
-                <p className="font-body text-[14px] text-brand-slate leading-relaxed">{step.body}</p>
+                <h4 className="font-display text-body-lg font-bold text-brand-navy mb-2 leading-tight">{step.title}</h4>
+                <p className="font-body text-body-sm text-brand-slate leading-relaxed">{step.body}</p>
               </motion.div>
             ))}
           </div>
@@ -264,11 +264,11 @@ const DentalImplants = () => (
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(4,116,193,0.08),transparent_50%)]" />
       <div className="container mx-auto px-4 relative z-10">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-          <motion.span variants={reveal} custom={0} className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-teal">Advanced Technology</motion.span>
-          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,4vw,44px)] font-extrabold text-white mt-3 mb-4 leading-[1.1] tracking-tight">
+          <motion.span variants={reveal} custom={0} className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-teal">Advanced Technology</motion.span>
+          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,3.5vw,40px)] font-extrabold text-white mt-3 mb-4 leading-[1.1] tracking-tight">
             Precision Implant Dentistry
           </motion.h2>
-          <motion.p variants={reveal} custom={2} className="font-body text-[16px] text-navy-100 mb-14 max-w-lg leading-relaxed">
+          <motion.p variants={reveal} custom={2} className="font-body text-body text-navy-100 mb-14 max-w-lg leading-relaxed">
             We use the latest technology to ensure your implant is placed perfectly and heals properly.
           </motion.p>
         </motion.div>
@@ -276,8 +276,8 @@ const DentalImplants = () => (
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }} className="grid md:grid-cols-3 gap-5">
           {techCards.map((card, i) => (
             <motion.div key={card.title} variants={reveal} custom={i} className="bg-white/6 backdrop-blur-sm border border-white/8 rounded-2xl p-7 hover:bg-white/10 hover:border-white/15 transition-all duration-300">
-              <h4 className="font-display text-[17px] font-bold text-white mb-3 leading-tight">{card.title}</h4>
-              <p className="font-body text-[14px] text-navy-200 leading-relaxed">{card.body}</p>
+              <h4 className="font-display text-body-lg font-bold text-white mb-3 leading-tight">{card.title}</h4>
+              <p className="font-body text-body-sm text-navy-200 leading-relaxed">{card.body}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -290,8 +290,8 @@ const DentalImplants = () => (
     <section id="pricing" className="py-24 md:py-32">
       <div className="container mx-auto px-4">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-          <motion.span variants={reveal} custom={0} className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-gold">Transparent Pricing</motion.span>
-          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,4vw,44px)] font-extrabold text-brand-navy mt-3 mb-14 leading-[1.1] tracking-tight">
+          <motion.span variants={reveal} custom={0} className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-gold">Transparent Pricing</motion.span>
+          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,3.5vw,40px)] font-extrabold text-brand-navy mt-3 mb-14 leading-[1.1] tracking-tight">
             Dental Implant Costs in Las Vegas
           </motion.h2>
         </motion.div>
@@ -301,20 +301,20 @@ const DentalImplants = () => (
           <motion.div variants={reveal} custom={0} className="lg:col-span-3 bg-gold-50 border-2 border-brand-gold rounded-3xl p-8 md:p-10 relative overflow-hidden">
             <div className="absolute -left-12 -bottom-12 w-[200px] h-[200px] rounded-full bg-brand-gold/10 blur-2xl" />
             <div className="relative z-10">
-              <span className="inline-block font-display font-bold text-[11px] uppercase tracking-wider text-gold-600 bg-brand-gold/15 px-3 py-1 rounded-btn mb-5">Limited Time Offer</span>
+              <span className="inline-block font-display font-bold text-caption uppercase tracking-wider text-gold-600 bg-brand-gold/15 px-3 py-1 rounded-btn mb-5">Limited Time Offer</span>
               <div className="flex items-baseline gap-3 mb-2">
                 <span className="font-display font-extrabold text-[56px] text-brand-navy leading-none">$1,200</span>
-                <span className="font-display font-bold text-[20px] text-brand-navy">OFF</span>
+                <span className="font-display font-bold text-h5 text-brand-navy">OFF</span>
               </div>
-              <h3 className="font-display font-bold text-[22px] text-brand-navy mb-3">Complete Implant Package</h3>
-              <p className="font-body text-[15px] text-brand-slate leading-relaxed mb-6">
+              <h3 className="font-display font-bold text-h4 text-brand-navy mb-3">Complete Implant Package</h3>
+              <p className="font-body text-body text-brand-slate leading-relaxed mb-6">
                 Includes consultation, implant, abutment & custom crown. Individual implant range: $1,800–$2,200.
               </p>
               <div className="space-y-3 mb-8">
                 {["Free consultation & 3D scan", "Titanium implant placement", "Custom abutment", "Porcelain crown — color-matched to your teeth", "All follow-up visits included"].map((item) => (
                   <div key={item} className="flex items-start gap-2.5">
                     <Check className="w-4 h-4 text-gold-600 mt-0.5 flex-shrink-0" />
-                    <span className="font-body text-[14px] text-brand-navy">{item}</span>
+                    <span className="font-body text-body-sm text-brand-navy">{item}</span>
                   </div>
                 ))}
               </div>
@@ -332,9 +332,9 @@ const DentalImplants = () => (
                 <div className="w-10 h-10 rounded-2xl bg-brand-blue/10 flex items-center justify-center">
                   <Shield className="w-5 h-5 text-brand-blue" />
                 </div>
-                <h4 className="font-display font-bold text-[17px] text-brand-navy">Insurance Friendly</h4>
+                <h4 className="font-display font-bold text-body-lg text-brand-navy">Insurance Friendly</h4>
               </div>
-              <p className="font-body text-[14px] text-brand-slate leading-relaxed mb-5">
+              <p className="font-body text-body-sm text-brand-slate leading-relaxed mb-5">
                 Most insurance plans cover a portion of implant costs. We'll verify your benefits and give you an exact out-of-pocket estimate before any work begins.
               </p>
               <Button variant="default" size="sm">
@@ -347,14 +347,14 @@ const DentalImplants = () => (
                 <div className="w-10 h-10 rounded-2xl bg-brand-gold/15 flex items-center justify-center">
                   <CreditCard className="w-5 h-5 text-gold-600" />
                 </div>
-                <h4 className="font-display font-bold text-[17px] text-brand-navy">Financing Available</h4>
+                <h4 className="font-display font-bold text-body-lg text-brand-navy">Financing Available</h4>
               </div>
-              <p className="font-body text-[14px] text-brand-slate leading-relaxed mb-4">
+              <p className="font-body text-body-sm text-brand-slate leading-relaxed mb-4">
                 Sunbit and CareCredit accepted. Split your implant cost into easy monthly payments — 3, 6, or 12-month plans available.
               </p>
               <div className="flex gap-2">
                 {["3 mo", "6 mo", "12 mo"].map((plan) => (
-                  <span key={plan} className="font-display font-semibold text-[10px] bg-white text-gold-600 px-3 py-1.5 rounded-lg border border-gold-100 uppercase tracking-wider">{plan}</span>
+                  <span key={plan} className="font-display font-semibold text-caption bg-white text-gold-600 px-3 py-1.5 rounded-lg border border-gold-100 uppercase tracking-wider">{plan}</span>
                 ))}
               </div>
             </motion.div>
@@ -362,7 +362,7 @@ const DentalImplants = () => (
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }}>
-          <motion.p variants={reveal} custom={0} className="font-body text-[13px] text-brand-slate italic mt-6">
+          <motion.p variants={reveal} custom={0} className="font-body text-body-sm text-brand-slate italic mt-6">
             Prices may vary based on individual treatment needs. A personalized quote is provided during your free consultation.
           </motion.p>
         </motion.div>
@@ -375,11 +375,11 @@ const DentalImplants = () => (
     <section className="bg-brand-sky py-24 md:py-32">
       <div className="container mx-auto px-4">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-          <motion.span variants={reveal} custom={0} className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-teal">Near You</motion.span>
-          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,4vw,44px)] font-extrabold text-brand-navy mt-3 mb-4 leading-[1.1] tracking-tight">
+          <motion.span variants={reveal} custom={0} className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-teal">Near You</motion.span>
+          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,3.5vw,40px)] font-extrabold text-brand-navy mt-3 mb-4 leading-[1.1] tracking-tight">
             Dental Implant Locations
           </motion.h2>
-          <motion.p variants={reveal} custom={2} className="font-body text-[16px] text-brand-slate mb-14 max-w-lg">
+          <motion.p variants={reveal} custom={2} className="font-body text-body text-brand-slate mb-14 max-w-lg">
             Our in-house oral surgeons perform implant procedures at these convenient Las Vegas Valley locations.
           </motion.p>
         </motion.div>
@@ -416,8 +416,8 @@ const DentalImplants = () => (
     <section className="py-24 md:py-32">
       <div className="container mx-auto px-4 max-w-3xl">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-          <motion.span variants={reveal} custom={0} className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-blue">FAQ</motion.span>
-          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,4vw,44px)] font-extrabold text-brand-navy mt-3 mb-12 leading-[1.1] tracking-tight">
+          <motion.span variants={reveal} custom={0} className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-blue">FAQ</motion.span>
+          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,3.5vw,40px)] font-extrabold text-brand-navy mt-3 mb-12 leading-[1.1] tracking-tight">
             Common Questions About Implants
           </motion.h2>
         </motion.div>
@@ -427,10 +427,10 @@ const DentalImplants = () => (
             {faqs.map((faq, i) => (
               <motion.div key={i} variants={reveal} custom={i}>
                 <AccordionItem value={`faq-${i}`} className="bg-white border border-blue-50 rounded-2xl px-6 overflow-hidden data-[state=open]:shadow-md transition-shadow">
-                  <AccordionTrigger className="font-display font-bold text-[16px] text-brand-navy hover:no-underline py-5">
+                  <AccordionTrigger className="font-display font-bold text-body text-brand-navy hover:no-underline py-5">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="font-body text-[15px] text-brand-slate leading-relaxed pb-5">
+                  <AccordionContent className="font-body text-body text-brand-slate leading-relaxed pb-5">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -447,8 +447,8 @@ const DentalImplants = () => (
     <section className="bg-blue-50 py-24 md:py-32">
       <div className="container mx-auto px-4">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-          <motion.span variants={reveal} custom={0} className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-blue">Patient Stories</motion.span>
-          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,4vw,44px)] font-extrabold text-brand-navy mt-3 mb-14 leading-[1.1] tracking-tight">
+          <motion.span variants={reveal} custom={0} className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-blue">Patient Stories</motion.span>
+          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,3.5vw,40px)] font-extrabold text-brand-navy mt-3 mb-14 leading-[1.1] tracking-tight">
             Real Implant Patients, Real Results
           </motion.h2>
         </motion.div>
@@ -480,8 +480,8 @@ const DentalImplants = () => (
     <section className="py-24 md:py-32">
       <div className="container mx-auto px-4">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-          <motion.span variants={reveal} custom={0} className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-teal">Related Services</motion.span>
-          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,4vw,44px)] font-extrabold text-brand-navy mt-3 mb-14 leading-[1.1] tracking-tight">
+          <motion.span variants={reveal} custom={0} className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-teal">Related Services</motion.span>
+          <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,3.5vw,40px)] font-extrabold text-brand-navy mt-3 mb-14 leading-[1.1] tracking-tight">
             You May Also Be Interested In
           </motion.h2>
         </motion.div>
@@ -511,11 +511,11 @@ const DentalImplants = () => (
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_40%,rgba(255,196,61,0.08),transparent_60%)]" />
       <div className="container mx-auto px-4 py-20 md:py-28 relative z-10">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className="text-center max-w-2xl mx-auto">
-          <motion.h2 variants={reveal} custom={0} className="font-display text-[clamp(28px,4.5vw,48px)] font-extrabold text-white leading-[1.05] tracking-tight mb-4">
+          <motion.h2 variants={reveal} custom={0} className="font-display text-[clamp(28px,4vw,48px)] font-extrabold text-white leading-[1.05] tracking-tight mb-4">
             Ready to Replace Your
             <br />Missing Teeth?
           </motion.h2>
-          <motion.p variants={reveal} custom={1} className="font-body text-[17px] text-navy-100 mb-10 leading-relaxed">
+          <motion.p variants={reveal} custom={1} className="font-body text-body-lg text-navy-100 mb-10 leading-relaxed">
             Schedule your free implant consultation at any of our 23 Las Vegas Valley offices. We'll evaluate your situation, explain your options, and give you a personalized treatment plan — with no obligation.
           </motion.p>
           <motion.div variants={reveal} custom={2} className="flex flex-wrap justify-center gap-3">

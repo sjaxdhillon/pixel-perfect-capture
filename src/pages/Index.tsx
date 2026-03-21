@@ -69,12 +69,12 @@ const Index = () => {
             <motion.div initial="hidden" animate="visible" className="lg:col-span-6 relative z-10 lg:pr-12">
               <motion.div variants={reveal} custom={0} className="inline-flex items-center gap-2 bg-white/8 backdrop-blur-sm rounded-btn px-4 py-2 mb-6">
                 <span className="w-2 h-2 rounded-full bg-brand-teal animate-pulse" />
-                <span className="font-display font-semibold text-[11px] uppercase tracking-[0.1em] text-blue-200">23 offices · open 7 days</span>
+                <span className="font-display font-semibold text-caption uppercase tracking-[0.1em] text-blue-200">23 offices · open 7 days</span>
               </motion.div>
 
               <motion.h1
                 variants={reveal} custom={1}
-                className="font-display text-[clamp(36px,5.5vw,72px)] font-extrabold text-white leading-[0.95] mb-6 tracking-[-2px]"
+                className="font-display text-[clamp(34px,5vw,56px)] font-extrabold text-white leading-[0.95] mb-6 tracking-[-2px]"
               >
                 Your Neighborhood
                 <br />
@@ -83,11 +83,11 @@ const Index = () => {
                 <span className="text-brand-blue">23 Front Doors</span>
               </motion.h1>
 
-              <motion.p variants={reveal} custom={2} className="font-accent italic text-[clamp(16px,2vw,22px)] text-blue-200/80 mb-4 max-w-md leading-relaxed">
+              <motion.p variants={reveal} custom={2} className="font-accent italic text-[clamp(15px,1.8vw,20px)] text-blue-200/80 mb-4 max-w-md leading-relaxed">
                 Great dental care shouldn't feel like a chore — it should feel like coming home.
               </motion.p>
 
-              <motion.p variants={reveal} custom={3} className="font-body text-[16px] text-navy-100 mb-10 max-w-md leading-relaxed">
+              <motion.p variants={reveal} custom={3} className="font-body text-body text-navy-100 mb-10 max-w-md leading-relaxed">
                 We're the anti-corporate dental group. No upselling, no surprise bills, no cold waiting rooms. Just honest care from real people — open evenings, Saturdays, and Sundays.
               </motion.p>
 
@@ -115,7 +115,7 @@ const Index = () => {
                 ].map((stat) => (
                   <div key={stat.label}>
                     <span className="font-display font-extrabold text-[28px] text-white leading-none">{stat.num}</span>
-                    <span className="block font-body text-[11px] text-navy-200 mt-1 uppercase tracking-wider">{stat.label}</span>
+                    <span className="block font-body text-caption text-navy-200 mt-1 uppercase tracking-wider">{stat.label}</span>
                   </div>
                 ))}
               </motion.div>
@@ -148,10 +148,10 @@ const Index = () => {
                       <Star key={s} className="w-3.5 h-3.5 fill-brand-gold text-brand-gold" />
                     ))}
                   </div>
-                  <p className="font-accent italic text-[13px] text-brand-slate leading-snug">
+                  <p className="font-accent italic text-body-sm text-brand-slate leading-snug">
                     "They got me in same-day. Incredible team."
                   </p>
-                  <span className="font-display font-bold text-[11px] text-brand-navy mt-2 block">— Maria G.</span>
+                  <span className="font-display font-bold text-caption text-brand-navy mt-2 block">— Maria G.</span>
                 </motion.div>
 
                 <motion.div
@@ -162,8 +162,8 @@ const Index = () => {
                 >
                   <img src={kidsSmile} alt="Happy kid" className="w-full h-[90px] object-cover" />
                   <div className="p-3">
-                    <span className="font-display font-bold text-[11px] text-brand-navy block">Kids Welcome!</span>
-                    <span className="font-body text-[10px] text-brand-slate">7 dedicated offices</span>
+                    <span className="font-display font-bold text-caption text-brand-navy block">Kids Welcome!</span>
+                    <span className="font-body text-caption text-brand-slate">7 dedicated offices</span>
                   </div>
                 </motion.div>
               </div>
@@ -190,7 +190,7 @@ const Index = () => {
             ].map((item, i) => (
               <motion.div key={item.text} variants={reveal} custom={i} className="flex items-center gap-2 group">
                 <item.icon className="w-4 h-4 text-brand-teal" />
-                <span className="font-display font-semibold text-[13px] text-brand-navy">{item.text}</span>
+                <span className="font-display font-semibold text-body-sm text-brand-navy">{item.text}</span>
               </motion.div>
             ))}
           </motion.div>
@@ -203,12 +203,12 @@ const Index = () => {
       <section className="py-24 md:py-32">
         <div className="container mx-auto px-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className="max-w-xl mb-16">
-            <motion.span variants={reveal} custom={0} className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-teal">Why Us</motion.span>
-            <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,4vw,44px)] font-extrabold text-brand-navy mt-3 leading-[1.1] tracking-tight">
+            <motion.span variants={reveal} custom={0} className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-teal">Why Us</motion.span>
+            <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,3.5vw,40px)] font-extrabold text-brand-navy mt-3 leading-[1.1] tracking-tight">
               Why You'll Love
               <br />It Here
             </motion.h2>
-            <motion.p variants={reveal} custom={2} className="font-body text-[16px] text-brand-slate mt-4 leading-relaxed">
+            <motion.p variants={reveal} custom={2} className="font-body text-body text-brand-slate mt-4 leading-relaxed">
               We're not your typical dental chain. We're your neighbors — with better tools, transparent pricing, and a genuine love for what we do.
             </motion.p>
           </motion.div>
@@ -220,8 +220,8 @@ const Index = () => {
                 <div className="absolute -right-16 -bottom-16 w-[200px] h-[200px] rounded-full bg-brand-blue/10 blur-2xl" />
                 <div>
                   <MapPin className="w-8 h-8 text-brand-blue mb-4" />
-                  <h3 className="font-display text-[22px] font-bold text-white mb-3 leading-tight">23 Locations<br/>Valleywide</h3>
-                  <p className="font-body text-[14px] text-navy-200 leading-relaxed">Las Vegas, Henderson, North Las Vegas, Summerlin — there's always one near you.</p>
+                  <h3 className="font-display text-h4 font-bold text-white mb-3 leading-tight">23 Locations<br/>Valleywide</h3>
+                  <p className="font-body text-body-sm text-navy-200 leading-relaxed">Las Vegas, Henderson, North Las Vegas, Summerlin — there's always one near you.</p>
                 </div>
                 <Link to="/locations">
                   <Button variant="secondary" size="sm" className="self-start mt-6 border-white/20 text-white hover:bg-white/10 hover:border-white/30">
@@ -232,18 +232,18 @@ const Index = () => {
 
               <motion.div variants={reveal} custom={1} className="bg-blue-50 rounded-3xl p-8 group hover:shadow-lg transition-all duration-300">
                 <Clock className="w-7 h-7 text-brand-blue mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-display text-[18px] font-bold text-brand-navy mb-2">Open When You Need Us</h3>
-                <p className="font-body text-[14px] text-brand-slate">Evenings, Saturdays, and Sundays. Because toothaches don't wait for Monday.</p>
-                <Link to="/locations" className="font-display font-semibold text-[12px] text-brand-blue hover:text-blue-600 flex items-center gap-1 mt-4 transition-colors">
+                <h3 className="font-display text-body-lg font-bold text-brand-navy mb-2">Open When You Need Us</h3>
+                <p className="font-body text-body-sm text-brand-slate">Evenings, Saturdays, and Sundays. Because toothaches don't wait for Monday.</p>
+                <Link to="/locations" className="font-display font-semibold text-caption text-brand-blue hover:text-blue-600 flex items-center gap-1 mt-4 transition-colors">
                   See our hours <ArrowRight className="w-3 h-3" />
                 </Link>
               </motion.div>
 
               <motion.div variants={reveal} custom={2} className="bg-teal-50 rounded-3xl p-8 group hover:shadow-lg transition-all duration-300">
                 <Users className="w-7 h-7 text-brand-teal mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-display text-[18px] font-bold text-brand-navy mb-2">The Whole Family</h3>
-                <p className="font-body text-[14px] text-brand-slate">7 dedicated kids offices and 16 family locations. All ages, all under one roof.</p>
-                <Link to="/services/kids-dentistry" className="font-display font-semibold text-[12px] text-brand-blue hover:text-blue-600 flex items-center gap-1 mt-4 transition-colors">
+                <h3 className="font-display text-body-lg font-bold text-brand-navy mb-2">The Whole Family</h3>
+                <p className="font-body text-body-sm text-brand-slate">7 dedicated kids offices and 16 family locations. All ages, all under one roof.</p>
+                <Link to="/services/kids-dentistry" className="font-display font-semibold text-caption text-brand-blue hover:text-blue-600 flex items-center gap-1 mt-4 transition-colors">
                   Explore kids dentistry <ArrowRight className="w-3 h-3" />
                 </Link>
               </motion.div>
@@ -253,27 +253,27 @@ const Index = () => {
             <div className="grid md:grid-cols-3 gap-5">
               <motion.div variants={reveal} custom={3} className="bg-coral-50 rounded-3xl p-8 group hover:shadow-lg transition-all duration-300">
                 <Zap className="w-7 h-7 text-brand-coral mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-display text-[18px] font-bold text-brand-navy mb-2">Emergency Dental Care</h3>
-                <p className="font-body text-[14px] text-brand-slate">Same-day appointments, 7 days a week. Walk-ins welcome. $49 exam & X-ray.</p>
-                <Link to="/services/emergency-dental-care" className="font-display font-semibold text-[12px] text-brand-blue hover:text-blue-600 flex items-center gap-1 mt-4 transition-colors">
+                <h3 className="font-display text-body-lg font-bold text-brand-navy mb-2">Emergency Dental Care</h3>
+                <p className="font-body text-body-sm text-brand-slate">Same-day appointments, 7 days a week. Walk-ins welcome. $49 exam & X-ray.</p>
+                <Link to="/services/emergency-dental-care" className="font-display font-semibold text-caption text-brand-blue hover:text-blue-600 flex items-center gap-1 mt-4 transition-colors">
                   Learn about emergency care <ArrowRight className="w-3 h-3" />
                 </Link>
               </motion.div>
 
               <motion.div variants={reveal} custom={4} className="bg-gold-50 rounded-3xl p-8 group hover:shadow-lg transition-all duration-300">
                 <CalendarCheck className="w-7 h-7 text-gold-600 mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-display text-[18px] font-bold text-brand-navy mb-2">Convenient Booking</h3>
-                <p className="font-body text-[14px] text-brand-slate">Call, text, or book online 24/7. Free benefits check before any treatment.</p>
-                <a href="#" className="font-display font-semibold text-[12px] text-brand-blue hover:text-blue-600 flex items-center gap-1 mt-4 transition-colors">
+                <h3 className="font-display text-body-lg font-bold text-brand-navy mb-2">Convenient Booking</h3>
+                <p className="font-body text-body-sm text-brand-slate">Call, text, or book online 24/7. Free benefits check before any treatment.</p>
+                <a href="#" className="font-display font-semibold text-caption text-brand-blue hover:text-blue-600 flex items-center gap-1 mt-4 transition-colors">
                   Book online now <ArrowRight className="w-3 h-3" />
                 </a>
               </motion.div>
 
               <motion.div variants={reveal} custom={5} className="bg-white border border-blue-50 rounded-3xl p-8 group hover:shadow-lg transition-all duration-300">
                 <Building2 className="w-7 h-7 text-brand-blue mb-4 group-hover:scale-110 transition-transform" />
-                <h3 className="font-display text-[18px] font-bold text-brand-navy mb-2">All Specialties In-House</h3>
-                <p className="font-body text-[14px] text-brand-slate">General, cosmetic, restorative, implants, ortho, oral surgery, pediatric — all here.</p>
-                <Link to="/services" className="font-display font-semibold text-[12px] text-brand-blue hover:text-blue-600 flex items-center gap-1 mt-4 transition-colors">
+                <h3 className="font-display text-body-lg font-bold text-brand-navy mb-2">All Specialties In-House</h3>
+                <p className="font-body text-body-sm text-brand-slate">General, cosmetic, restorative, implants, ortho, oral surgery, pediatric — all here.</p>
+                <Link to="/services" className="font-display font-semibold text-caption text-brand-blue hover:text-blue-600 flex items-center gap-1 mt-4 transition-colors">
                   View all services <ArrowRight className="w-3 h-3" />
                 </Link>
               </motion.div>
@@ -289,13 +289,13 @@ const Index = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(4,116,193,0.08),transparent_50%)]" />
         <div className="container mx-auto px-4 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
-            <motion.span variants={reveal} custom={0} className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-teal">Our Services</motion.span>
+            <motion.span variants={reveal} custom={0} className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-teal">Our Services</motion.span>
             <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mt-3 mb-4">
               <div>
-                <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,4vw,44px)] font-extrabold text-white leading-[1.1] tracking-tight">
+                <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,3.5vw,40px)] font-extrabold text-white leading-[1.1] tracking-tight">
                   Every Service You Need — Under One Roof
                 </motion.h2>
-                <motion.p variants={reveal} custom={2} className="font-body text-[16px] text-navy-100 mt-3 max-w-lg leading-relaxed">
+                <motion.p variants={reveal} custom={2} className="font-body text-body text-navy-100 mt-3 max-w-lg leading-relaxed">
                   From routine cleanings to dental implants, orthodontics, and same-day emergency care — our in-house specialists handle it all. No referrals, no runaround.
                 </motion.p>
               </div>
@@ -304,7 +304,7 @@ const Index = () => {
                   <button
                     key={tab.label}
                     onClick={() => setActiveTab(i)}
-                    className={`font-display font-semibold text-[12px] px-4 py-2 rounded-btn transition-all duration-200 active:scale-[0.96] ${
+                    className={`font-display font-semibold text-caption px-4 py-2 rounded-btn transition-all duration-200 active:scale-[0.96] ${
                       activeTab === i
                         ? "bg-brand-blue text-white shadow-md shadow-brand-blue/30"
                         : "bg-white/8 text-navy-100 hover:bg-white/12 hover:text-white"
@@ -328,14 +328,14 @@ const Index = () => {
               <Link key={s.id} to={`/services/${s.slug}`} className="block">
                 <div className="bg-white/6 backdrop-blur-sm border border-white/8 rounded-2xl p-6 hover:bg-white/10 hover:border-white/15 transition-all duration-300 group cursor-pointer h-full">
                   <div className="flex items-start justify-between mb-4">
-                    <h3 className="font-display text-[17px] font-bold text-white group-hover:text-brand-blue transition-colors">{s.name}</h3>
+                    <h3 className="font-display text-body-lg font-bold text-white group-hover:text-brand-blue transition-colors">{s.name}</h3>
                     <ChevronRight className="w-4 h-4 text-navy-200 group-hover:text-brand-blue group-hover:translate-x-0.5 transition-all" />
                   </div>
-                  <p className="font-body text-[13px] text-navy-200 mb-5 leading-relaxed">{s.tagline}</p>
+                  <p className="font-body text-body-sm text-navy-200 mb-5 leading-relaxed">{s.tagline}</p>
                   <div className="flex items-center justify-between pt-4 border-t border-white/8">
-                    <span className="font-display font-extrabold text-[18px] text-white">{s.priceDisplay}</span>
+                    <span className="font-display font-extrabold text-body-lg text-white">{s.priceDisplay}</span>
                     {s.promoText && (
-                      <span className="font-display font-bold text-[10px] bg-brand-gold/20 text-brand-gold px-2.5 py-1 rounded-btn uppercase tracking-wider">
+                      <span className="font-display font-bold text-caption bg-brand-gold/20 text-brand-gold px-2.5 py-1 rounded-btn uppercase tracking-wider">
                         {s.promoText}
                       </span>
                     )}
@@ -361,11 +361,11 @@ const Index = () => {
       <section className="py-24 md:py-32">
         <div className="container mx-auto px-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-            <motion.span variants={reveal} custom={0} className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-gold">Current Specials</motion.span>
-            <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,4vw,44px)] font-extrabold text-brand-navy mt-3 mb-4 leading-[1.1] tracking-tight">
+            <motion.span variants={reveal} custom={0} className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-gold">Current Specials</motion.span>
+            <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,3.5vw,40px)] font-extrabold text-brand-navy mt-3 mb-4 leading-[1.1] tracking-tight">
               Specials That Actually Save You Money
             </motion.h2>
-            <motion.p variants={reveal} custom={2} className="font-body text-[16px] text-brand-slate mb-14 max-w-lg">
+            <motion.p variants={reveal} custom={2} className="font-body text-body text-brand-slate mb-14 max-w-lg">
               No gimmicks, no asterisks, no catch. These are real savings available at all 23 offices.
             </motion.p>
           </motion.div>
@@ -381,19 +381,19 @@ const Index = () => {
                       <span className="absolute inline-flex h-full w-full rounded-full bg-white opacity-75 animate-ping" />
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
                     </span>
-                    <span className="font-display font-semibold text-[11px] uppercase tracking-wider text-white">Same-Day Available</span>
+                    <span className="font-display font-semibold text-caption uppercase tracking-wider text-white">Same-Day Available</span>
                   </span>
-                  <h3 className="font-display text-[28px] md:text-[36px] font-extrabold text-white leading-[1.05]">
+                  <h3 className="font-display text-[28px] md:text-h2 font-extrabold text-white leading-[1.05]">
                     Emergency Exam & X-Ray
                   </h3>
-                  <p className="font-body text-[15px] text-coral-50 mt-2 max-w-md">
+                  <p className="font-body text-body text-coral-50 mt-2 max-w-md">
                     Plus FREE comprehensive exam within 30 days ($380 value). Walk-ins welcome, 7 days a week.
                   </p>
                 </div>
                 <div className="flex flex-col items-center md:items-end gap-3 flex-shrink-0">
                   <div className="text-center md:text-right">
                     <span className="font-display font-extrabold text-[56px] text-white leading-none">$49</span>
-                    <span className="block font-body text-[13px] text-coral-100 line-through">reg. $155</span>
+                    <span className="block font-body text-body-sm text-coral-100 line-through">reg. $155</span>
                   </div>
                   <a href="tel:7028522829">
                     <Button className="bg-white text-brand-coral hover:bg-coral-50 shadow-xl" size="lg">
@@ -415,8 +415,8 @@ const Index = () => {
                   className="bg-gold-50 border border-gold-100 rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
                 >
                   <span className="font-display font-extrabold text-[28px] text-brand-navy leading-none">{promo.price}</span>
-                  <h4 className="font-display font-bold text-[15px] text-brand-navy mt-2 mb-1">{promo.title}</h4>
-                  <p className="font-body text-[13px] text-brand-slate mb-5">{promo.description}</p>
+                  <h4 className="font-display font-bold text-body text-brand-navy mt-2 mb-1">{promo.title}</h4>
+                  <p className="font-body text-body-sm text-brand-slate mb-5">{promo.description}</p>
                   <Button variant={promo.ctaVariant === "promo" ? "promo" : "default"} size="sm" className="w-full">
                     {promo.cta}
                   </Button>
@@ -435,21 +435,21 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Insurance */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-              <motion.span variants={reveal} custom={0} className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-blue">Insurance</motion.span>
-              <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(24px,3vw,36px)] font-extrabold text-brand-navy mt-3 mb-3 leading-[1.15] tracking-tight">
+              <motion.span variants={reveal} custom={0} className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-blue">Insurance</motion.span>
+              <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(22px,3vw,34px)] font-extrabold text-brand-navy mt-3 mb-3 leading-[1.15] tracking-tight">
                 Yes, We Probably Take Your Insurance
               </motion.h2>
-              <motion.p variants={reveal} custom={2} className="font-body text-[15px] text-brand-slate mb-8 leading-relaxed">
+              <motion.p variants={reveal} custom={2} className="font-body text-body text-brand-slate mb-8 leading-relaxed">
                 We're in-network with 16 major carriers including Medicare. Not sure about yours? We'll check your benefits for free before any treatment — no surprises, no pressure.
               </motion.p>
               <motion.div variants={reveal} custom={3} className="flex flex-wrap gap-2 mb-4">
                 {insuranceCarriers.map((c) => (
-                  <span key={c} className="font-display font-medium text-[12px] bg-white text-brand-navy px-3.5 py-1.5 rounded-lg border border-blue-100 shadow-sm">
+                  <span key={c} className="font-display font-medium text-caption bg-white text-brand-navy px-3.5 py-1.5 rounded-lg border border-blue-100 shadow-sm">
                     {c}
                   </span>
                 ))}
               </motion.div>
-              <motion.p variants={reveal} custom={4} className="font-body text-[13px] text-brand-slate mb-8 italic">
+              <motion.p variants={reveal} custom={4} className="font-body text-body-sm text-brand-slate mb-8 italic">
                 Medicaid not accepted. Emergency out-of-pocket visits available starting at $49.
               </motion.p>
               <motion.div variants={reveal} custom={5}>
@@ -462,11 +462,11 @@ const Index = () => {
 
             {/* Financing */}
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-              <motion.span variants={reveal} custom={0} className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-teal">Financing</motion.span>
-              <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(24px,3vw,36px)] font-extrabold text-brand-navy mt-3 mb-3 leading-[1.15] tracking-tight">
+              <motion.span variants={reveal} custom={0} className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-teal">Financing</motion.span>
+              <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(22px,3vw,34px)] font-extrabold text-brand-navy mt-3 mb-3 leading-[1.15] tracking-tight">
                 Smile Now & Pay-Over-Time
               </motion.h2>
-              <motion.p variants={reveal} custom={2} className="font-body text-[15px] text-brand-slate mb-8 leading-relaxed">
+              <motion.p variants={reveal} custom={2} className="font-body text-body text-brand-slate mb-8 leading-relaxed">
                 Don't let cost stand between you and the care you need. Flexible payment plans through trusted partners.
               </motion.p>
               {[
@@ -478,11 +478,11 @@ const Index = () => {
                     <CreditCard className="w-5 h-5 text-brand-teal" />
                   </div>
                   <div>
-                    <h4 className="font-display font-bold text-[16px] text-brand-navy">{provider.name}</h4>
-                    <p className="font-body text-[13px] text-brand-slate mt-1">{provider.desc}</p>
+                    <h4 className="font-display font-bold text-body text-brand-navy">{provider.name}</h4>
+                    <p className="font-body text-body-sm text-brand-slate mt-1">{provider.desc}</p>
                     <div className="flex gap-2 mt-3">
                       {["3 mo", "6 mo", "12 mo"].map((plan) => (
-                        <span key={plan} className="font-display font-semibold text-[10px] bg-teal-50 text-brand-teal px-2 py-1 rounded-md uppercase">{plan}</span>
+                        <span key={plan} className="font-display font-semibold text-caption bg-teal-50 text-brand-teal px-2 py-1 rounded-md uppercase">{plan}</span>
                       ))}
                     </div>
                   </div>
@@ -499,8 +499,8 @@ const Index = () => {
       <section className="py-24 md:py-32">
         <div className="container mx-auto px-4">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-            <motion.span variants={reveal} custom={0} className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-blue">Patient Stories</motion.span>
-            <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,4vw,44px)] font-extrabold text-brand-navy mt-3 mb-14 leading-[1.1] tracking-tight">
+            <motion.span variants={reveal} custom={0} className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-blue">Patient Stories</motion.span>
+            <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,3.5vw,40px)] font-extrabold text-brand-navy mt-3 mb-14 leading-[1.1] tracking-tight">
               Don't Take Our Word for It
             </motion.h2>
           </motion.div>
@@ -512,14 +512,14 @@ const Index = () => {
               <div className="flex gap-1 mb-6">
                 {[1,2,3,4,5].map((s) => <Star key={s} className="w-5 h-5 fill-brand-gold text-brand-gold" />)}
               </div>
-              <p className="font-accent italic text-[clamp(18px,2.5vw,26px)] text-blue-100 leading-relaxed mb-8 max-w-3xl">
+              <p className="font-accent italic text-[clamp(17px,2vw,22px)] text-blue-100 leading-relaxed mb-8 max-w-3xl">
                 "My kids used to dread the dentist. Now they actually ask when their next appointment is. The staff is so patient and kind — truly feels like family."
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-brand-blue/20 flex items-center justify-center font-display font-bold text-white text-[16px]">PK</div>
+                <div className="w-12 h-12 rounded-full bg-brand-blue/20 flex items-center justify-center font-display font-bold text-white text-body">PK</div>
                 <div>
-                  <span className="font-display font-bold text-[15px] text-white block">Patricia K.</span>
-                  <span className="font-body text-[13px] text-navy-200">Henderson, NV</span>
+                  <span className="font-display font-bold text-body text-white block">Patricia K.</span>
+                  <span className="font-body text-body-sm text-navy-200">Henderson, NV</span>
                 </div>
               </div>
             </motion.div>
@@ -547,8 +547,8 @@ const Index = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
             <motion.div variants={reveal} custom={0} className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
               <div>
-                <span className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-teal">Find Us</span>
-                <h2 className="font-display text-[clamp(28px,4vw,44px)] font-extrabold text-brand-navy mt-3 leading-[1.1] tracking-tight">
+                <span className="font-display font-bold text-caption uppercase tracking-[0.12em] text-brand-teal">Find Us</span>
+                <h2 className="font-display text-[clamp(28px,3.5vw,40px)] font-extrabold text-brand-navy mt-3 leading-[1.1] tracking-tight">
                   Let's Find Your Dentist
                 </h2>
               </div>
@@ -557,9 +557,9 @@ const Index = () => {
                 <input
                   type="text"
                   placeholder="Search by city, zip, or office..."
-                  className="w-full pl-12 pr-4 py-3 rounded-2xl border border-blue-100 bg-white font-body text-[14px] text-brand-navy placeholder:text-navy-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent shadow-sm"
+                  className="w-full pl-12 pr-4 py-3 rounded-2xl border border-blue-100 bg-white font-body text-body-sm text-brand-navy placeholder:text-navy-200 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-transparent shadow-sm"
                 />
-                <p className="font-body text-[11px] text-brand-slate mt-2 italic">Full location finder coming soon</p>
+                <p className="font-body text-caption text-brand-slate mt-2 italic">Full location finder coming soon</p>
               </div>
             </motion.div>
           </motion.div>
@@ -595,11 +595,11 @@ const Index = () => {
                 <Link to={loc.href} className="block bg-white rounded-2xl p-6 border border-blue-50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
                   <div className="flex items-center gap-3 mb-3">
                     <div className={`w-3 h-3 rounded-full ${loc.color}`} />
-                    <h3 className="font-display text-[20px] font-bold text-brand-navy">{loc.city}</h3>
-                    <span className="ml-auto font-display font-extrabold text-[24px] text-brand-blue">{loc.count}</span>
+                    <h3 className="font-display text-h5 font-bold text-brand-navy">{loc.city}</h3>
+                    <span className="ml-auto font-display font-extrabold text-h4 text-brand-blue">{loc.count}</span>
                   </div>
-                  <p className="font-body text-[13px] text-brand-slate mb-4 leading-relaxed">{loc.areas}</p>
-                  <span className="font-display font-semibold text-[12px] text-brand-blue group-hover:text-blue-600 flex items-center gap-1 transition-colors">
+                  <p className="font-body text-body-sm text-brand-slate mb-4 leading-relaxed">{loc.areas}</p>
+                  <span className="font-display font-semibold text-caption text-brand-blue group-hover:text-blue-600 flex items-center gap-1 transition-colors">
                     View offices <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                   </span>
                 </Link>
@@ -624,15 +624,15 @@ const Index = () => {
                 <span className="absolute inline-flex h-full w-full rounded-full bg-white opacity-75 animate-ping" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
               </span>
-              <span className="font-display font-semibold text-[11px] uppercase tracking-wider text-white">Available 7 Days a Week</span>
+              <span className="font-display font-semibold text-caption uppercase tracking-wider text-white">Available 7 Days a Week</span>
             </motion.div>
-            <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(32px,5vw,52px)] font-extrabold text-white leading-[1.0] tracking-tight mb-4">
+            <motion.h2 variants={reveal} custom={1} className="font-display text-[clamp(28px,4vw,48px)] font-extrabold text-white leading-[1.0] tracking-tight mb-4">
               Same-Day Emergency Care
             </motion.h2>
-            <motion.p variants={reveal} custom={2} className="font-body text-[17px] text-coral-50 mb-2">Walk-ins welcome. No appointment needed.</motion.p>
+            <motion.p variants={reveal} custom={2} className="font-body text-body-lg text-coral-50 mb-2">Walk-ins welcome. No appointment needed.</motion.p>
             <motion.div variants={reveal} custom={3} className="my-8">
-              <span className="font-display font-extrabold text-[72px] text-white leading-none">$49</span>
-              <span className="block font-body text-[15px] text-coral-100 mt-1">Emergency Exam & X-Ray</span>
+              <span className="font-display font-extrabold text-[56px] text-white leading-none">$49</span>
+              <span className="block font-body text-body text-coral-100 mt-1">Emergency Exam & X-Ray</span>
             </motion.div>
             <motion.div variants={reveal} custom={4} className="flex flex-wrap justify-center gap-3">
               <a href="tel:7028522829">
