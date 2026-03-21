@@ -10,6 +10,7 @@ import Invisalign from "./pages/Invisalign.tsx";
 import KidsDentistry from "./pages/KidsDentistry.tsx";
 import LocationFinder from "./pages/LocationFinder.tsx";
 import NewPatients from "./pages/NewPatients.tsx";
+import WisdomTeeth from "./pages/WisdomTeeth.tsx";
 import PlaceholderPage from "./pages/PlaceholderPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
@@ -45,7 +46,7 @@ const App = () => (
           <Route path="/services/traditional-braces" element={<PlaceholderPage title="Traditional Braces" />} />
           <Route path="/services/teen-orthodontics" element={<PlaceholderPage title="Teen Orthodontics" />} />
           <Route path="/services/adult-orthodontics" element={<PlaceholderPage title="Adult Orthodontics" />} />
-          <Route path="/services/wisdom-tooth-extractions" element={<PlaceholderPage title="Wisdom Tooth Extractions" />} />
+          <Route path="/services/wisdom-tooth-extractions" element={<WisdomTeeth />} />
           <Route path="/services/deep-cleanings" element={<PlaceholderPage title="Deep Cleanings" />} />
           <Route path="/services/laser-dentistry" element={<PlaceholderPage title="Laser Dentistry" />} />
           <Route path="/services/gum-surgery" element={<PlaceholderPage title="Gum Surgery" />} />
