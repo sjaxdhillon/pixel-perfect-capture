@@ -2,6 +2,38 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import logoIcon from "@/assets/gooddocdentalicon.svg";
 
+const serviceLinks: { label: string; href: string }[] = [
+  { label: "Dental Exams", href: "/services/dental-exams" },
+  { label: "Cleanings", href: "/services/dental-cleanings" },
+  { label: "Implants", href: "/services/dental-implants" },
+  { label: "Invisalign®", href: "/services/invisalign" },
+  { label: "Crowns", href: "/services/dental-crowns" },
+  { label: "Emergency Care", href: "/services/emergency-dental-care" },
+  { label: "Kids Dentistry", href: "/services/kids-dentistry" },
+];
+
+const locationLinks: { label: string; count: number; href: string }[] = [
+  { label: "Las Vegas", count: 13, href: "/locations/las-vegas" },
+  { label: "Henderson", count: 7, href: "/locations/henderson" },
+  { label: "North Las Vegas", count: 3, href: "/locations/north-las-vegas" },
+];
+
+const companyLinks: { label: string; href: string }[] = [
+  { label: "About Us", href: "/about" },
+  { label: "Our Team", href: "/about/our-team" },
+  { label: "Technology", href: "/about/technology" },
+  { label: "Careers", href: "/careers" },
+  { label: "FAQs", href: "/faqs" },
+];
+
+const patientLinks: { label: string; href: string }[] = [
+  { label: "New Patients", href: "/new-patients" },
+  { label: "Insurance", href: "/new-patients/insurance" },
+  { label: "Financing", href: "/new-patients/financing" },
+  { label: "Patient Forms", href: "/new-patients/patient-forms" },
+  { label: "Blog", href: "/blog" },
+];
+
 const Footer = () => (
   <footer className="bg-brand-navy text-white relative overflow-hidden">
     {/* Decorative top border */}
@@ -47,9 +79,9 @@ const Footer = () => (
         <div>
           <h4 className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-blue mb-5">Services</h4>
           <ul className="space-y-2.5">
-            {["Dental Exams", "Cleanings", "Implants", "Invisalign®", "Crowns", "Emergency Care", "Kids Dentistry"].map((s) => (
-              <li key={s}>
-                <Link to="/services" className="font-body text-[13px] text-navy-200 hover:text-white transition-colors">{s}</Link>
+            {serviceLinks.map((s) => (
+              <li key={s.label}>
+                <Link to={s.href} className="font-body text-[13px] text-navy-200 hover:text-white transition-colors">{s.label}</Link>
               </li>
             ))}
           </ul>
@@ -57,13 +89,9 @@ const Footer = () => (
         <div>
           <h4 className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-blue mb-5">Locations</h4>
           <ul className="space-y-2.5">
-            {[
-              { label: "Las Vegas", count: 13 },
-              { label: "Henderson", count: 7 },
-              { label: "North Las Vegas", count: 3 },
-            ].map((l) => (
+            {locationLinks.map((l) => (
               <li key={l.label}>
-                <Link to="/locations" className="font-body text-[13px] text-navy-200 hover:text-white transition-colors flex items-center gap-2">
+                <Link to={l.href} className="font-body text-[13px] text-navy-200 hover:text-white transition-colors flex items-center gap-2">
                   {l.label} <span className="text-[10px] text-brand-blue font-display font-bold">({l.count})</span>
                 </Link>
               </li>
@@ -78,9 +106,9 @@ const Footer = () => (
         <div>
           <h4 className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-blue mb-5">Company</h4>
           <ul className="space-y-2.5">
-            {["About Us", "Our Team", "Technology", "Careers", "FAQs"].map((c) => (
-              <li key={c}>
-                <Link to="/about" className="font-body text-[13px] text-navy-200 hover:text-white transition-colors">{c}</Link>
+            {companyLinks.map((c) => (
+              <li key={c.label}>
+                <Link to={c.href} className="font-body text-[13px] text-navy-200 hover:text-white transition-colors">{c.label}</Link>
               </li>
             ))}
           </ul>
@@ -88,9 +116,9 @@ const Footer = () => (
         <div>
           <h4 className="font-display font-bold text-[11px] uppercase tracking-[0.12em] text-brand-blue mb-5">Patients</h4>
           <ul className="space-y-2.5">
-            {["New Patients", "Insurance", "Financing", "Patient Forms", "Blog"].map((p) => (
-              <li key={p}>
-                <Link to="/new-patients" className="font-body text-[13px] text-navy-200 hover:text-white transition-colors">{p}</Link>
+            {patientLinks.map((p) => (
+              <li key={p.label}>
+                <Link to={p.href} className="font-body text-[13px] text-navy-200 hover:text-white transition-colors">{p.label}</Link>
               </li>
             ))}
           </ul>
@@ -105,11 +133,9 @@ const Footer = () => (
           © {new Date().getFullYear()} Good Doc Dental of Nevada. All rights reserved.
         </p>
         <div className="flex gap-6">
-          {["Privacy", "HIPAA", "Accessibility"].map((link) => (
-            <Link key={link} to={`/${link.toLowerCase()}`} className="font-body text-[11px] text-navy-200 hover:text-white transition-colors">
-              {link}
-            </Link>
-          ))}
+          <Link to="/privacy-policy" className="font-body text-[11px] text-navy-200 hover:text-white transition-colors">Privacy</Link>
+          <Link to="/hipaa-notice" className="font-body text-[11px] text-navy-200 hover:text-white transition-colors">HIPAA</Link>
+          <Link to="/website-accessibility" className="font-body text-[11px] text-navy-200 hover:text-white transition-colors">Accessibility</Link>
         </div>
       </div>
     </div>
