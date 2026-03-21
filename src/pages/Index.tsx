@@ -345,33 +345,37 @@ const Index = () => {
               </motion.div>
 
               {[
-                { icon: Clock, title: "Open When You Need Us", desc: "Evenings, Saturdays, and Sundays. Because toothaches don't wait for Monday.", bg: "bg-blue-50", iconColor: "text-brand-blue", link: "/locations", cta: "See our hours" },
-                { icon: Users, title: "The Whole Family", desc: "7 dedicated kids offices and 16 family locations. All ages, all under one roof.", bg: "bg-teal-50", iconColor: "text-brand-teal", link: "/services/kids-dentistry", cta: "Explore kids dentistry" },
+                { icon: Clock, title: "Open When You Need Us", desc: "Evenings, Saturdays, and Sundays. Because toothaches don't wait for Monday.", img: whyOpenHours, link: "/locations", cta: "See our hours" },
+                { icon: Users, title: "The Whole Family", desc: "7 dedicated kids offices and 16 family locations. All ages, all under one roof.", img: whyWholeFamily, link: "/services/kids-dentistry", cta: "Explore kids dentistry" },
               ].map((card, i) => (
                 <motion.div
                   key={card.title}
                   variants={reveal} custom={i + 1}
-                  whileHover={{ y: -4, boxShadow: "0 20px 40px -12px rgba(0,0,0,0.1)" }}
+                  whileHover={{ y: -4, boxShadow: "0 20px 40px -12px rgba(0,0,0,0.15)" }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                  className={`${card.bg} rounded-[24px] p-8 group`}
+                  className="rounded-[24px] flex flex-col justify-end min-h-[200px] group relative overflow-hidden"
                 >
-                  <div className="w-12 h-12 rounded-2xl bg-white/60 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                    <card.icon className={`w-6 h-6 ${card.iconColor}`} />
+                  <img src={card.img} alt={card.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/50 to-transparent" />
+                  <div className="relative z-10 p-8">
+                    <div className="w-10 h-10 rounded-xl bg-white/15 backdrop-blur-sm flex items-center justify-center mb-4">
+                      <card.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <h3 className="font-display text-h5 font-bold text-white mb-1.5">{card.title}</h3>
+                    <p className="font-body text-body-sm text-white/75 leading-[1.6]">{card.desc}</p>
+                    <Link to={card.link} className="font-display font-semibold text-caption text-brand-blue hover:text-blue-300 flex items-center gap-1.5 mt-4 transition-colors group/link">
+                      {card.cta} <ArrowRight className="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" />
+                    </Link>
                   </div>
-                  <h3 className="font-display text-h5 font-bold text-brand-navy mb-2">{card.title}</h3>
-                  <p className="font-body text-body-sm text-brand-slate leading-[1.6]">{card.desc}</p>
-                  <Link to={card.link} className="font-display font-semibold text-caption text-brand-blue hover:text-blue-600 flex items-center gap-1.5 mt-5 transition-colors group/link">
-                    {card.cta} <ArrowRight className="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" />
-                  </Link>
                 </motion.div>
               ))}
             </div>
 
             <div className="grid md:grid-cols-3 gap-5">
               {[
-                { icon: Zap, title: "Emergency Dental Care", desc: "Same-day appointments, 7 days a week. Walk-ins welcome. $49 exam & X-ray.", bg: "bg-coral-50", iconColor: "text-brand-coral", link: "/services/emergency-dental-care", cta: "Learn about emergency care" },
-                { icon: CalendarCheck, title: "Convenient Booking", desc: "Call, text, or book online 24/7. Free benefits check before any treatment.", bg: "bg-gold-50", iconColor: "text-gold-600", link: "#", cta: "Book online now" },
-                { icon: Building2, title: "All Specialties In-House", desc: "General, cosmetic, restorative, implants, ortho, oral surgery, pediatric — all here.", bg: "bg-white border border-blue-50", iconColor: "text-brand-blue", link: "/services", cta: "View all services" },
+                { icon: Zap, title: "Emergency Dental Care", desc: "Same-day appointments, 7 days a week. Walk-ins welcome. $49 exam & X-ray.", img: whyEmergency, link: "/services/emergency-dental-care", cta: "Learn about emergency care" },
+                { icon: CalendarCheck, title: "Convenient Booking", desc: "Call, text, or book online 24/7. Free benefits check before any treatment.", img: whyBooking, link: "#", cta: "Book online now" },
+                { icon: Building2, title: "All Specialties In-House", desc: "General, cosmetic, restorative, implants, ortho, oral surgery, pediatric — all here.", img: whySpecialties, link: "/services", cta: "View all services" },
               ].map((card, i) => (
                 <motion.div
                   key={card.title}
