@@ -121,7 +121,7 @@ const Navbar = () => {
             <div className="absolute -inset-1 rounded-2xl bg-brand-blue/10 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
           </motion.div>
           <div className="hidden sm:block">
-            <img src={wordLogo} alt="Good Doc Dental" className="h-7 brightness-0 invert opacity-95 group-hover:opacity-100 transition-opacity" />
+            <img src={wordMark} alt="Good Doc Dental" className="h-8 brightness-0 invert opacity-95 group-hover:opacity-100 transition-opacity" />
           </div>
         </Link>
 
