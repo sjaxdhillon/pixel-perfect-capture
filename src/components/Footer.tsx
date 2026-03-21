@@ -147,7 +147,7 @@ const Footer = () => (
     <div className="border-t border-white/5 bg-navy-900/50">
       <div className="container mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
         <p className="font-body text-caption text-navy-200 flex items-center gap-1.5">
-          © {new Date().getFullYear()} Good Doc Dental of Nevada. Made with <Heart className="w-3 h-3 text-brand-coral fill-brand-coral" /> in Las Vegas.
+          © {new Date().getFullYear()} Good Doc Dental. Made with <Heart className="w-3 h-3 text-brand-coral fill-brand-coral" /> in Las Vegas.
         </p>
         <div className="flex gap-6">
           <Link to="/privacy-policy" className="font-body text-caption text-navy-200 hover:text-white transition-colors duration-200">Privacy</Link>
