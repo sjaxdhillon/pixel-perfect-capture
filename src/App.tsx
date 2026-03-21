@@ -29,7 +29,8 @@ import FAQs from "./pages/FAQs.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import HIPAANotice from "./pages/HIPAANotice.tsx";
 import WebsiteAccessibility from "./pages/WebsiteAccessibility.tsx";
-import PlaceholderPage from "./pages/PlaceholderPage.tsx";
+import BlogIndex from "./pages/BlogIndex.tsx";
+import BlogPost from "./pages/BlogPost.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
