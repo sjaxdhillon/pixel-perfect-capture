@@ -63,8 +63,7 @@ const Footer = () => (
               <img src={logoIcon} alt="" className="h-9 w-9 brightness-0 invert" />
             </div>
             <div>
-              <img src={wordMark} alt="Good Doc Dental" className="h-7 brightness-0 invert opacity-95" />
-              <span className="block font-body text-caption text-navy-200 tracking-wider uppercase mt-0.5">of Nevada</span>
+              <img src={wordMark} alt="Good Doc Dental" className="h-9 brightness-0 invert opacity-95" />
             </div>
           </div>
           <p className="font-accent italic text-body-lg text-blue-200/80 leading-relaxed">
@@ -148,7 +147,7 @@ const Footer = () => (
     <div className="border-t border-white/5 bg-navy-900/50">
       <div className="container mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
         <p className="font-body text-caption text-navy-200 flex items-center gap-1.5">
-          © {new Date().getFullYear()} Good Doc Dental of Nevada. Made with <Heart className="w-3 h-3 text-brand-coral fill-brand-coral" /> in Las Vegas.
+          © {new Date().getFullYear()} Good Doc Dental. Made with <Heart className="w-3 h-3 text-brand-coral fill-brand-coral" /> in Las Vegas.
         </p>
         <div className="flex gap-6">
           <Link to="/privacy-policy" className="font-body text-caption text-navy-200 hover:text-white transition-colors duration-200">Privacy</Link>
