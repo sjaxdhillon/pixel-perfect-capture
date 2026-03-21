@@ -153,10 +153,13 @@ const LocationPage = () => {
         </div>
       </section>
 
-      {/* Map Placeholder */}
+      {/* Office Image + Map */}
       <section className="container mx-auto px-4 py-10">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
-          <motion.div variants={reveal} custom={0} className="rounded-card border border-blue-50 bg-brand-sky/30 min-h-[200px] md:min-h-[300px] flex flex-col items-center justify-center gap-4 p-8">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="grid md:grid-cols-2 gap-5">
+          <motion.div variants={reveal} custom={0} className="rounded-card overflow-hidden shadow-lg">
+            <img src={isKids ? happyKid : dentalOffice} alt={`Inside ${location.name}`} className="w-full h-[260px] md:h-[300px] object-cover" />
+          </motion.div>
+          <motion.div variants={reveal} custom={1} className="rounded-card border border-blue-50 bg-brand-sky/30 flex flex-col items-center justify-center gap-4 p-8">
             <MapPin className="w-10 h-10 text-brand-blue" />
             <p className="font-display font-bold text-h4 text-brand-navy text-center">{location.name}</p>
             <p className="font-body text-body text-brand-slate text-center">{fullAddress}</p>

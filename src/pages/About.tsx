@@ -110,6 +110,21 @@ const About = () => (
       </div>
     </section>
 
+    {/* Office Image Banner */}
+    <section className="py-0">
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}
+        className="max-w-6xl mx-auto px-5">
+        <div className="grid md:grid-cols-2 gap-5 -mt-10">
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img src={dentalOffice} alt="Modern Good Doc Dental office interior" className="w-full h-[280px] object-cover" />
+          </div>
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img src={friendlyDentist} alt="Friendly dentist at Good Doc Dental" className="w-full h-[280px] object-cover" />
+          </div>
+        </div>
+      </motion.div>
+    </section>
+
     {/* Values */}
     <section className="py-20">
       <div className="max-w-6xl mx-auto px-5">

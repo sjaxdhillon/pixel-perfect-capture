@@ -13,6 +13,8 @@ import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
 import heroPatient from "@/assets/hero-patient.jpg";
 import kidsSmile from "@/assets/kids-smile.jpg";
+import lasVegasAerial from "@/assets/las-vegas-aerial.jpg";
+import perfectSmile from "@/assets/perfect-smile.jpg";
 import promotions from "@/data/promotions.json";
 import services from "@/data/services.json";
 
