@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import PromoBar from "@/components/PromoBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import storyOrigin from "@/assets/pages/our-story-origin.jpg";
+import storyGrowth from "@/assets/pages/our-story-growth.jpg";
 
 const reveal = {
   hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
@@ -28,6 +30,16 @@ const OurStory = () => (
       </div>
     </section>
 
+    {/* Image Banner */}
+    <section className="py-0">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+        className="max-w-6xl mx-auto px-5 -mt-10 relative z-10">
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <img src={storyOrigin} alt="The first Good Doc Dental office welcoming families" className="w-full h-[280px] md:h-[380px] object-cover" />
+        </div>
+      </motion.div>
+    </section>
+
     <section className="py-20">
       <div className="max-w-3xl mx-auto px-5">
         <motion.h2 variants={reveal} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} custom={0}
@@ -42,6 +54,16 @@ const OurStory = () => (
             className="text-[hsl(var(--slate))] leading-relaxed mb-5 last:mb-0">{p}</motion.p>
         ))}
       </div>
+    </section>
+
+    {/* Growth Image */}
+    <section className="py-0 mb-16">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+        className="max-w-6xl mx-auto px-5">
+        <div className="rounded-2xl overflow-hidden shadow-lg">
+          <img src={storyGrowth} alt="Good Doc Dental locations across the Las Vegas Valley" className="w-full h-[260px] md:h-[340px] object-cover" />
+        </div>
+      </motion.div>
     </section>
 
     <section className="py-20 bg-[hsl(var(--navy-50))]">
