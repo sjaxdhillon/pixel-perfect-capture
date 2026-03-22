@@ -44,6 +44,15 @@ import sedationComfort from "@/assets/services/dental-sedation-comfort.jpg";
 import sedationPrep from "@/assets/services/dental-sedation-prep.jpg";
 import sedationCare from "@/assets/services/dental-sedation-care.jpg";
 
+// Dental Fillings page images
+import fillingsHero from "@/assets/services/dental-fillings-hero.jpg";
+import fillingsXray from "@/assets/services/dental-fillings-xray.jpg";
+import fillingsComposite from "@/assets/services/dental-fillings-composite.jpg";
+import fillingsCuring from "@/assets/services/dental-fillings-curing.jpg";
+import fillingsHappy from "@/assets/services/dental-fillings-happy.jpg";
+import fillingsTools from "@/assets/services/dental-fillings-tools.jpg";
+import fillingsNumb from "@/assets/services/dental-fillings-numb.jpg";
+
 // Service card images
 import imgDentalExams from "@/assets/services/dental-exams.jpg";
 import imgDentalCleanings from "@/assets/services/dental-cleanings.jpg";
