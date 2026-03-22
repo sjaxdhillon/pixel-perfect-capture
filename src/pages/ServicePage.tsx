@@ -192,6 +192,15 @@ const servicePageImages: Record<string, ServiceImages> = {
     afterBenefits: rootCanalsApex,
     technology: rootCanalsMicroscope,
   },
+  "tooth-extractions": {
+    hero: extractionsHero,
+    secondary: extractionsHappy,
+    afterIntro: extractionsXray,
+    afterSigns: extractionsInstruments,
+    afterProcess: extractionsConsult,
+    afterBenefits: extractionsComfort,
+    technology: extractionsRecovery,
+  },
 };
 
 const reveal = {
