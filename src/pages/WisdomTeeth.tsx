@@ -14,6 +14,7 @@ import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import locations from "@/data/locations.json";
 import services from "@/data/services.json";
+import wisdomTeethImg from "@/assets/pages/wisdom-teeth-consult.jpg";
 
 const reveal = {
   hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
