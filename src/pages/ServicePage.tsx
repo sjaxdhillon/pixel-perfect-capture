@@ -138,6 +138,15 @@ const servicePageImages: Record<string, ServiceImages> = {
     afterBenefits: sedationComfort,
     technology: sedationMonitor,
   },
+  "dental-fillings": {
+    hero: fillingsHero,
+    secondary: fillingsHappy,
+    afterIntro: fillingsXray,
+    afterSigns: fillingsComposite,
+    afterProcess: fillingsCuring,
+    afterBenefits: fillingsNumb,
+    technology: fillingsTools,
+  },
 };
 
 const reveal = {
