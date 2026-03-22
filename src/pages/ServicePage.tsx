@@ -62,6 +62,15 @@ import crownsShades from "@/assets/services/dental-crowns-shades.jpg";
 import crownsHappy from "@/assets/services/dental-crowns-happy.jpg";
 import crownsScan from "@/assets/services/dental-crowns-scan.jpg";
 
+// Root Canals page images
+import rootCanalsHero from "@/assets/services/root-canals-hero.jpg";
+import rootCanalsXray from "@/assets/services/root-canals-xray.jpg";
+import rootCanalsInstruments from "@/assets/services/root-canals-instruments.jpg";
+import rootCanalsMicroscope from "@/assets/services/root-canals-microscope.jpg";
+import rootCanalsRelief from "@/assets/services/root-canals-relief.jpg";
+import rootCanalsRubberdam from "@/assets/services/root-canals-rubberdam.jpg";
+import rootCanalsApex from "@/assets/services/root-canals-apex.jpg";
+
 // Service card images
 import imgDentalExams from "@/assets/services/dental-exams.jpg";
 import imgDentalCleanings from "@/assets/services/dental-cleanings.jpg";
@@ -164,6 +173,15 @@ const servicePageImages: Record<string, ServiceImages> = {
     afterProcess: crownsPlacement,
     afterBenefits: crownsScan,
     technology: crownsCadcam,
+  },
+  "root-canals": {
+    hero: rootCanalsHero,
+    secondary: rootCanalsRelief,
+    afterIntro: rootCanalsXray,
+    afterSigns: rootCanalsInstruments,
+    afterProcess: rootCanalsRubberdam,
+    afterBenefits: rootCanalsApex,
+    technology: rootCanalsMicroscope,
   },
 };
 
