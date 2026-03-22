@@ -237,7 +237,7 @@ const ServicePage = () => {
                   {content.ctaButtonText}
                 </Button>
                 <Link to="/locations">
-                  <Button size="lg" variant="outline" className={`rounded-btn font-display font-bold ${isNavy ? "border-white/20 text-white hover:bg-white/10" : "border-brand-navy/20 text-brand-navy hover:bg-brand-navy/5"}`}>
+                  <Button size="lg" variant="outline" className={`rounded-btn font-display font-bold ${isNavy ? "border-white/40 text-white hover:bg-white/10" : "border-brand-navy/20 text-brand-navy hover:bg-brand-navy/5"}`}>
                     Find a Location Near You
                   </Button>
                 </Link>
