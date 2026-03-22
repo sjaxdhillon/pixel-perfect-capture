@@ -35,6 +35,15 @@ import cleaningsTech from "@/assets/services/dental-cleanings-tech.jpg";
 import cleaningsTools from "@/assets/services/dental-cleanings-tools.jpg";
 import cleaningsWelcome from "@/assets/services/dental-cleanings-welcome.jpg";
 
+// Dental Sedation page images
+import sedationHero from "@/assets/services/dental-sedation-hero.jpg";
+import sedationConsult from "@/assets/services/dental-sedation-consult.jpg";
+import sedationMonitor from "@/assets/services/dental-sedation-monitor.jpg";
+import sedationHappy from "@/assets/services/dental-sedation-happy.jpg";
+import sedationComfort from "@/assets/services/dental-sedation-comfort.jpg";
+import sedationPrep from "@/assets/services/dental-sedation-prep.jpg";
+import sedationCare from "@/assets/services/dental-sedation-care.jpg";
+
 // Service card images
 import imgDentalExams from "@/assets/services/dental-exams.jpg";
 import imgDentalCleanings from "@/assets/services/dental-cleanings.jpg";
