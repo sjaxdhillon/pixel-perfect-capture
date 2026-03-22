@@ -17,12 +17,14 @@ import ServiceCard from "@/components/ServiceCard";
 import services from "@/data/services.json";
 import { serviceContentMap } from "@/data/serviceContent";
 
-// Service-specific images
+// Dental Exams page images
 import examHero from "@/assets/services/dental-exams-hero.jpg";
 import examXray from "@/assets/services/dental-exams-xray.jpg";
 import examIntraoral from "@/assets/services/dental-exams-intraoral.jpg";
 import examConsult from "@/assets/services/dental-exams-consult.jpg";
 import examFamily from "@/assets/services/dental-exams-family.jpg";
+import examPano from "@/assets/services/dental-exams-pano.jpg";
+import examHappy from "@/assets/services/dental-exams-happy.jpg";
 
 // Service card images
 import imgDentalExams from "@/assets/services/dental-exams.jpg";
@@ -71,22 +73,25 @@ const serviceCardImageMap: Record<string, string> = {
   "emergency-dental-care": imgEmergency, "dental-sedation": imgDentalSedation,
 };
 
-// Per-service page images: hero banner, between-section images
 interface ServiceImages {
   hero: string;
+  secondary?: string;
   afterIntro?: string;
   afterSigns?: string;
   afterProcess?: string;
   afterBenefits?: string;
+  technology?: string;
 }
 
 const servicePageImages: Record<string, ServiceImages> = {
   "dental-exams": {
     hero: examHero,
+    secondary: examHappy,
     afterIntro: examXray,
     afterSigns: examIntraoral,
     afterProcess: examConsult,
     afterBenefits: examFamily,
+    technology: examPano,
   },
 };
 
@@ -115,55 +120,37 @@ const floatReverse = {
 };
 
 const iconMap: Record<string, React.ReactNode> = {
-  "search": <Search className="w-6 h-6" />,
-  "shield": <Shield className="w-6 h-6" />,
-  "monitor": <Monitor className="w-6 h-6" />,
-  "piggy-bank": <PiggyBank className="w-6 h-6" />,
-  "sparkles": <Sparkles className="w-6 h-6" />,
-  "heart": <Heart className="w-6 h-6" />,
-  "wind": <Wind className="w-6 h-6" />,
-  "palette": <Palette className="w-6 h-6" />,
-  "zap": <Zap className="w-6 h-6" />,
-  "smile": <Smile className="w-6 h-6" />,
-  "clock": <Clock className="w-6 h-6" />,
-  "moon": <Moon className="w-6 h-6" />,
-  "activity": <Activity className="w-6 h-6" />,
-  "lock": <Lock className="w-6 h-6" />,
-  "utensils": <Utensils className="w-6 h-6" />,
-  "minus-circle": <MinusCircle className="w-6 h-6" />,
-  "volume-2": <Volume2 className="w-6 h-6" />,
-  "sun": <Sun className="w-6 h-6" />,
-  "credit-card": <CreditCard className="w-6 h-6" />,
-  "users": <Users className="w-6 h-6" />,
-  "wand-sparkles": <WandSparkles className="w-6 h-6" />,
-  "check-circle": <CheckCircle className="w-6 h-6" />,
-  "tag": <Tag className="w-6 h-6" />,
-  "briefcase": <Briefcase className="w-6 h-6" />,
-  "eye-off": <EyeOff className="w-6 h-6" />,
-  "refresh-cw": <RefreshCw className="w-6 h-6" />,
-  "user-check": <UserCheck className="w-6 h-6" />,
-  "timer": <Timer className="w-6 h-6" />,
-  "message-circle": <MessageCircle className="w-6 h-6" />,
-  "graduation-cap": <GraduationCap className="w-6 h-6" />,
-  "settings": <Settings className="w-6 h-6" />,
-  "scan": <Scan className="w-6 h-6" />,
+  "search": <Search className="w-6 h-6" />, "shield": <Shield className="w-6 h-6" />,
+  "monitor": <Monitor className="w-6 h-6" />, "piggy-bank": <PiggyBank className="w-6 h-6" />,
+  "sparkles": <Sparkles className="w-6 h-6" />, "heart": <Heart className="w-6 h-6" />,
+  "wind": <Wind className="w-6 h-6" />, "palette": <Palette className="w-6 h-6" />,
+  "zap": <Zap className="w-6 h-6" />, "smile": <Smile className="w-6 h-6" />,
+  "clock": <Clock className="w-6 h-6" />, "moon": <Moon className="w-6 h-6" />,
+  "activity": <Activity className="w-6 h-6" />, "lock": <Lock className="w-6 h-6" />,
+  "utensils": <Utensils className="w-6 h-6" />, "minus-circle": <MinusCircle className="w-6 h-6" />,
+  "volume-2": <Volume2 className="w-6 h-6" />, "sun": <Sun className="w-6 h-6" />,
+  "credit-card": <CreditCard className="w-6 h-6" />, "users": <Users className="w-6 h-6" />,
+  "wand-sparkles": <WandSparkles className="w-6 h-6" />, "check-circle": <CheckCircle className="w-6 h-6" />,
+  "tag": <Tag className="w-6 h-6" />, "briefcase": <Briefcase className="w-6 h-6" />,
+  "eye-off": <EyeOff className="w-6 h-6" />, "refresh-cw": <RefreshCw className="w-6 h-6" />,
+  "user-check": <UserCheck className="w-6 h-6" />, "timer": <Timer className="w-6 h-6" />,
+  "message-circle": <MessageCircle className="w-6 h-6" />, "graduation-cap": <GraduationCap className="w-6 h-6" />,
+  "settings": <Settings className="w-6 h-6" />, "scan": <Scan className="w-6 h-6" />,
   "arrow-right": <ArrowRight className="w-6 h-6" />,
 };
 
-const ImageBanner = ({ src, alt }: { src: string; alt: string }) => (
-  <motion.section
-    initial={{ opacity: 0, y: 20 }}
+const ImageBanner = ({ src, alt, className = "" }: { src: string; alt: string; className?: string }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 16 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, amount: 0.2 }}
     transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-    className="py-0"
+    className={className}
   >
-    <div className="max-w-6xl mx-auto px-4">
-      <div className="rounded-2xl overflow-hidden shadow-lg">
-        <img src={src} alt={alt} className="w-full h-[260px] md:h-[360px] object-cover" />
-      </div>
+    <div className="rounded-2xl overflow-hidden shadow-lg">
+      <img src={src} alt={alt} className="w-full h-full object-cover" />
     </div>
-  </motion.section>
+  </motion.div>
 );
 
 const ServicePage = () => {
@@ -191,14 +178,14 @@ const ServicePage = () => {
       <PromoBar />
       <Navbar />
 
-      {/* Hero */}
+      {/* ─── Hero ─── */}
       <section className={`relative overflow-hidden ${isNavy ? "bg-brand-navy" : "bg-brand-sky"} pt-32 pb-20 md:pt-40 md:pb-28`}>
         <motion.div {...floatSlow} className={`absolute -right-32 top-20 w-72 h-72 rounded-full ${isNavy ? "bg-brand-blue/8" : "bg-brand-blue/10"} blur-3xl`} />
         <motion.div {...floatReverse} className={`absolute -left-20 bottom-10 w-56 h-56 rounded-full ${isNavy ? "bg-brand-teal/6" : "bg-brand-teal/8"} blur-3xl`} />
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div initial="hidden" animate="visible" className={images?.hero ? "grid md:grid-cols-2 gap-12 items-center" : "max-w-3xl"}>
-            <div className="max-w-3xl">
+            <div>
               <motion.div variants={reveal} custom={0} className={`inline-flex items-center gap-2 px-4 py-2 rounded-btn ${isNavy ? "bg-white/10 backdrop-blur-sm" : "bg-white/60"} mb-6`}>
                 <span className="w-2 h-2 rounded-full bg-brand-teal" />
                 <span className={`font-display font-semibold text-caption uppercase tracking-wider ${isNavy ? "text-blue-200" : "text-brand-navy"}`}>{content.eyebrow}</span>
@@ -212,7 +199,7 @@ const ServicePage = () => {
                 {content.tagline}
               </motion.p>
 
-              {hasPromo && (
+              {hasPromo ? (
                 <motion.div variants={reveal} custom={3} className="mb-8">
                   <span className="inline-block bg-brand-gold text-brand-navy font-display font-extrabold text-h3 px-5 py-2 rounded-btn">
                     {content.pricing.promoText}
@@ -221,9 +208,7 @@ const ServicePage = () => {
                     <span className={`block mt-2 font-body text-body-sm ${isNavy ? "text-blue-200/70" : "text-brand-slate"}`}>{content.pricing.promoDetail}</span>
                   )}
                 </motion.div>
-              )}
-
-              {!hasPromo && (
+              ) : (
                 <motion.div variants={reveal} custom={3} className="mb-8">
                   <span className={`font-display font-extrabold text-h2 ${isNavy ? "text-white" : "text-brand-navy"}`}>{content.pricing.display}</span>
                 </motion.div>
@@ -243,8 +228,8 @@ const ServicePage = () => {
 
             {images?.hero && (
               <motion.div variants={reveal} custom={2} className="hidden md:block">
-                <div className="rounded-2xl overflow-hidden shadow-2xl">
-                  <img src={images.hero} alt={`${serviceData.name} at Good Doc Dental`} className="w-full h-[340px] object-cover" />
+                <div className="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+                  <img src={images.hero} alt={`${serviceData.name} at Good Doc Dental`} className="w-full h-[380px] object-cover" />
                 </div>
               </motion.div>
             )}
@@ -252,7 +237,7 @@ const ServicePage = () => {
         </div>
       </section>
 
-      {/* Trust Bar */}
+      {/* ─── Trust Bar ─── */}
       <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className="bg-brand-sky border-y border-blue-100">
         <div className="container mx-auto px-4 py-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -266,44 +251,54 @@ const ServicePage = () => {
         </div>
       </motion.section>
 
-      {/* About This Service */}
+      {/* ─── About This Service — side-by-side with image ─── */}
       <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="py-20 md:py-28">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <motion.span variants={reveal} custom={0} className="font-display font-semibold text-caption uppercase tracking-wider text-brand-blue block mb-3">About This Service</motion.span>
-          <motion.h2 variants={reveal} custom={1} className="font-display font-extrabold text-h2 text-brand-navy mb-6">
-            What Are {serviceData.name}?
-          </motion.h2>
-          <motion.p variants={reveal} custom={2} className="font-body text-body-lg text-brand-slate leading-relaxed">
-            {content.intro}
-          </motion.p>
-        </div>
-      </motion.section>
-
-      {/* Image after intro */}
-      {images?.afterIntro && <ImageBanner src={images.afterIntro} alt={`${serviceData.name} technology`} />}
-
-      {/* Signs / Reasons */}
-      <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="py-20 md:py-28 bg-slate-50">
         <div className="container mx-auto px-4">
-          <motion.span variants={reveal} custom={0} className="font-display font-semibold text-caption uppercase tracking-wider text-brand-blue block mb-3">Is This For You?</motion.span>
-          <motion.h2 variants={reveal} custom={1} className="font-display font-extrabold text-h2 text-brand-navy mb-10 max-w-2xl">
-            {content.signs.heading}
-          </motion.h2>
-          <div className="grid md:grid-cols-2 gap-4 max-w-3xl">
-            {content.signs.items.map((item, i) => (
-              <motion.div key={i} variants={reveal} custom={i + 2} className="flex items-start gap-3 bg-white rounded-2xl p-4 border border-blue-50">
-                <Check className="w-5 h-5 text-brand-teal mt-0.5 flex-shrink-0" />
-                <span className="font-body text-body-sm text-brand-slate">{item}</span>
-              </motion.div>
-            ))}
+          <div className={`${images?.afterIntro ? "grid md:grid-cols-2 gap-12 items-center" : "max-w-3xl"}`}>
+            <div>
+              <motion.span variants={reveal} custom={0} className="font-display font-semibold text-caption uppercase tracking-wider text-brand-blue block mb-3">About This Service</motion.span>
+              <motion.h2 variants={reveal} custom={1} className="font-display font-extrabold text-h2 text-brand-navy mb-6">
+                What Are {serviceData.name}?
+              </motion.h2>
+              <motion.p variants={reveal} custom={2} className="font-body text-body-lg text-brand-slate leading-relaxed">
+                {content.intro}
+              </motion.p>
+            </div>
+            {images?.afterIntro && (
+              <ImageBanner src={images.afterIntro} alt={`${serviceData.name} digital technology`} className="h-[320px]" />
+            )}
           </div>
         </div>
       </motion.section>
 
-      {/* Image after signs */}
-      {images?.afterSigns && <ImageBanner src={images.afterSigns} alt={`${serviceData.name} procedure`} />}
+      {/* ─── Signs / Reasons — with image alongside ─── */}
+      <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="py-20 md:py-28 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className={`${images?.afterSigns ? "grid md:grid-cols-5 gap-12 items-start" : ""}`}>
+            <div className={images?.afterSigns ? "md:col-span-3" : ""}>
+              <motion.span variants={reveal} custom={0} className="font-display font-semibold text-caption uppercase tracking-wider text-brand-blue block mb-3">Is This For You?</motion.span>
+              <motion.h2 variants={reveal} custom={1} className="font-display font-extrabold text-h2 text-brand-navy mb-10 max-w-2xl">
+                {content.signs.heading}
+              </motion.h2>
+              <div className="grid sm:grid-cols-2 gap-4">
+                {content.signs.items.map((item, i) => (
+                  <motion.div key={i} variants={reveal} custom={i + 2} className="flex items-start gap-3 bg-white rounded-2xl p-4 border border-blue-50">
+                    <Check className="w-5 h-5 text-brand-teal mt-0.5 flex-shrink-0" />
+                    <span className="font-body text-body-sm text-brand-slate">{item}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+            {images?.afterSigns && (
+              <div className="md:col-span-2 hidden md:block">
+                <ImageBanner src={images.afterSigns} alt={`${serviceData.name} examination`} className="h-[400px] sticky top-28" />
+              </div>
+            )}
+          </div>
+        </div>
+      </motion.section>
 
-      {/* Process */}
+      {/* ─── Process ─── */}
       <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="py-20 md:py-28 bg-brand-sky">
         <div className="container mx-auto px-4">
           <motion.span variants={reveal} custom={0} className="font-display font-semibold text-caption uppercase tracking-wider text-brand-blue block mb-3">Our Process</motion.span>
@@ -327,10 +322,23 @@ const ServicePage = () => {
         </div>
       </motion.section>
 
-      {/* Image after process */}
-      {images?.afterProcess && <ImageBanner src={images.afterProcess} alt={`${serviceData.name} consultation`} />}
+      {/* ─── Dual image strip after process ─── */}
+      {images?.afterProcess && (
+        <section className="py-10">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-5">
+              <ImageBanner src={images.afterProcess} alt={`${serviceData.name} consultation`} className="h-[280px]" />
+              {images.secondary ? (
+                <ImageBanner src={images.secondary} alt={`Happy patient at Good Doc Dental`} className="h-[280px]" />
+              ) : (
+                <ImageBanner src={images.afterProcess} alt={`${serviceData.name}`} className="h-[280px]" />
+              )}
+            </div>
+          </div>
+        </section>
+      )}
 
-      {/* Benefits */}
+      {/* ─── Benefits ─── */}
       <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="py-20 md:py-28">
         <div className="container mx-auto px-4">
           <motion.span variants={reveal} custom={0} className="font-display font-semibold text-caption uppercase tracking-wider text-brand-blue block mb-3">Benefits</motion.span>
@@ -351,30 +359,43 @@ const ServicePage = () => {
         </div>
       </motion.section>
 
-      {/* Image after benefits */}
-      {images?.afterBenefits && <ImageBanner src={images.afterBenefits} alt={`${serviceData.name} patients`} />}
+      {/* ─── Full-width image banner after benefits ─── */}
+      {images?.afterBenefits && (
+        <section className="py-0">
+          <div className="max-w-6xl mx-auto px-4">
+            <ImageBanner src={images.afterBenefits} alt={`Good Doc Dental family`} className="h-[300px] md:h-[400px]" />
+          </div>
+        </section>
+      )}
 
-      {/* Technology (optional) */}
+      {/* ─── Technology (optional) — with side image ─── */}
       {content.technology && (
         <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="py-20 md:py-28 bg-slate-50">
           <div className="container mx-auto px-4">
-            <motion.span variants={reveal} custom={0} className="font-display font-semibold text-caption uppercase tracking-wider text-brand-blue block mb-3">Our Technology</motion.span>
-            <motion.h2 variants={reveal} custom={1} className="font-display font-extrabold text-h2 text-brand-navy mb-12">
-              Advanced Technology
-            </motion.h2>
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl">
-              {content.technology.map((t, i) => (
-                <motion.div key={i} variants={reveal} custom={i + 2} className="bg-white rounded-2xl border border-blue-50 p-6">
-                  <h3 className="font-display font-bold text-h4 text-brand-navy mb-2">{t.title}</h3>
-                  <p className="font-body text-body-sm text-brand-slate">{t.body}</p>
-                </motion.div>
-              ))}
+            <div className={`${images?.technology ? "grid md:grid-cols-2 gap-12 items-center" : ""}`}>
+              <div>
+                <motion.span variants={reveal} custom={0} className="font-display font-semibold text-caption uppercase tracking-wider text-brand-blue block mb-3">Our Technology</motion.span>
+                <motion.h2 variants={reveal} custom={1} className="font-display font-extrabold text-h2 text-brand-navy mb-8">
+                  Advanced Technology
+                </motion.h2>
+                <div className="space-y-4">
+                  {content.technology.map((t, i) => (
+                    <motion.div key={i} variants={reveal} custom={i + 2} className="bg-white rounded-2xl border border-blue-50 p-6">
+                      <h3 className="font-display font-bold text-h4 text-brand-navy mb-2">{t.title}</h3>
+                      <p className="font-body text-body-sm text-brand-slate">{t.body}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+              {images?.technology && (
+                <ImageBanner src={images.technology} alt={`Advanced dental technology`} className="h-[400px] hidden md:block" />
+              )}
             </div>
           </div>
         </motion.section>
       )}
 
-      {/* Pricing */}
+      {/* ─── Pricing ─── */}
       <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="py-20 md:py-28">
         <div className="container mx-auto px-4">
           <motion.span variants={reveal} custom={0} className="font-display font-semibold text-caption uppercase tracking-wider text-brand-blue block mb-3">Transparent Pricing</motion.span>
@@ -383,7 +404,6 @@ const ServicePage = () => {
           </motion.h2>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl">
-            {/* Main pricing card */}
             <motion.div variants={reveal} custom={2} className={`rounded-2xl border-2 p-8 ${hasPromo ? "bg-gold-50 border-brand-gold" : "bg-blue-50 border-brand-blue"}`}>
               <span className="font-display font-extrabold text-h2 text-brand-navy block mb-2">{content.pricing.display}</span>
               {hasPromo && (
@@ -399,7 +419,6 @@ const ServicePage = () => {
               </Button>
             </motion.div>
 
-            {/* Insurance card */}
             <motion.div variants={reveal} custom={3} className="bg-blue-50 rounded-2xl border border-blue-100 p-8">
               <Shield className="w-8 h-8 text-brand-blue mb-4" />
               <h3 className="font-display font-bold text-h4 text-brand-navy mb-2">Insurance Accepted</h3>
@@ -409,7 +428,6 @@ const ServicePage = () => {
               <span className="inline-block mt-4 font-display font-semibold text-caption text-brand-blue">Free Benefits Check</span>
             </motion.div>
 
-            {/* Financing card */}
             <motion.div variants={reveal} custom={4} className="bg-gold-50 rounded-2xl border border-gold-200 p-8">
               <CreditCard className="w-8 h-8 text-brand-gold mb-4" />
               <h3 className="font-display font-bold text-h4 text-brand-navy mb-2">Financing Available</h3>
@@ -426,7 +444,7 @@ const ServicePage = () => {
         </div>
       </motion.section>
 
-      {/* FAQ */}
+      {/* ─── FAQ ─── */}
       <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="py-20 md:py-28 bg-slate-50">
         <div className="container mx-auto px-4 max-w-3xl">
           <motion.span variants={reveal} custom={0} className="font-display font-semibold text-caption uppercase tracking-wider text-brand-blue block mb-3">FAQ</motion.span>
@@ -450,7 +468,7 @@ const ServicePage = () => {
         </div>
       </motion.section>
 
-      {/* Testimonials */}
+      {/* ─── Testimonials ─── */}
       <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="py-20 md:py-28">
         <div className="container mx-auto px-4">
           <motion.span variants={reveal} custom={0} className="font-display font-semibold text-caption uppercase tracking-wider text-brand-blue block mb-3">Patient Reviews</motion.span>
@@ -467,7 +485,7 @@ const ServicePage = () => {
         </div>
       </motion.section>
 
-      {/* Related Services */}
+      {/* ─── Related Services ─── */}
       <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="py-20 md:py-28 bg-slate-50">
         <div className="container mx-auto px-4">
           <motion.span variants={reveal} custom={0} className="font-display font-semibold text-caption uppercase tracking-wider text-brand-blue block mb-3">Related Services</motion.span>
@@ -484,7 +502,7 @@ const ServicePage = () => {
         </div>
       </motion.section>
 
-      {/* Bottom CTA */}
+      {/* ─── Bottom CTA ─── */}
       <section className={`py-20 md:py-28 ${isNavy ? "bg-brand-navy" : "bg-brand-sky"} relative overflow-hidden`}>
         <motion.div {...floatSlow} className={`absolute -right-32 top-10 w-72 h-72 rounded-full ${isNavy ? "bg-brand-blue/8" : "bg-brand-blue/10"} blur-3xl`} />
         <motion.div {...floatReverse} className={`absolute -left-20 bottom-10 w-48 h-48 rounded-full ${isNavy ? "bg-brand-teal/5" : "bg-brand-teal/8"} blur-3xl`} />
