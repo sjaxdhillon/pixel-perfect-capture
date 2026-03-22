@@ -17,6 +17,79 @@ import ServiceCard from "@/components/ServiceCard";
 import services from "@/data/services.json";
 import { serviceContentMap } from "@/data/serviceContent";
 
+// Service-specific images
+import examHero from "@/assets/services/dental-exams-hero.jpg";
+import examXray from "@/assets/services/dental-exams-xray.jpg";
+import examIntraoral from "@/assets/services/dental-exams-intraoral.jpg";
+import examConsult from "@/assets/services/dental-exams-consult.jpg";
+import examFamily from "@/assets/services/dental-exams-family.jpg";
+
+// Service card images
+import imgDentalExams from "@/assets/services/dental-exams.jpg";
+import imgDentalCleanings from "@/assets/services/dental-cleanings.jpg";
+import imgDentalFillings from "@/assets/services/dental-fillings.jpg";
+import imgDentalCrowns from "@/assets/services/dental-crowns.jpg";
+import imgRootCanals from "@/assets/services/root-canals.jpg";
+import imgToothExtractions from "@/assets/services/tooth-extractions.jpg";
+import imgDentalBridges from "@/assets/services/dental-bridges.jpg";
+import imgSameDayCrowns from "@/assets/services/same-day-crowns.jpg";
+import imgDentalImplants from "@/assets/services/dental-implants.jpg";
+import imgImplantDentures from "@/assets/services/implant-supported-dentures.jpg";
+import imgDentures from "@/assets/services/dentures.jpg";
+import imgPorcelainVeneers from "@/assets/services/porcelain-veneers.jpg";
+import imgTeethWhitening from "@/assets/services/teeth-whitening.jpg";
+import imgSmileMakeovers from "@/assets/services/smile-makeovers.jpg";
+import imgInvisalign from "@/assets/services/invisalign.jpg";
+import imgTraditionalBraces from "@/assets/services/traditional-braces.jpg";
+import imgTeenOrthodontics from "@/assets/services/teen-orthodontics.jpg";
+import imgAdultOrthodontics from "@/assets/services/adult-orthodontics.jpg";
+import imgWisdomTooth from "@/assets/services/wisdom-tooth-extractions.jpg";
+import imgDeepCleanings from "@/assets/services/deep-cleanings.jpg";
+import imgLaserDentistry from "@/assets/services/laser-dentistry.jpg";
+import imgGumSurgery from "@/assets/services/gum-surgery.jpg";
+import imgKidsDentistry from "@/assets/services/kids-dentistry.jpg";
+import imgBabyToddler from "@/assets/services/baby-toddler-dentistry.jpg";
+import imgKidsOrthodontics from "@/assets/services/kids-orthodontics.jpg";
+import imgSpecialNeeds from "@/assets/services/special-needs-dentistry.jpg";
+import imgEmergency from "@/assets/services/emergency-dental-care.jpg";
+import imgDentalSedation from "@/assets/services/dental-sedation.jpg";
+
+const serviceCardImageMap: Record<string, string> = {
+  "dental-exams": imgDentalExams, "dental-cleanings": imgDentalCleanings,
+  "dental-fillings": imgDentalFillings, "dental-crowns": imgDentalCrowns,
+  "root-canals": imgRootCanals, "tooth-extractions": imgToothExtractions,
+  "dental-bridges": imgDentalBridges, "same-day-crowns": imgSameDayCrowns,
+  "dental-implants": imgDentalImplants, "implant-supported-dentures": imgImplantDentures,
+  "dentures": imgDentures, "porcelain-veneers": imgPorcelainVeneers,
+  "teeth-whitening": imgTeethWhitening, "smile-makeovers": imgSmileMakeovers,
+  "invisalign": imgInvisalign, "traditional-braces": imgTraditionalBraces,
+  "teen-orthodontics": imgTeenOrthodontics, "adult-orthodontics": imgAdultOrthodontics,
+  "wisdom-tooth-extractions": imgWisdomTooth, "deep-cleanings": imgDeepCleanings,
+  "laser-dentistry": imgLaserDentistry, "gum-surgery": imgGumSurgery,
+  "kids-dentistry": imgKidsDentistry, "baby-toddler-dentistry": imgBabyToddler,
+  "kids-orthodontics": imgKidsOrthodontics, "special-needs-dentistry": imgSpecialNeeds,
+  "emergency-dental-care": imgEmergency, "dental-sedation": imgDentalSedation,
+};
+
+// Per-service page images: hero banner, between-section images
+interface ServiceImages {
+  hero: string;
+  afterIntro?: string;
+  afterSigns?: string;
+  afterProcess?: string;
+  afterBenefits?: string;
+}
+
+const servicePageImages: Record<string, ServiceImages> = {
+  "dental-exams": {
+    hero: examHero,
+    afterIntro: examXray,
+    afterSigns: examIntraoral,
+    afterProcess: examConsult,
+    afterBenefits: examFamily,
+  },
+};
+
 const reveal = {
   hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
   visible: (i: number) => ({
@@ -77,6 +150,22 @@ const iconMap: Record<string, React.ReactNode> = {
   "arrow-right": <ArrowRight className="w-6 h-6" />,
 };
 
+const ImageBanner = ({ src, alt }: { src: string; alt: string }) => (
+  <motion.section
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.2 }}
+    transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+    className="py-0"
+  >
+    <div className="max-w-6xl mx-auto px-4">
+      <div className="rounded-2xl overflow-hidden shadow-lg">
+        <img src={src} alt={alt} className="w-full h-[260px] md:h-[360px] object-cover" />
+      </div>
+    </div>
+  </motion.section>
+);
+
 const ServicePage = () => {
   const { slug } = useParams<{ slug: string }>();
   if (!slug) return <Navigate to="/services" replace />;
@@ -88,6 +177,7 @@ const ServicePage = () => {
   const relatedServices = services.filter((s: any) => content.relatedSlugs.includes(s.slug));
   const isNavy = content.heroBackground === "navy";
   const hasPromo = !!content.pricing.promoText;
+  const images = servicePageImages[slug];
 
   const trustItems = [
     { icon: <MapPin className="w-5 h-5" />, label: "23 Locations" },
@@ -107,47 +197,57 @@ const ServicePage = () => {
         <motion.div {...floatReverse} className={`absolute -left-20 bottom-10 w-56 h-56 rounded-full ${isNavy ? "bg-brand-teal/6" : "bg-brand-teal/8"} blur-3xl`} />
 
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div initial="hidden" animate="visible" className="max-w-3xl">
-            <motion.div variants={reveal} custom={0} className={`inline-flex items-center gap-2 px-4 py-2 rounded-btn ${isNavy ? "bg-white/10 backdrop-blur-sm" : "bg-white/60"} mb-6`}>
-              <span className="w-2 h-2 rounded-full bg-brand-teal" />
-              <span className={`font-display font-semibold text-caption uppercase tracking-wider ${isNavy ? "text-blue-200" : "text-brand-navy"}`}>{content.eyebrow}</span>
-            </motion.div>
-
-            <motion.h1 variants={reveal} custom={1} className={`font-display font-extrabold text-h1 leading-[1.05] mb-4 ${isNavy ? "text-white" : "text-brand-navy"}`}>
-              {content.headline}
-            </motion.h1>
-
-            <motion.p variants={reveal} custom={2} className={`font-accent italic text-body-lg mb-8 ${isNavy ? "text-blue-200/80" : "text-brand-slate"}`}>
-              {content.tagline}
-            </motion.p>
-
-            {hasPromo && (
-              <motion.div variants={reveal} custom={3} className="mb-8">
-                <span className="inline-block bg-brand-gold text-brand-navy font-display font-extrabold text-h3 px-5 py-2 rounded-btn">
-                  {content.pricing.promoText}
-                </span>
-                {content.pricing.promoDetail && (
-                  <span className={`block mt-2 font-body text-body-sm ${isNavy ? "text-blue-200/70" : "text-brand-slate"}`}>{content.pricing.promoDetail}</span>
-                )}
+          <motion.div initial="hidden" animate="visible" className={images?.hero ? "grid md:grid-cols-2 gap-12 items-center" : "max-w-3xl"}>
+            <div className="max-w-3xl">
+              <motion.div variants={reveal} custom={0} className={`inline-flex items-center gap-2 px-4 py-2 rounded-btn ${isNavy ? "bg-white/10 backdrop-blur-sm" : "bg-white/60"} mb-6`}>
+                <span className="w-2 h-2 rounded-full bg-brand-teal" />
+                <span className={`font-display font-semibold text-caption uppercase tracking-wider ${isNavy ? "text-blue-200" : "text-brand-navy"}`}>{content.eyebrow}</span>
               </motion.div>
-            )}
 
-            {!hasPromo && (
-              <motion.div variants={reveal} custom={3} className="mb-8">
-                <span className={`font-display font-extrabold text-h2 ${isNavy ? "text-white" : "text-brand-navy"}`}>{content.pricing.display}</span>
-              </motion.div>
-            )}
+              <motion.h1 variants={reveal} custom={1} className={`font-display font-extrabold text-h1 leading-[1.05] mb-4 ${isNavy ? "text-white" : "text-brand-navy"}`}>
+                {content.headline}
+              </motion.h1>
 
-            <motion.div variants={reveal} custom={4} className="flex flex-col sm:flex-row gap-3">
-              <Button size="lg" className={`rounded-btn font-display font-bold ${hasPromo ? "bg-brand-gold hover:bg-gold-400 text-brand-navy" : "bg-brand-blue hover:bg-blue-600 text-white"}`}>
-                {content.ctaButtonText}
-              </Button>
-              <Link to="/locations">
-                <Button size="lg" variant="outline" className={`rounded-btn font-display font-bold ${isNavy ? "border-white/20 text-white hover:bg-white/10" : "border-brand-navy/20 text-brand-navy hover:bg-brand-navy/5"}`}>
-                  Find a Location Near You
+              <motion.p variants={reveal} custom={2} className={`font-accent italic text-body-lg mb-8 ${isNavy ? "text-blue-200/80" : "text-brand-slate"}`}>
+                {content.tagline}
+              </motion.p>
+
+              {hasPromo && (
+                <motion.div variants={reveal} custom={3} className="mb-8">
+                  <span className="inline-block bg-brand-gold text-brand-navy font-display font-extrabold text-h3 px-5 py-2 rounded-btn">
+                    {content.pricing.promoText}
+                  </span>
+                  {content.pricing.promoDetail && (
+                    <span className={`block mt-2 font-body text-body-sm ${isNavy ? "text-blue-200/70" : "text-brand-slate"}`}>{content.pricing.promoDetail}</span>
+                  )}
+                </motion.div>
+              )}
+
+              {!hasPromo && (
+                <motion.div variants={reveal} custom={3} className="mb-8">
+                  <span className={`font-display font-extrabold text-h2 ${isNavy ? "text-white" : "text-brand-navy"}`}>{content.pricing.display}</span>
+                </motion.div>
+              )}
+
+              <motion.div variants={reveal} custom={4} className="flex flex-col sm:flex-row gap-3">
+                <Button size="lg" className={`rounded-btn font-display font-bold ${hasPromo ? "bg-brand-gold hover:bg-gold-400 text-brand-navy" : "bg-brand-blue hover:bg-blue-600 text-white"}`}>
+                  {content.ctaButtonText}
                 </Button>
-              </Link>
-            </motion.div>
+                <Link to="/locations">
+                  <Button size="lg" variant="outline" className={`rounded-btn font-display font-bold ${isNavy ? "border-white/20 text-white hover:bg-white/10" : "border-brand-navy/20 text-brand-navy hover:bg-brand-navy/5"}`}>
+                    Find a Location Near You
+                  </Button>
+                </Link>
+              </motion.div>
+            </div>
+
+            {images?.hero && (
+              <motion.div variants={reveal} custom={2} className="hidden md:block">
+                <div className="rounded-2xl overflow-hidden shadow-2xl">
+                  <img src={images.hero} alt={`${serviceData.name} at Good Doc Dental`} className="w-full h-[340px] object-cover" />
+                </div>
+              </motion.div>
+            )}
           </motion.div>
         </div>
       </section>
@@ -179,6 +279,9 @@ const ServicePage = () => {
         </div>
       </motion.section>
 
+      {/* Image after intro */}
+      {images?.afterIntro && <ImageBanner src={images.afterIntro} alt={`${serviceData.name} technology`} />}
+
       {/* Signs / Reasons */}
       <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="py-20 md:py-28 bg-slate-50">
         <div className="container mx-auto px-4">
@@ -196,6 +299,9 @@ const ServicePage = () => {
           </div>
         </div>
       </motion.section>
+
+      {/* Image after signs */}
+      {images?.afterSigns && <ImageBanner src={images.afterSigns} alt={`${serviceData.name} procedure`} />}
 
       {/* Process */}
       <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="py-20 md:py-28 bg-brand-sky">
@@ -221,6 +327,9 @@ const ServicePage = () => {
         </div>
       </motion.section>
 
+      {/* Image after process */}
+      {images?.afterProcess && <ImageBanner src={images.afterProcess} alt={`${serviceData.name} consultation`} />}
+
       {/* Benefits */}
       <motion.section initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="py-20 md:py-28">
         <div className="container mx-auto px-4">
@@ -241,6 +350,9 @@ const ServicePage = () => {
           </div>
         </div>
       </motion.section>
+
+      {/* Image after benefits */}
+      {images?.afterBenefits && <ImageBanner src={images.afterBenefits} alt={`${serviceData.name} patients`} />}
 
       {/* Technology (optional) */}
       {content.technology && (
@@ -365,7 +477,7 @@ const ServicePage = () => {
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl">
             {relatedServices.map((s: any, i: number) => (
               <motion.div key={s.slug} variants={reveal} custom={i + 2}>
-                <ServiceCard name={s.name} slug={s.slug} tagline={s.tagline} priceDisplay={s.priceDisplay} priceUnit={s.priceUnit} icon={s.icon} promoText={s.promoText} />
+                <ServiceCard name={s.name} slug={s.slug} tagline={s.tagline} priceDisplay={s.priceDisplay} priceUnit={s.priceUnit} icon={s.icon} promoText={s.promoText} image={serviceCardImageMap[s.slug]} />
               </motion.div>
             ))}
           </div>
