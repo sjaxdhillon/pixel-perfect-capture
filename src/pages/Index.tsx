@@ -50,7 +50,42 @@ import promoKids from "@/assets/promo-kids.jpg";
 import promoInvisalign from "@/assets/promo-invisalign.jpg";
 import promoWisdom from "@/assets/promo-wisdom.jpg";
 import promoImplants from "@/assets/promo-implants.jpg";
+import logoAetna from "@/assets/logos/logo-aetna.png";
+import logoDeltaDental from "@/assets/logos/logo-delta-dental.png";
+import logoCareington from "@/assets/logos/logo-careington.png";
+import logoMetLife from "@/assets/logos/logo-metlife.png";
+import logoHumana from "@/assets/logos/logo-humana.png";
+import logoUnitedHealthcare from "@/assets/logos/logo-united-healthcare.png";
+import logoAnthem from "@/assets/logos/logo-anthem.png";
+import logoGuardian from "@/assets/logos/logo-guardian.png";
+import logoBCBS from "@/assets/logos/logo-bcbs.png";
+import logoUnicare from "@/assets/logos/logo-unicare.png";
+import logoDHA from "@/assets/logos/logo-dha.png";
+import logoUnitedConcordia from "@/assets/logos/logo-united-concordia.png";
+import logoAmeritas from "@/assets/logos/logo-ameritas.png";
+import logoCigna from "@/assets/logos/logo-cigna.png";
+import logoAssurant from "@/assets/logos/logo-assurant.png";
+import logoMedicare from "@/assets/logos/logo-medicare.png";
 import promotions from "@/data/promotions.json";
+
+const insuranceLogos = [
+  { name: "Aetna", logo: logoAetna },
+  { name: "Delta Dental", logo: logoDeltaDental },
+  { name: "Careington", logo: logoCareington },
+  { name: "MetLife", logo: logoMetLife },
+  { name: "Humana", logo: logoHumana },
+  { name: "United Healthcare", logo: logoUnitedHealthcare },
+  { name: "Anthem", logo: logoAnthem },
+  { name: "Guardian", logo: logoGuardian },
+  { name: "BlueCross BlueShield", logo: logoBCBS },
+  { name: "Unicare", logo: logoUnicare },
+  { name: "DHA", logo: logoDHA },
+  { name: "United Concordia", logo: logoUnitedConcordia },
+  { name: "Ameritas", logo: logoAmeritas },
+  { name: "Cigna", logo: logoCigna },
+  { name: "Assurant", logo: logoAssurant },
+  { name: "Medicare", logo: logoMedicare },
+];
 
 const promoImageMap: Record<string, string> = {
   "emergency-exam": promoEmergency,
@@ -131,11 +166,6 @@ const serviceTabs = [
   { label: "Emergency", categories: ["emergency"] },
 ];
 
-const insuranceCarriers = [
-  "Aetna", "Delta Dental", "Careington", "MetLife", "Humana", "United Healthcare",
-  "Anthem", "Guardian", "BlueCross BlueShield", "Unicare", "DHA", "United Concordia",
-  "Ameritas", "Cigna", "Assurant", "Medicare",
-];
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -680,15 +710,15 @@ const Index = () => {
               <motion.p variants={reveal} custom={2} className="font-body text-body-lg text-brand-slate mb-10 leading-[1.7]">
                 We're in-network with 16 major carriers including Medicare. Not sure about yours? We'll check your benefits for free.
               </motion.p>
-              <motion.div variants={reveal} custom={3} className="flex flex-wrap gap-2 mb-5">
-                {insuranceCarriers.map((c, i) => (
-                  <motion.span
-                    key={c}
+              <motion.div variants={reveal} custom={3} className="grid grid-cols-4 gap-3 mb-5">
+                {insuranceLogos.map((c, i) => (
+                  <motion.div
+                    key={c.name}
                     whileHover={{ scale: 1.05, y: -2 }}
-                    className="font-display font-medium text-caption bg-white text-brand-navy px-4 py-2 rounded-xl border border-blue-100/80 shadow-sm hover:shadow-md transition-shadow duration-300"
+                    className="bg-white rounded-xl p-3 border border-blue-100/80 shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center h-16"
                   >
-                    {c}
-                  </motion.span>
+                    <img src={c.logo} alt={c.name} className="max-h-10 max-w-full object-contain" />
+                  </motion.div>
                 ))}
               </motion.div>
               <motion.p variants={reveal} custom={4} className="font-body text-body-sm text-brand-slate mb-8 italic">

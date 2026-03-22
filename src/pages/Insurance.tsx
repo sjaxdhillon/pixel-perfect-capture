@@ -5,6 +5,22 @@ import { Button } from "@/components/ui/button";
 import PromoBar from "@/components/PromoBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import logoAetna from "@/assets/logos/logo-aetna.png";
+import logoDeltaDental from "@/assets/logos/logo-delta-dental.png";
+import logoCareington from "@/assets/logos/logo-careington.png";
+import logoMetLife from "@/assets/logos/logo-metlife.png";
+import logoHumana from "@/assets/logos/logo-humana.png";
+import logoUnitedHealthcare from "@/assets/logos/logo-united-healthcare.png";
+import logoAnthem from "@/assets/logos/logo-anthem.png";
+import logoGuardian from "@/assets/logos/logo-guardian.png";
+import logoBCBS from "@/assets/logos/logo-bcbs.png";
+import logoUnicare from "@/assets/logos/logo-unicare.png";
+import logoDHA from "@/assets/logos/logo-dha.png";
+import logoUnitedConcordia from "@/assets/logos/logo-united-concordia.png";
+import logoAmeritas from "@/assets/logos/logo-ameritas.png";
+import logoCigna from "@/assets/logos/logo-cigna.png";
+import logoAssurant from "@/assets/logos/logo-assurant.png";
+import logoMedicare from "@/assets/logos/logo-medicare.png";
 
 const reveal = {
   hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
@@ -14,10 +30,23 @@ const reveal = {
   }),
 };
 
-const insuranceCarriers = [
-  "Aetna", "Delta Dental", "Careington", "MetLife", "Humana", "United Healthcare",
-  "Anthem", "Guardian", "BlueCross BlueShield", "Unicare", "DHA", "United Concordia",
-  "Ameritas", "Cigna", "Assurant", "Medicare",
+const insuranceLogos = [
+  { name: "Aetna", logo: logoAetna },
+  { name: "Delta Dental", logo: logoDeltaDental },
+  { name: "Careington", logo: logoCareington },
+  { name: "MetLife", logo: logoMetLife },
+  { name: "Humana", logo: logoHumana },
+  { name: "United Healthcare", logo: logoUnitedHealthcare },
+  { name: "Anthem", logo: logoAnthem },
+  { name: "Guardian", logo: logoGuardian },
+  { name: "BlueCross BlueShield", logo: logoBCBS },
+  { name: "Unicare", logo: logoUnicare },
+  { name: "DHA", logo: logoDHA },
+  { name: "United Concordia", logo: logoUnitedConcordia },
+  { name: "Ameritas", logo: logoAmeritas },
+  { name: "Cigna", logo: logoCigna },
+  { name: "Assurant", logo: logoAssurant },
+  { name: "Medicare", logo: logoMedicare },
 ];
 
 const infoCards = [
@@ -82,12 +111,12 @@ const Insurance = () => (
           className="font-heading text-2xl md:text-3xl font-bold text-[hsl(var(--navy-600))] mb-10">
           16 Insurance Plans Accepted
         </motion.h2>
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
-          {insuranceCarriers.map((c, i) => (
-            <motion.span key={c} variants={reveal} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} custom={i * 0.5}
-              className="bg-white rounded-full px-5 py-2.5 text-sm font-medium text-[hsl(var(--navy-600))] shadow-sm border border-[hsl(var(--navy-50))]">
-              {c}
-            </motion.span>
+        <div className="grid grid-cols-4 md:grid-cols-8 gap-4 mb-8 max-w-4xl mx-auto">
+          {insuranceLogos.map((c, i) => (
+            <motion.div key={c.name} variants={reveal} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} custom={i * 0.3}
+              className="bg-white rounded-xl p-3 shadow-sm border border-[hsl(var(--navy-50))] flex items-center justify-center h-16 hover:shadow-md transition-shadow duration-300">
+              <img src={c.logo} alt={c.name} className="max-h-10 max-w-full object-contain" />
+            </motion.div>
           ))}
         </div>
         <motion.div variants={reveal} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} custom={9}
