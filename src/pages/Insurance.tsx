@@ -111,12 +111,12 @@ const Insurance = () => (
           className="font-heading text-2xl md:text-3xl font-bold text-[hsl(var(--navy-600))] mb-10">
           16 Insurance Plans Accepted
         </motion.h2>
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
-          {insuranceCarriers.map((c, i) => (
-            <motion.span key={c} variants={reveal} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} custom={i * 0.5}
-              className="bg-white rounded-full px-5 py-2.5 text-sm font-medium text-[hsl(var(--navy-600))] shadow-sm border border-[hsl(var(--navy-50))]">
-              {c}
-            </motion.span>
+        <div className="grid grid-cols-4 md:grid-cols-8 gap-4 mb-8 max-w-4xl mx-auto">
+          {insuranceLogos.map((c, i) => (
+            <motion.div key={c.name} variants={reveal} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} custom={i * 0.3}
+              className="bg-white rounded-xl p-3 shadow-sm border border-[hsl(var(--navy-50))] flex items-center justify-center h-16 hover:shadow-md transition-shadow duration-300">
+              <img src={c.logo} alt={c.name} className="max-h-10 max-w-full object-contain" />
+            </motion.div>
           ))}
         </div>
         <motion.div variants={reveal} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} custom={9}
