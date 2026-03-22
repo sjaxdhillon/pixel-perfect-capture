@@ -14,6 +14,7 @@ import LocationCard from "@/components/LocationCard";
 import ServiceCard from "@/components/ServiceCard";
 import locations from "@/data/locations.json";
 import services from "@/data/services.json";
+import kidsImg from "@/assets/pages/kids-dentistry-fun.jpg";
 
 const reveal = {
   hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
@@ -144,6 +145,16 @@ const KidsDentistry = () => (
           </motion.div>
         </motion.div>
       </div>
+    </section>
+
+    {/* Kids Image */}
+    <section className="py-0">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+        className="max-w-6xl mx-auto px-5 -mt-8 mb-8 relative z-10">
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <img src={kidsImg} alt="Happy child laughing in colorful pediatric dental office" className="w-full h-[280px] md:h-[380px] object-cover" />
+        </div>
+      </motion.div>
     </section>
 
     {/* TRUST BAR */}

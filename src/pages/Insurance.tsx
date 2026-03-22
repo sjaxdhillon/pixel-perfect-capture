@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Phone, Check, AlertTriangle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import insuranceHeroImg from "@/assets/pages/insurance-hero.jpg";
 import PromoBar from "@/components/PromoBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -78,6 +79,16 @@ const Insurance = () => (
           We accept 16 major plans and verify your benefits for free.
         </motion.p>
       </div>
+    </section>
+
+    {/* Hero Image */}
+    <section className="py-0">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+        className="max-w-6xl mx-auto px-5 -mt-10 relative z-10">
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <img src={insuranceHeroImg} alt="Dental insurance card and stethoscope" className="w-full h-[260px] md:h-[340px] object-cover" />
+        </div>
+      </motion.div>
     </section>
 
     {/* How Insurance Works */}

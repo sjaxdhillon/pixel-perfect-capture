@@ -12,6 +12,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import LocationCard from "@/components/LocationCard";
 import locations from "@/data/locations.json";
 import { Link } from "react-router-dom";
+import emergencyCareImg from "@/assets/pages/emergency-care.jpg";
 
 const reveal = {
   hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
@@ -152,6 +153,16 @@ const EmergencyDentalCare = () => (
           </motion.div>
         </motion.div>
       </div>
+    </section>
+
+    {/* Emergency Image */}
+    <section className="py-0">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+        className="max-w-6xl mx-auto px-5 -mt-8 mb-8 relative z-10">
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <img src={emergencyCareImg} alt="Patient being welcomed for emergency dental care" className="w-full h-[280px] md:h-[380px] object-cover" />
+        </div>
+      </motion.div>
     </section>
 
     {/* TRUST BAR — Floating pills */}

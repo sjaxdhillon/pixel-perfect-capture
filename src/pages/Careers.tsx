@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import PromoBar from "@/components/PromoBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import careersCultureImg from "@/assets/pages/careers-culture.jpg";
 
 const reveal = {
   hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
@@ -48,6 +49,16 @@ const Careers = () => (
           Good Doc Dental is one of the fastest-growing dental groups in Nevada with 23 offices across the Las Vegas Valley. We're always looking for talented, compassionate people who want to make a difference in patients' lives.
         </motion.p>
       </div>
+    </section>
+
+    {/* Culture Image */}
+    <section className="py-0">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+        className="max-w-6xl mx-auto px-5 -mt-10 relative z-10">
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <img src={careersCultureImg} alt="Good Doc Dental team celebrating together" className="w-full h-[280px] md:h-[380px] object-cover" />
+        </div>
+      </motion.div>
     </section>
 
     <section className="py-20">

@@ -11,6 +11,7 @@ import PromoBar from "@/components/PromoBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
+import newPatientsImg from "@/assets/pages/new-patients-welcome.jpg";
 
 const reveal = {
   hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
@@ -109,6 +110,16 @@ const NewPatients = () => (
           </motion.div>
         </motion.div>
       </div>
+    </section>
+
+    {/* Welcome Image */}
+    <section className="py-0">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+        className="max-w-6xl mx-auto px-5 -mt-8 mb-8 relative z-10">
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <img src={newPatientsImg} alt="New patient being warmly welcomed at reception" className="w-full h-[280px] md:h-[380px] object-cover" />
+        </div>
+      </motion.div>
     </section>
 
     {/* GETTING STARTED */}

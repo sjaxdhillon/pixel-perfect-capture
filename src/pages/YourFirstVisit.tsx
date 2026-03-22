@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Phone, FileText, Shield, Briefcase, Clock, Eye, Search, Sparkles, MessageCircle, CalendarCheck } from "lucide-react";
+import firstVisitImg from "@/assets/pages/first-visit-exam.jpg";
 import { Button } from "@/components/ui/button";
 import PromoBar from "@/components/PromoBar";
 import Navbar from "@/components/Navbar";
@@ -48,6 +49,16 @@ const YourFirstVisit = () => (
           Here's exactly what to expect — from check-in to checkout.
         </motion.p>
       </div>
+    </section>
+
+    {/* Hero Image */}
+    <section className="py-0">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+        className="max-w-6xl mx-auto px-5 -mt-10 relative z-10">
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <img src={firstVisitImg} alt="Dentist explaining x-ray results to patient during first visit" className="w-full h-[280px] md:h-[380px] object-cover" />
+        </div>
+      </motion.div>
     </section>
 
     {/* Before Your Visit */}

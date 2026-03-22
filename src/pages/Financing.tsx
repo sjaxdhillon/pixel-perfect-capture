@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import PromoBar from "@/components/PromoBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import financingImg from "@/assets/pages/financing-consultation.jpg";
 
 const reveal = {
   hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
@@ -51,6 +52,16 @@ const Financing = () => (
           Smile now, pay over time — flexible plans for every budget.
         </motion.p>
       </div>
+    </section>
+
+    {/* Hero Image */}
+    <section className="py-0">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+        className="max-w-6xl mx-auto px-5 -mt-10 relative z-10">
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <img src={financingImg} alt="Family discussing dental payment options" className="w-full h-[260px] md:h-[340px] object-cover" />
+        </div>
+      </motion.div>
     </section>
 
     {/* Payment Options */}
