@@ -174,6 +174,15 @@ const servicePageImages: Record<string, ServiceImages> = {
     afterBenefits: crownsScan,
     technology: crownsCadcam,
   },
+  "root-canals": {
+    hero: rootCanalsHero,
+    secondary: rootCanalsRelief,
+    afterIntro: rootCanalsXray,
+    afterSigns: rootCanalsInstruments,
+    afterProcess: rootCanalsRubberdam,
+    afterBenefits: rootCanalsApex,
+    technology: rootCanalsMicroscope,
+  },
 };
 
 const reveal = {
