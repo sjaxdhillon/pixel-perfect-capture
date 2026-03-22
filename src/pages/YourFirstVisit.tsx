@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Phone, FileText, Shield, Briefcase, Clock, Eye, Search, Sparkles, MessageCircle, CalendarCheck } from "lucide-react";
+import firstVisitImg from "@/assets/pages/first-visit-exam.jpg";
 import { Button } from "@/components/ui/button";
 import PromoBar from "@/components/PromoBar";
 import Navbar from "@/components/Navbar";
