@@ -156,6 +156,15 @@ const servicePageImages: Record<string, ServiceImages> = {
     afterBenefits: fillingsNumb,
     technology: fillingsTools,
   },
+  "dental-crowns": {
+    hero: crownsHero,
+    secondary: crownsHappy,
+    afterIntro: crownsPrep,
+    afterSigns: crownsShades,
+    afterProcess: crownsPlacement,
+    afterBenefits: crownsScan,
+    technology: crownsCadcam,
+  },
 };
 
 const reveal = {
