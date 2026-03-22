@@ -155,6 +155,16 @@ const EmergencyDentalCare = () => (
       </div>
     </section>
 
+    {/* Emergency Image */}
+    <section className="py-0">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+        className="max-w-6xl mx-auto px-5 -mt-8 mb-8 relative z-10">
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <img src={emergencyCareImg} alt="Patient being welcomed for emergency dental care" className="w-full h-[280px] md:h-[380px] object-cover" />
+        </div>
+      </motion.div>
+    </section>
+
     {/* TRUST BAR — Floating pills */}
     <section className="bg-coral-50 py-6 border-b border-coral-100/60">
       <div className="container mx-auto px-4">

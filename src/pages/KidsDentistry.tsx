@@ -147,6 +147,16 @@ const KidsDentistry = () => (
       </div>
     </section>
 
+    {/* Kids Image */}
+    <section className="py-0">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+        className="max-w-6xl mx-auto px-5 -mt-8 mb-8 relative z-10">
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <img src={kidsImg} alt="Happy child laughing in colorful pediatric dental office" className="w-full h-[280px] md:h-[380px] object-cover" />
+        </div>
+      </motion.div>
+    </section>
+
     {/* TRUST BAR */}
     <section className="bg-white py-6 border-b border-blue-100/60">
       <div className="container mx-auto px-4">
