@@ -112,6 +112,16 @@ const NewPatients = () => (
       </div>
     </section>
 
+    {/* Welcome Image */}
+    <section className="py-0">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+        className="max-w-6xl mx-auto px-5 -mt-8 mb-8 relative z-10">
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <img src={newPatientsImg} alt="New patient being warmly welcomed at reception" className="w-full h-[280px] md:h-[380px] object-cover" />
+        </div>
+      </motion.div>
+    </section>
+
     {/* GETTING STARTED */}
     <section className="py-28 md:py-36 relative">
       <motion.div variants={float} initial="initial" animate="animate"
