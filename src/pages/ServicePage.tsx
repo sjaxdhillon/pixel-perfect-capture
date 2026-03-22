@@ -71,6 +71,15 @@ import rootCanalsRelief from "@/assets/services/root-canals-relief.jpg";
 import rootCanalsRubberdam from "@/assets/services/root-canals-rubberdam.jpg";
 import rootCanalsApex from "@/assets/services/root-canals-apex.jpg";
 
+// Tooth Extractions page images
+import extractionsHero from "@/assets/services/tooth-extractions-hero.jpg";
+import extractionsXray from "@/assets/services/tooth-extractions-xray.jpg";
+import extractionsInstruments from "@/assets/services/tooth-extractions-instruments.jpg";
+import extractionsConsult from "@/assets/services/tooth-extractions-consult.jpg";
+import extractionsHappy from "@/assets/services/tooth-extractions-happy.jpg";
+import extractionsComfort from "@/assets/services/tooth-extractions-comfort.jpg";
+import extractionsRecovery from "@/assets/services/tooth-extractions-recovery.jpg";
+
 // Service card images
 import imgDentalExams from "@/assets/services/dental-exams.jpg";
 import imgDentalCleanings from "@/assets/services/dental-cleanings.jpg";
