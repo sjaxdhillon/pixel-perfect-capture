@@ -8,6 +8,66 @@ import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import services from "@/data/services.json";
 
+import imgDentalExams from "@/assets/services/dental-exams.jpg";
+import imgDentalCleanings from "@/assets/services/dental-cleanings.jpg";
+import imgDentalFillings from "@/assets/services/dental-fillings.jpg";
+import imgDentalCrowns from "@/assets/services/dental-crowns.jpg";
+import imgRootCanals from "@/assets/services/root-canals.jpg";
+import imgToothExtractions from "@/assets/services/tooth-extractions.jpg";
+import imgDentalBridges from "@/assets/services/dental-bridges.jpg";
+import imgSameDayCrowns from "@/assets/services/same-day-crowns.jpg";
+import imgDentalImplants from "@/assets/services/dental-implants.jpg";
+import imgImplantDentures from "@/assets/services/implant-supported-dentures.jpg";
+import imgDentures from "@/assets/services/dentures.jpg";
+import imgPorcelainVeneers from "@/assets/services/porcelain-veneers.jpg";
+import imgTeethWhitening from "@/assets/services/teeth-whitening.jpg";
+import imgSmileMakeovers from "@/assets/services/smile-makeovers.jpg";
+import imgInvisalign from "@/assets/services/invisalign.jpg";
+import imgTraditionalBraces from "@/assets/services/traditional-braces.jpg";
+import imgTeenOrthodontics from "@/assets/services/teen-orthodontics.jpg";
+import imgAdultOrthodontics from "@/assets/services/adult-orthodontics.jpg";
+import imgWisdomTooth from "@/assets/services/wisdom-tooth-extractions.jpg";
+import imgDeepCleanings from "@/assets/services/deep-cleanings.jpg";
+import imgLaserDentistry from "@/assets/services/laser-dentistry.jpg";
+import imgGumSurgery from "@/assets/services/gum-surgery.jpg";
+import imgKidsDentistry from "@/assets/services/kids-dentistry.jpg";
+import imgBabyToddler from "@/assets/services/baby-toddler-dentistry.jpg";
+import imgKidsOrthodontics from "@/assets/services/kids-orthodontics.jpg";
+import imgSpecialNeeds from "@/assets/services/special-needs-dentistry.jpg";
+import imgEmergency from "@/assets/services/emergency-dental-care.jpg";
+import imgDentalSedation from "@/assets/services/dental-sedation.jpg";
+
+const serviceImageMap: Record<string, string> = {
+  "dental-exams": imgDentalExams,
+  "dental-cleanings": imgDentalCleanings,
+  "dental-fillings": imgDentalFillings,
+  "dental-crowns": imgDentalCrowns,
+  "root-canals": imgRootCanals,
+  "tooth-extractions": imgToothExtractions,
+  "dental-bridges": imgDentalBridges,
+  "same-day-crowns": imgSameDayCrowns,
+  "dental-implants": imgDentalImplants,
+  "implant-supported-dentures": imgImplantDentures,
+  "dentures": imgDentures,
+  "porcelain-veneers": imgPorcelainVeneers,
+  "teeth-whitening": imgTeethWhitening,
+  "smile-makeovers": imgSmileMakeovers,
+  "invisalign": imgInvisalign,
+  "traditional-braces": imgTraditionalBraces,
+  "teen-orthodontics": imgTeenOrthodontics,
+  "adult-orthodontics": imgAdultOrthodontics,
+  "wisdom-tooth-extractions": imgWisdomTooth,
+  "deep-cleanings": imgDeepCleanings,
+  "laser-dentistry": imgLaserDentistry,
+  "gum-surgery": imgGumSurgery,
+  "kids-dentistry": imgKidsDentistry,
+  "baby-toddler-dentistry": imgBabyToddler,
+  "kids-orthodontics": imgKidsOrthodontics,
+  "special-needs-dentistry": imgSpecialNeeds,
+  "emergency-dental-care": imgEmergency,
+  "dental-sedation": imgDentalSedation,
+};
+
 const reveal = {
   hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
   visible: (i: number) => ({
@@ -85,7 +145,16 @@ const ServicesIndex = () => (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {catServices.map((service, i) => (
                 <motion.div key={service.id} variants={reveal} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} custom={i + 1}>
-                  <ServiceCard name={service.name} slug={service.slug} tagline={service.tagline} priceDisplay={service.priceDisplay} priceUnit={service.priceUnit} icon={service.icon} promoText={service.promoText} />
+                  <ServiceCard
+                    name={service.name}
+                    slug={service.slug}
+                    tagline={service.tagline}
+                    priceDisplay={service.priceDisplay}
+                    priceUnit={service.priceUnit}
+                    icon={service.icon}
+                    promoText={service.promoText}
+                    image={serviceImageMap[service.slug]}
+                  />
                 </motion.div>
               ))}
             </div>
