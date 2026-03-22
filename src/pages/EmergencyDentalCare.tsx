@@ -12,6 +12,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import LocationCard from "@/components/LocationCard";
 import locations from "@/data/locations.json";
 import { Link } from "react-router-dom";
+import emergencyCareImg from "@/assets/pages/emergency-care.jpg";
 
 const reveal = {
   hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
