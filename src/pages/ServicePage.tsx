@@ -120,6 +120,15 @@ const servicePageImages: Record<string, ServiceImages> = {
     afterBenefits: cleaningsWelcome,
     technology: cleaningsTech,
   },
+  "dental-sedation": {
+    hero: sedationHero,
+    secondary: sedationHappy,
+    afterIntro: sedationConsult,
+    afterSigns: sedationPrep,
+    afterProcess: sedationCare,
+    afterBenefits: sedationComfort,
+    technology: sedationMonitor,
+  },
 };
 
 const reveal = {
