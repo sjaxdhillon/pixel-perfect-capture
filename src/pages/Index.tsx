@@ -50,7 +50,42 @@ import promoKids from "@/assets/promo-kids.jpg";
 import promoInvisalign from "@/assets/promo-invisalign.jpg";
 import promoWisdom from "@/assets/promo-wisdom.jpg";
 import promoImplants from "@/assets/promo-implants.jpg";
+import logoAetna from "@/assets/logos/logo-aetna.png";
+import logoDeltaDental from "@/assets/logos/logo-delta-dental.png";
+import logoCareington from "@/assets/logos/logo-careington.png";
+import logoMetLife from "@/assets/logos/logo-metlife.png";
+import logoHumana from "@/assets/logos/logo-humana.png";
+import logoUnitedHealthcare from "@/assets/logos/logo-united-healthcare.png";
+import logoAnthem from "@/assets/logos/logo-anthem.png";
+import logoGuardian from "@/assets/logos/logo-guardian.png";
+import logoBCBS from "@/assets/logos/logo-bcbs.png";
+import logoUnicare from "@/assets/logos/logo-unicare.png";
+import logoDHA from "@/assets/logos/logo-dha.png";
+import logoUnitedConcordia from "@/assets/logos/logo-united-concordia.png";
+import logoAmeritas from "@/assets/logos/logo-ameritas.png";
+import logoCigna from "@/assets/logos/logo-cigna.png";
+import logoAssurant from "@/assets/logos/logo-assurant.png";
+import logoMedicare from "@/assets/logos/logo-medicare.png";
 import promotions from "@/data/promotions.json";
+
+const insuranceLogos = [
+  { name: "Aetna", logo: logoAetna },
+  { name: "Delta Dental", logo: logoDeltaDental },
+  { name: "Careington", logo: logoCareington },
+  { name: "MetLife", logo: logoMetLife },
+  { name: "Humana", logo: logoHumana },
+  { name: "United Healthcare", logo: logoUnitedHealthcare },
+  { name: "Anthem", logo: logoAnthem },
+  { name: "Guardian", logo: logoGuardian },
+  { name: "BlueCross BlueShield", logo: logoBCBS },
+  { name: "Unicare", logo: logoUnicare },
+  { name: "DHA", logo: logoDHA },
+  { name: "United Concordia", logo: logoUnitedConcordia },
+  { name: "Ameritas", logo: logoAmeritas },
+  { name: "Cigna", logo: logoCigna },
+  { name: "Assurant", logo: logoAssurant },
+  { name: "Medicare", logo: logoMedicare },
+];
 
 const promoImageMap: Record<string, string> = {
   "emergency-exam": promoEmergency,
