@@ -710,14 +710,14 @@ const Index = () => {
               <motion.p variants={reveal} custom={2} className="font-body text-body-lg text-brand-slate mb-10 leading-[1.7]">
                 We're in-network with 16 major carriers including Medicare. Not sure about yours? We'll check your benefits for free.
               </motion.p>
-              <motion.div variants={reveal} custom={3} className="grid grid-cols-4 gap-8 mb-5">
+              <motion.div variants={reveal} custom={3} className="grid grid-cols-2 sm:grid-cols-3 gap-x-10 gap-y-8 md:gap-x-12 md:gap-y-10 mb-6 max-w-2xl">
                 {insuranceLogos.map((c, i) => (
                   <motion.div
                     key={c.name}
                     whileHover={{ scale: 1.08, y: -3 }}
-                    className="flex items-center justify-center h-20 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-400"
+                    className="flex items-center justify-start h-24 md:h-28 grayscale hover:grayscale-0 opacity-80 hover:opacity-100 transition-all duration-300"
                   >
-                    <img src={c.logo} alt={c.name} className="max-h-16 max-w-full object-contain" />
+                    <img src={c.logo} alt={c.name} className="max-h-16 md:max-h-20 w-auto max-w-full object-contain" />
                   </motion.div>
                 ))}
               </motion.div>
