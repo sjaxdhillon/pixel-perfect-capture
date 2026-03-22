@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import PromoBar from "@/components/PromoBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import financingImg from "@/assets/pages/financing-consultation.jpg";
 
 const reveal = {
   hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
