@@ -53,6 +53,15 @@ import fillingsHappy from "@/assets/services/dental-fillings-happy.jpg";
 import fillingsTools from "@/assets/services/dental-fillings-tools.jpg";
 import fillingsNumb from "@/assets/services/dental-fillings-numb.jpg";
 
+// Dental Crowns page images
+import crownsHero from "@/assets/services/dental-crowns-hero.jpg";
+import crownsCadcam from "@/assets/services/dental-crowns-cadcam.jpg";
+import crownsPrep from "@/assets/services/dental-crowns-prep.jpg";
+import crownsPlacement from "@/assets/services/dental-crowns-placement.jpg";
+import crownsShades from "@/assets/services/dental-crowns-shades.jpg";
+import crownsHappy from "@/assets/services/dental-crowns-happy.jpg";
+import crownsScan from "@/assets/services/dental-crowns-scan.jpg";
+
 // Service card images
 import imgDentalExams from "@/assets/services/dental-exams.jpg";
 import imgDentalCleanings from "@/assets/services/dental-cleanings.jpg";
