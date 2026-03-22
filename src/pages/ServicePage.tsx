@@ -102,6 +102,15 @@ const servicePageImages: Record<string, ServiceImages> = {
     afterBenefits: examFamily,
     technology: examPano,
   },
+  "dental-cleanings": {
+    hero: cleaningsHero,
+    secondary: cleaningsSmile,
+    afterIntro: cleaningsTools,
+    afterSigns: cleaningsBeforeAfter,
+    afterProcess: cleaningsPolish,
+    afterBenefits: cleaningsWelcome,
+    technology: cleaningsTech,
+  },
 };
 
 const reveal = {
