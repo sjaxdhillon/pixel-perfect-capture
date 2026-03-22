@@ -166,11 +166,6 @@ const serviceTabs = [
   { label: "Emergency", categories: ["emergency"] },
 ];
 
-const insuranceCarriers = [
-  "Aetna", "Delta Dental", "Careington", "MetLife", "Humana", "United Healthcare",
-  "Anthem", "Guardian", "BlueCross BlueShield", "Unicare", "DHA", "United Concordia",
-  "Ameritas", "Cigna", "Assurant", "Medicare",
-];
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState(0);
