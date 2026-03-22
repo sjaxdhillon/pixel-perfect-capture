@@ -51,6 +51,16 @@ const YourFirstVisit = () => (
       </div>
     </section>
 
+    {/* Hero Image */}
+    <section className="py-0">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+        className="max-w-6xl mx-auto px-5 -mt-10 relative z-10">
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <img src={firstVisitImg} alt="Dentist explaining x-ray results to patient during first visit" className="w-full h-[280px] md:h-[380px] object-cover" />
+        </div>
+      </motion.div>
+    </section>
+
     {/* Before Your Visit */}
     <section className="py-20">
       <div className="max-w-6xl mx-auto px-5">

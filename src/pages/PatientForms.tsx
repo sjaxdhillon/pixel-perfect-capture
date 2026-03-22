@@ -41,6 +41,16 @@ const PatientForms = () => (
       </div>
     </section>
 
+    {/* Hero Image */}
+    <section className="py-0">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}
+        className="max-w-6xl mx-auto px-5 -mt-10 relative z-10">
+        <div className="rounded-2xl overflow-hidden shadow-2xl">
+          <img src={patientFormsImg} alt="Patient completing dental forms on tablet in waiting room" className="w-full h-[260px] md:h-[340px] object-cover" />
+        </div>
+      </motion.div>
+    </section>
+
     {/* Forms Section */}
     <section className="py-20">
       <div className="max-w-3xl mx-auto px-5">
