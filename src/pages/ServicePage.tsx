@@ -80,6 +80,71 @@ import extractionsHappy from "@/assets/services/tooth-extractions-happy.jpg";
 import extractionsComfort from "@/assets/services/tooth-extractions-comfort.jpg";
 import extractionsRecovery from "@/assets/services/tooth-extractions-recovery.jpg";
 
+// Dental Bridges page images
+import bridgesHero from "@/assets/services/dental-bridges-hero.jpg";
+import bridgesConsult from "@/assets/services/dental-bridges-consult.jpg";
+import bridgesLab from "@/assets/services/dental-bridges-lab.jpg";
+import bridgesPrep from "@/assets/services/dental-bridges-prep.jpg";
+import bridgesSmile from "@/assets/services/dental-bridges-smile.jpg";
+import bridgesShade from "@/assets/services/dental-bridges-shade.jpg";
+import bridgesScan from "@/assets/services/dental-bridges-scan.jpg";
+
+// Same-Day Crowns page images
+import sameDayHero from "@/assets/services/same-day-crowns-hero.jpg";
+import sameDayDesign from "@/assets/services/same-day-crowns-design.jpg";
+import sameDayScan from "@/assets/services/same-day-crowns-scan.jpg";
+import sameDayCrown from "@/assets/services/same-day-crowns-crown.jpg";
+import sameDayHappy from "@/assets/services/same-day-crowns-happy.jpg";
+import sameDayPlacement from "@/assets/services/same-day-crowns-placement.jpg";
+import sameDayCadcam from "@/assets/services/same-day-crowns-cadcam.jpg";
+
+// Dental Implants page images
+import implantsHero from "@/assets/services/dental-implants-hero.jpg";
+import implantsSurgery from "@/assets/services/dental-implants-surgery.jpg";
+import implantsCbct from "@/assets/services/dental-implants-cbct.jpg";
+import implantsConsult from "@/assets/services/dental-implants-consult.jpg";
+import implantsSmile from "@/assets/services/dental-implants-smile.jpg";
+import implantsHealing from "@/assets/services/dental-implants-healing.jpg";
+import implantsGuide from "@/assets/services/dental-implants-guide.jpg";
+
+// Dentures page images
+import denturesHero from "@/assets/services/dentures-hero.jpg";
+import denturesLab from "@/assets/services/dentures-lab.jpg";
+import denturesHappy from "@/assets/services/dentures-happy.jpg";
+import denturesFitting from "@/assets/services/dentures-fitting.jpg";
+import denturesCare from "@/assets/services/dentures-care.jpg";
+import denturesDigital from "@/assets/services/dentures-digital.jpg";
+
+// Implant-Supported Dentures page images
+import implantDenturesHero from "@/assets/services/implant-dentures-hero.jpg";
+import implantDenturesModel from "@/assets/services/implant-dentures-model.jpg";
+import implantDenturesExam from "@/assets/services/implant-dentures-exam.jpg";
+import implantDenturesHappy from "@/assets/services/implant-dentures-happy.jpg";
+import implantDenturesCt from "@/assets/services/implant-dentures-ct.jpg";
+import implantDenturesLab from "@/assets/services/implant-dentures-lab.jpg";
+
+// Porcelain Veneers page images
+import veneersHero from "@/assets/services/porcelain-veneers-hero.jpg";
+import veneersCraft from "@/assets/services/porcelain-veneers-craft.jpg";
+import veneersBonding from "@/assets/services/porcelain-veneers-bonding.jpg";
+import veneersDesign from "@/assets/services/porcelain-veneers-design.jpg";
+import veneersMirror from "@/assets/services/porcelain-veneers-mirror.jpg";
+
+// Teeth Whitening page images
+import whiteningHero from "@/assets/services/teeth-whitening-hero.jpg";
+import whiteningShade from "@/assets/services/teeth-whitening-shade.jpg";
+import whiteningLight from "@/assets/services/teeth-whitening-light.jpg";
+import whiteningKit from "@/assets/services/teeth-whitening-kit.jpg";
+import whiteningHappy from "@/assets/services/teeth-whitening-happy.jpg";
+
+// Smile Makeovers page images
+import smileHero from "@/assets/services/smile-makeovers-hero.jpg";
+import smileDesign from "@/assets/services/smile-makeovers-design.jpg";
+import smileConsult from "@/assets/services/smile-makeovers-consult.jpg";
+import smilePhoto from "@/assets/services/smile-makeovers-photo.jpg";
+import smileMaterials from "@/assets/services/smile-makeovers-materials.jpg";
+import smileMockup from "@/assets/services/smile-makeovers-mockup.jpg";
+
 // Service card images
 import imgDentalExams from "@/assets/services/dental-exams.jpg";
 import imgDentalCleanings from "@/assets/services/dental-cleanings.jpg";
@@ -200,6 +265,78 @@ const servicePageImages: Record<string, ServiceImages> = {
     afterProcess: extractionsConsult,
     afterBenefits: extractionsComfort,
     technology: extractionsRecovery,
+  },
+  "dental-bridges": {
+    hero: bridgesHero,
+    secondary: bridgesSmile,
+    afterIntro: bridgesConsult,
+    afterSigns: bridgesShade,
+    afterProcess: bridgesLab,
+    afterBenefits: bridgesPrep,
+    technology: bridgesScan,
+  },
+  "same-day-crowns": {
+    hero: sameDayHero,
+    secondary: sameDayHappy,
+    afterIntro: sameDayScan,
+    afterSigns: sameDayCrown,
+    afterProcess: sameDayPlacement,
+    afterBenefits: sameDayDesign,
+    technology: sameDayCadcam,
+  },
+  "dental-implants": {
+    hero: implantsHero,
+    secondary: implantsSmile,
+    afterIntro: implantsCbct,
+    afterSigns: implantsConsult,
+    afterProcess: implantsSurgery,
+    afterBenefits: implantsHealing,
+    technology: implantsGuide,
+  },
+  "dentures": {
+    hero: denturesHero,
+    secondary: denturesHappy,
+    afterIntro: denturesLab,
+    afterSigns: denturesFitting,
+    afterProcess: denturesCare,
+    afterBenefits: denturesDigital,
+    technology: denturesLab,
+  },
+  "implant-supported-dentures": {
+    hero: implantDenturesHero,
+    secondary: implantDenturesHappy,
+    afterIntro: implantDenturesModel,
+    afterSigns: implantDenturesExam,
+    afterProcess: implantDenturesLab,
+    afterBenefits: implantDenturesCt,
+    technology: implantDenturesModel,
+  },
+  "porcelain-veneers": {
+    hero: veneersHero,
+    secondary: veneersMirror,
+    afterIntro: veneersDesign,
+    afterSigns: veneersCraft,
+    afterProcess: veneersBonding,
+    afterBenefits: veneersMirror,
+    technology: veneersDesign,
+  },
+  "teeth-whitening": {
+    hero: whiteningHero,
+    secondary: whiteningHappy,
+    afterIntro: whiteningShade,
+    afterSigns: whiteningLight,
+    afterProcess: whiteningKit,
+    afterBenefits: whiteningHappy,
+    technology: whiteningLight,
+  },
+  "smile-makeovers": {
+    hero: smileHero,
+    secondary: smileMockup,
+    afterIntro: smileDesign,
+    afterSigns: smileConsult,
+    afterProcess: smilePhoto,
+    afterBenefits: smileMaterials,
+    technology: smileDesign,
   },
 };
 
