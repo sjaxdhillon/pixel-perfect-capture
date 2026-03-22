@@ -11,6 +11,7 @@ import PromoBar from "@/components/PromoBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TestimonialCard from "@/components/TestimonialCard";
+import newPatientsImg from "@/assets/pages/new-patients-welcome.jpg";
 
 const reveal = {
   hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
