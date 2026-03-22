@@ -26,6 +26,15 @@ import examFamily from "@/assets/services/dental-exams-family.jpg";
 import examPano from "@/assets/services/dental-exams-pano.jpg";
 import examHappy from "@/assets/services/dental-exams-happy.jpg";
 
+// Dental Cleanings page images
+import cleaningsHero from "@/assets/services/dental-cleanings-hero.jpg";
+import cleaningsBeforeAfter from "@/assets/services/dental-cleanings-before-after.jpg";
+import cleaningsSmile from "@/assets/services/dental-cleanings-smile.jpg";
+import cleaningsPolish from "@/assets/services/dental-cleanings-polish.jpg";
+import cleaningsTech from "@/assets/services/dental-cleanings-tech.jpg";
+import cleaningsTools from "@/assets/services/dental-cleanings-tools.jpg";
+import cleaningsWelcome from "@/assets/services/dental-cleanings-welcome.jpg";
+
 // Service card images
 import imgDentalExams from "@/assets/services/dental-exams.jpg";
 import imgDentalCleanings from "@/assets/services/dental-cleanings.jpg";
@@ -92,6 +101,15 @@ const servicePageImages: Record<string, ServiceImages> = {
     afterProcess: examConsult,
     afterBenefits: examFamily,
     technology: examPano,
+  },
+  "dental-cleanings": {
+    hero: cleaningsHero,
+    secondary: cleaningsSmile,
+    afterIntro: cleaningsTools,
+    afterSigns: cleaningsBeforeAfter,
+    afterProcess: cleaningsPolish,
+    afterBenefits: cleaningsWelcome,
+    technology: cleaningsTech,
   },
 };
 
